@@ -1,0 +1,45 @@
+{
+  "status": "SUBMITTED",
+  "jobId": "61891140",
+  "submittedAt": "2026-11-18T19:01:48.538102+00:00",
+  "commit": "8c271edbca01864fda09dc3b75b7f8d34dbccd57",
+  "sourceManifestSha256": "15b2dc99f216462e7d0deaec9f16b4de416cf0a291c76bcda6b973cd3b4ff3cb",
+  "trackedFiles": 10420,
+  "remoteDirectory": "/n/netscratch/randall_lab/Everyone/obarrera/swampwiki/sw-001/smoke-8c271ed-v1",
+  "resources": {
+    "account": "randall_lab",
+    "partition": "test",
+    "cpus": 2,
+    "memoryGB": 4,
+    "minutes": 10
+  },
+  "envelope": [
+    {
+      "path": "browser.py",
+      "bytes": 6046,
+      "sha256": "731ad6a5750579779ebd3e39f5ed28691c17951e7b9bfbc98602e0043d2f2f78"
+    },
+    {
+      "path": "delta.tar.gz",
+      "bytes": 2309295,
+      "sha256": "5f8ea4e40f02d37f2048b160124027d03ca1c124b460cb880ee399b29b84f9a0"
+    },
+    {
+      "path": "input.json",
+      "bytes": 1577485,
+      "sha256": "5e33a063dfb37a28dc1aca7152d2a05e6428baf05f0e734fa46cd5c1c7eff777"
+    },
+    {
+      "path": "run.sbatch",
+      "bytes": 1387,
+      "sha256": "836b29f2745b1df48ce2a5127bf6778fa243437733a685ee996054d94a98ff44"
+    },
+    {
+      "path": "stage.py",
+      "bytes": 1490,
+      "sha256": "0148db0ac5eddfcc2eb04ad62728a345d3c4efa783fa34b58fbab1eca4abaa0d"
+    }
+  ],
+  "remoteChecksumsMatched": true,
+  "scope": "One isolated loopback Chromium text smoke. No model, companion, public-origin or owner-browser operation."
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "swampwiki-text-smoke",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Swampland text home has 15 choices and no all-physics or graphical navigation",
+      "passed": true,
+      "readyMilliseconds": 501.1
+    },
+    {
+      "name": "A visible recorded direction opens its exact scientific destination",
+      "passed": true,
+      "destinationId": "q025-candidate-region:ec6e08226449cb148b80a2d2",
+      "label": "Anomalies, consistency and six-dimensional theory structure"
+    },
+    {
+      "name": "Title/alias search opens a scientific result",
+      "passed": true,
+      "query": "linear cosmology",
+      "labels": [
+        "What do repeated KK decays do to linear structure?",
+        "Can background cosmology, CMB anisotropies, and linear structure growth distinguish conformal from disformal dark-sector couplings? The paper also asks whether a disformal term can suppress otherwise large conformal interactions and whether negative disformal factors cause instabilities.",
+        "What foundational, mathematical, physical, and quantum problems remain open in theoretical cosmology, particularly concerning cosmological assumptions, inflation, nonlinear structure, averaging, singularities, and quantum gravity?",
+        "Conditional quantum-gravity constraints and cosmology",
+        "Validity and decay of nonlinear uplift theories",
+        "Particle-physics and cosmological implications",
+        "Phenomenology and rolling dark energy",
+        "N=4 EFT constraints and conditional Veneziano selection",
+        "Quantum cosmology, holography and observables",
+        "Thermal axionic hybrid \u03b1-attractors",
+        "Thermal evolution of stabilized moduli",
+        "Constraints on moduli geometry, EFTs and cosmology",
+        "Reheating and post-inflationary expansion",
+        "Mediation, soft spectra and hidden\u2013visible transmission",
+        "TCC tests and reinterpretations in holographic cosmology"
+      ],
+      "selected": "q-kk-decay-linear-cosmology"
+    },
+    {
+      "name": "Source scope and provenance remain readable",
+      "passed": true,
+      "sourceScopeText": "Source scope & provenance\n\nExtracted source description, not a direct quotation or independently verified result.\n\nSource ID: unit:be7aae21bb2419d0869faff0e2d1c1e653b0e8e75d40ce2e657fb8fb7495284a\n\nSource records: record:ec86f5549e75429659c6039ac85af20a"
+    },
+    {
+      "name": "Compact URL reopens the same destination and state without upload",
+      "passed": true,
+      "url": "http://127.0.0.1:4319/#atlas=swampwiki&version=2026-11-18-text-v1&destination=q-kk-decay-linear-cosmology&lens=combined&intent=explore&relation=either",
+      "stateId": "state-f74f42c0cd590138"
+    },
+    {
+      "name": "Back restores the previous destination; New path restores the Swampland entrance",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no horizontal document overflow",
+      "passed": true,
+      "viewport": 390
+    }
+  ],
+  "pageErrors": [],
+  "scope": "Isolated Slurm Chromium on loopback HTTP, not swampwiki.com or owner browser.",
+  "browserVersion": "145.0.7632.6",
+  "phase": "complete"
+}

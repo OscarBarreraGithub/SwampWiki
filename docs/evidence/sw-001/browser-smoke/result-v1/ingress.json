@@ -1,0 +1,20 @@
+{
+  "commit": "8c271edbca01864fda09dc3b75b7f8d34dbccd57",
+  "verifiedGitFiles": 10420,
+  "deltaSha256": "5f8ea4e40f02d37f2048b160124027d03ca1c124b460cb880ee399b29b84f9a0",
+  "reusedAcceptedIngress": {
+    "kind": "final-qa-ingress",
+    "manifestSha256": "15b2dc99f216462e7d0deaec9f16b4de416cf0a291c76bcda6b973cd3b4ff3cb",
+    "project": "/tmp/swampwiki-61891140-CLXFyz/project",
+    "verifiedFileCount": 10366,
+    "verifiedBytes": 778649627,
+    "sourceArchiveSha256": [
+      "fec0f908ec2d29c3fe1e97f719553799011160503741549d8d0df8e605e2f78c",
+      "0e1a8793f569a4c6ef5a9d2f8e2a5b4adee005cfd162a3dab1d263dc213dd4b1",
+      "1056d58be00df2a3e71a05f6aa12cea00059aa1c55e0f1f634a1fe2d6fd4e347"
+    ],
+    "externalAssetsVerifiedWhileCopied": 6735,
+    "policy": "Complete frozen source accounting; unresolved zero-semantic-mass facets remain allowed with explicit reasons. Scientific containment and access reachability are separate."
+  },
+  "sourcePolicy": "Immutable prior source archives reused; every resulting file matches the sealed SwampWiki Git tree."
+}

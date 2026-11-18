@@ -1,0 +1,79 @@
+{
+  "kind": "swampwiki-browser-smoke-capture",
+  "commit": "8c271edbca01864fda09dc3b75b7f8d34dbccd57",
+  "jobId": "61891140",
+  "passed": true,
+  "checks": 7,
+  "pageErrors": 0,
+  "scope": "Isolated rendered loopback HTTP only; no deployment/public-origin/owner-browser/model test.",
+  "captureArchiveSha256": "0f7ae00914cd3a0e2b65f1cd1a80e97581fb4f85299c4173772f690b1551ec52",
+  "files": [
+    {
+      "path": "browser/home-desktop.png",
+      "bytes": 152821,
+      "sha256": "7cdaf57c578c16e2bef0d0e3fed8dcc82cc874a70eeb41eae4d1ed1af0f02dd6"
+    },
+    {
+      "path": "browser/home-mobile.png",
+      "bytes": 109362,
+      "sha256": "626f324ae8fd5ac296e6bc42bfc3a615211a738be1efea0f3033276924bb9e85"
+    },
+    {
+      "path": "browser/report.json",
+      "bytes": 3165,
+      "sha256": "8e967ec1a615b3ea8758ac6e37718eaff89ad9e43b5b158aede0e41eb01320fb"
+    },
+    {
+      "path": "browser/source-desktop.png",
+      "bytes": 403006,
+      "sha256": "3f1530628cdca4c648d3c2cdecf203d6f33507e0dca769a9b9cf8fdcbee827d5"
+    },
+    {
+      "path": "browser.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build.log",
+      "bytes": 192,
+      "sha256": "541027f5a115b32be8800d84157e65a17a9871915c7a83018d7c8767cea52562"
+    },
+    {
+      "path": "ingress.json",
+      "bytes": 1062,
+      "sha256": "36ce3da29b8aee10f91c27747e87aaf3976d5d8a10481b9aafae48c2faf1516c"
+    },
+    {
+      "path": "job-exit.txt",
+      "bytes": 26,
+      "sha256": "133a0c8cf856d067aded8426d901fb7eea1fe3c70d60908250696291d7aef3ff"
+    },
+    {
+      "path": "job.json",
+      "bytes": 1415,
+      "sha256": "49ac0e737a7ec1490ec9f109c57c166c5ffadfe5179aad53d43ec1a5fefdea62"
+    },
+    {
+      "path": "slurm-61891140.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "slurm-61891140.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "slurm-accounting.txt",
+      "bytes": 33,
+      "sha256": "1d868af8e16d0c7f31f18dc39f3f00bc0ee7448b1f4d363ececad8f834ab22c5"
+    }
+  ],
+  "jobCompletion": {
+    "state": "COMPLETED",
+    "exitCode": "0:0",
+    "elapsed": "00:00:36",
+    "receipt": "slurm-accounting.txt"
+  },
+  "visualReview": "Reviewed home-desktop.png, source-desktop.png and home-mobile.png: readable text navigation and source qualification; no all-physics/graphical entrance or horizontal mobile overflow observed."
+}
