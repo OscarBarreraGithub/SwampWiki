@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFile} from 'node:fs/promises';
+import path from 'node:path';
+import test from 'node:test';
+import {PROJECT_ROOT,createRuntime,loadLocalAtlas} from '../../lib/protocol/runtime.mjs';
+import {atlasId,atlasVersion,entryDestinationId} from '../../lib/swampwiki.mjs';
+import {atlasAddress} from '../../lib/geometry/prepared-atlas.mjs';
+
+test('CLI, search, aliases, shared session history and compact addresses use the focused collection', async () => {
+  const compute=JSON.parse(execFileSync(process.execPath,['bin/navigate.mjs','compute'],{cwd:PROJECT_ROOT,encoding:'utf8'}));
+  assert.equal(compute.view.atlas.selector.destinationId,entryDestinationId);
+  assert.equal(compute.view.directions.length,15);
+  const data=path.join(PROJECT_ROOT,'dist/data');
+  const {atlas,navigator}=await loadLocalAtlas(path.join(data,'atlas',atlasId,atlasVersion),data);
+  const runtime=createRuntime(navigator,atlas.manifest.corpusId);
+  const home=runtime.snapshot();
+  assert.equal(home.view.stateId,compute.view.stateId);
+  const hits=await runtime.search('dark dimension');
+  assert.ok(hits.length);
+  const next=await runtime.action({type:'navigate',selector:hits[0].selector},{expectedRevision:0});
+  assert.deepEqual(next.view.atlas.selector,hits[0].selector);
+  assert.equal(next.view.chart,null);
+  assert.equal(new URL(atlasAddress(next.session.states[next.session.cursor])).origin,'https://swampwiki.com');
+  const afterBack=await runtime.action({type:'back'});
+  assert.equal(afterBack.view.stateId,home.view.stateId);
+  const [former,canonical]=Object.entries(atlas.catalog.destinationAliases)[0];
+  const alias=await runtime.action({type:'navigate',selector:{...home.view.atlas.selector,destinationId:former}});
+  assert.equal(alias.view.atlas.selector.destinationId,canonical);
+  const aliasPage=await readFile(path.join(PROJECT_ROOT,'dist/atlas',atlasId,atlasVersion,former+'.html'),'utf8');
+  assert.ok(aliasPage.includes(encodeURIComponent(canonical)+'.html'));
+  const reset=await runtime.action({type:'reset'});
+  assert.equal(reset.session.states.length,1);
+  assert.equal(reset.view.stateId,home.view.stateId);
+});

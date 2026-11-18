@@ -100,12 +100,12 @@ test('MCP stdio action reaches bridge SSE and origin/session checks reject outsi
   try{
     assert.equal((await fetch(new URL('/api/session',bridge.url))).status,401);
     assert.equal((await fetch(new URL('/api/session',bridge.url),{headers:{Origin:'https://untrusted.example',Authorization:`Bearer ${bridge.token}`}})).status,403);
-    const publicResponse=await fetch(new URL('/api/session',bridge.url),{headers:{Origin:'https://eigenquestions.com',Authorization:`Bearer ${bridge.token}`}});
-    assert.equal(publicResponse.status,200);assert.equal(publicResponse.headers.get('access-control-allow-origin'),'https://eigenquestions.com');
-    const preflight=await fetch(new URL('/api/action',bridge.url),{method:'OPTIONS',headers:{Origin:'https://eigenquestions.com','Access-Control-Request-Private-Network':'true'}});assert.equal(preflight.status,204);assert.equal(preflight.headers.get('access-control-allow-private-network'),'true');
+    const publicResponse=await fetch(new URL('/api/session',bridge.url),{headers:{Origin:'https://swampwiki.com',Authorization:`Bearer ${bridge.token}`}});
+    assert.equal(publicResponse.status,200);assert.equal(publicResponse.headers.get('access-control-allow-origin'),'https://swampwiki.com');
+    const preflight=await fetch(new URL('/api/action',bridge.url),{method:'OPTIONS',headers:{Origin:'https://swampwiki.com','Access-Control-Request-Private-Network':'true'}});assert.equal(preflight.status,204);assert.equal(preflight.headers.get('access-control-allow-private-network'),'true');
     assert.match(preflight.headers.get('access-control-allow-headers'),/If-Match/);
     const events=await fetch(new URL(`/api/events?token=${bridge.token}`,bridge.url));reader=events.body.getReader();await reader.read();
-    const init=await rpc('initialize',{protocolVersion:'2025-06-18',clientInfo:{name:'integration',version:'1'}});assert.equal(init.result.serverInfo.name,'eigenquestions-navigator');
+    const init=await rpc('initialize',{protocolVersion:'2025-06-18',clientInfo:{name:'integration',version:'1'}});assert.equal(init.result.serverInfo.name,'swampwiki-navigator');
     assert.deepEqual((await rpc('tools/list',{})).result.tools.map(tool=>tool.name).sort(),['navigator_state','navigator_search','navigator_evidence','navigator_sources','navigator_connections','navigator_context','navigator_navigate','navigator_export','navigator_import'].sort());
     const response=await rpc('tools/call',{name:'navigator_navigate',arguments:{type:'navigate',query:'KK towers'}});assert.equal(response.result.isError,false);
     let streamText='';while(!streamText.includes('\n\n')){const chunk=await reader.read();streamText+=new TextDecoder().decode(chunk.value);}

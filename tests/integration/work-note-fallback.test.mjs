@@ -14,6 +14,6 @@ test('private note export survives storage quota failure and accepted reading co
     assert.ok(all.some(element=>element.textContent==='More source context is needed for precise topic placement.'));
     assert.ok(all.some(element=>element.textContent==='Two distinct regimes remain unreconciled.'));
     const textarea=all.find(element=>element.tag==='textarea');textarea.value='Private work retained despite quota failure';textarea.handlers.input();all.find(element=>element.textContent==='Export note').click();
-    assert.deepEqual(errors,[]);assert.equal(blobs.length,1);const note=JSON.parse(await blobs[0].text());assert.equal(note.text,textarea.value);assert.deepEqual(note.target,selector);assert.equal(all.find(element=>element.tag==='a').download,'eigenquestions-work-note.json');
+    assert.deepEqual(errors,[]);assert.equal(blobs.length,1);const note=JSON.parse(await blobs[0].text());assert.equal(note.text,textarea.value);assert.deepEqual(note.target,selector);assert.equal(all.find(element=>element.tag==='a').download,'swampwiki-work-note.json');
   }finally{for(const [key,value]of Object.entries(originals)){if(value===undefined)delete globalThis[key];else globalThis[key]=value;}URL.createObjectURL=create;URL.revokeObjectURL=revoke;}
 });

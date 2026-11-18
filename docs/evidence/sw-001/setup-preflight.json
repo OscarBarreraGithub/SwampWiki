@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-18T18:49:48.398830+00:00",
+  "domain": "swampwiki.com",
+  "publicDns": {
+    "NS": [
+      "dns1.registrar-servers.com.",
+      "dns2.registrar-servers.com."
+    ],
+    "A": [
+      "192.64.119.132"
+    ],
+    "AAAA": [],
+    "MX": [
+      "10 eforward2.registrar-servers.com.",
+      "10 eforward3.registrar-servers.com.",
+      "15 eforward4.registrar-servers.com.",
+      "20 eforward5.registrar-servers.com.",
+      "10 eforward1.registrar-servers.com."
+    ],
+    "TXT": [
+      "\"v=spf1 include:spf.efwd.registrar-servers.com ~all\""
+    ],
+    "DS": [],
+    "www_CNAME": [
+      "parkingpage.namecheap.com."
+    ]
+  },
+  "cloudflareLookup": {
+    "status": "blocked_before_account_data",
+    "message": "MCP tool call requires approval, but approval policy is never",
+    "attempted": "Read account list and exact domain zone",
+    "alternativeAccessAttempted": false
+  },
+  "github": {
+    "repository": "OscarBarreraGithub/SwampWiki",
+    "visibility": "public",
+    "created": true,
+    "adminAccessVerified": true,
+    "deployGateVariable": "CLOUDFLARE_DEPLOY_ENABLED",
+    "deployGateValue": "false",
+    "deploySecretsConfigured": false
+  },
+  "scope": "Public DNS preflight only, not a complete registrar DNS export. No Cloudflare or registrar changes performed."
+}

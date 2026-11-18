@@ -1,16 +1,14 @@
-name: Deploy to Cloudflare Workers
+name: Check and deploy SwampWiki
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  deploy:
+  check-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write
 
     steps:
       - uses: actions/checkout@v4
@@ -23,20 +21,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate the explorer and bounded stored-view service
+      - name: Validate the Swampland text navigator
         run: |
           npm run build
           npm test
           npm run check:site
 
-      - name: Deploy the explorer to the existing domain
+      - name: Report skipped deployment
+        if: ${{ always() && vars.CLOUDFLARE_DEPLOY_ENABLED != 'true' }}
+        run: echo 'Cloudflare deployment skipped. Set CLOUDFLARE_DEPLOY_ENABLED to true after domain and credential setup.' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy SwampWiki
+        if: ${{ vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          ENABLE_STORED_VIEWS: ${{ vars.ENABLE_STORED_VIEWS }}
         run: |
-          if [ "$ENABLE_STORED_VIEWS" = "true" ]; then
-            npx wrangler deploy --config wrangler.views.toml
-          else
-            npx wrangler deploy --config wrangler.toml
-          fi
+          : "${CLOUDFLARE_API_TOKEN:?Missing SwampWiki repository secret CLOUDFLARE_API_TOKEN}"
+          : "${CLOUDFLARE_ACCOUNT_ID:?Missing SwampWiki repository secret CLOUDFLARE_ACCOUNT_ID}"
+          ./node_modules/.bin/wrangler deploy --config wrangler.toml

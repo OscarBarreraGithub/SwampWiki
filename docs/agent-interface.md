@@ -1,379 +1,53 @@
-# Agent interface
+# SwampWiki agent interface
 
-The external agent interprets conversation. Prepared navigation selects a recorded,
-versioned scientific destination; native exploration selects source facets and runs
-graph/vector geometry. Both use the same session transitions and accepted browser
-controller. The static website does not run a language model.
+Read the collection entrance and follow its links in a regular HTTP client. Each destination has an HTML page with its scope, assumptions, methods, sources and typed connections. The discovery index identifies the current atlas ID, version and entrance. Use SwampWiki to orient independent research and check the original papers.
 
-## Prepared destinations
+[Text archive](/atlas/index.html) · [Discovery index](/data/atlas/index.json) · [Portable skill](/skills/physics-navigator/SKILL.md)
 
-Read `/data/atlas/index.json` for installed atlas versions and entry destinations.
-Each `/data/atlas/ATLAS/VERSION/manifest.json` pins the catalog. Small readable
-pages at `/atlas/ATLAS/VERSION/DESTINATION.html` expose definitions, qualifications,
-representative sources and typed connections without JavaScript or installation.
-A lazy package reads only the selected definition and bounded representatives at
-first. Direct fine-ID links use a small lookup bucket; global title search loads a
-separate index. Full source paging and filters read complete memberships before
-returning results, with exact totals and no silent sample filtering.
-Title/alias lookup is lexical discovery. It does not interpret arbitrary paragraphs
-or establish scientific equivalence. Read the scope and sources before accepting
-a destination; retain changed hypotheses as a distinct question or explicit gap.
+## Browser
+
+The browser exposes the shared controller as `window.swampwikiNavigator`. The compatible name `window.eigenquestionsNavigator` addresses the same object. Read-only calls preserve the open path.
 
 ```js
-const graph = window.eigenquestionsNavigator;
-const parent = await graph.ready(); // capture before interpretation/computation
-const selector = {kind: 'atlas-destination', atlasId, atlasVersion, destinationId};
-const definition = await graph.describe(selector);
-const prepared = await graph.orient(originalQuestion, {selector, lens: 'combined'});
-// Inspect definitions, sources and constraints; continue independent research.
-graph.apply(prepared, {expectedRevision: parent.revision});
-// Or follow an explicit reviewed selector in the current prepared path:
-// await graph.navigate({type:'navigate', selector}, {expectedRevision:parent.revision});
-```
-
-`lookup(query, selector)` returns title/alias matches without changing the page.
-`describe(selector)` reads the full destination definition; `connections(selector,{offset,limit})`
-reads typed incident relations, preserving their actual direction.
-`sources(selector,{offset,limit,lens,intent,workRelation,constraints})` pages through
-recorded membership and fetches checksum-verified source metadata/excerpts without
-loading embeddings. Full membership may be much larger than a displayed capsule.
-Same-paper method associations are counted separately from primary membership and excluded from complete-containment checks. Method/derive perspectives expose them as context only; explicit `includeContext:true` includes them in source paging, with `primaryTotal` and `contextTotal`. They retain evidence role and are excluded by USING filters. Missing filter metadata is an explicit error. Context witnesses are labeled apart
-from matching sources; recent refers only to recorded years in the frozen corpus.
-
-A destination may also expose `sourceContributions` in its full definition:
-reviewed roles such as addresses, example, method, boundary or comparison, with
-exact source IDs, evidence refs, reading basis, scope hash and decision ID. These
-are distinct from source membership and do not establish question equivalence or
-method applicability. Static pages retain all roles; the browser expands them in
-bounded pages grouped by paper.
-
-`context(unitId, selector, options)` reads one bounded page from the checksummed source-context shard. The default is 20 objects; set `section` to `objects`, `relations`, `evidence` or `assessments`, `offset` to the returned `page.nextOffset`, and `limit` up to 40. Optional `scope`, `kinds` and exact `objectIds` narrow the page. Unfiltered totals, filtered totals, returned count and omitted-context notice remain explicit. Relations include exact endpoint references even when their full text is outside the object page; request those IDs in the objects section. Always inspect applicable withheld/nonpositive assessments: their full `readerNote` is retained. A 256 KiB record budget may end a page before its requested count; continue at the explicit next offset. Direct substantive source relations are presented before structural containment or mentions; structural records remain available through continuation pages with their original status. Browser disclosures use the complete underlying reader and build their DOM progressively.
-It preserves exact scientific object endpoints, semantic status, premises,
-convention dictionaries and evidence namespaces. Direct source relations,
-shared-extraction context and same-paper context are visibly distinct; a source
-relation is never promoted to a claim about an entire destination. Missing exported
-context reports its coverage limit, not absence of assumptions or methods.
-
-Exact reviewed endpoint inspection uses the same controller. A relations page may
-include `sourceRoutes.items[].endpoints[].choices[].action`. Each action names an
-exact reviewed relation, its origin source unit, an endpoint object and a frozen
-method unit. Submit it through `navigator_navigate` (with `expectedRevision`) or
-browser `navigate(action,{expectedRevision})`. The CLI equivalent is:
-
-```sh
-node bin/navigate.mjs inspect-source --origin ORIGIN_UNIT \
-  --source-relation RELATION_ID --object OBJECT_ID --unit METHOD_UNIT \
-  --expected-revision CAPTURED_REVISION
-```
-
-The resulting `state.sourceInspection` and `view.atlas.sourceInspection` preserve
-the physical destination selector, query, membership, source counts and perspective.
-Only the view/history focus changes. Original relation direction, status, complete
-premises and reader notes remain attached. Following toward a source endpoint does
-not assert a converse. The checksummed endpoint map is loaded only when inspecting
-source context; it matches exact source-node IDs and verifies frozen method text.
-Unmapped endpoints have no follow action—there is no same-paper fallback.
-`close-source` clears the focus; Back/replay/import restore it. Export the full
-capsule to share an inspection; a compact destination link has no source focus.
-
-The optional source-context index uses exact unit-hash prefix buckets. Opening one source reads the small index, its checksummed bucket and one checksummed paper shard; it does not load the complete scientific graph. Method/source attachment overrides use exact source IDs and numbered extraction windows only. Whole-paper first-pass context is separately labeled, and missing requested anchors remain explicit. The reader preserves optional plain source locators and the exact compressed-file descriptor. Static `.json.gz` files are hashed as stored bytes and decoded explicitly; they must not be served with a `Content-Encoding: gzip` transformation.
-
-The local bridge/MCP exposes the same read-only operations as `navigator_sources`,
-`navigator_connections` and `navigator_context`; CLI equivalents are `sources`,
-`connections` and `context --id UNIT_ID --section objects --offset 0 --limit 20`. Start a prepared companion with
-`node bin/navigate.mjs serve --atlas data/atlas/ID/VERSION`.
-
-The selector's atlas/version/destination and explicit perspective define the
-prepared state. Route history and original prose do not create different question
-IDs. Navigate by exact IDs, never by a label re-search. The same destination exposes
-the same incident graph from any route; narrower, method, application, scientific
-relation and geometric affinity have distinct meanings. A metadata-only field is
-a vocabulary landmark, not evidence of a complete physics corpus.
-
-Compact `/#atlas=ID&version=VERSION&destination=ID&lens=...&intent=...&relation=...`
-addresses need no upload. Unsupported filter addresses require a full capsule.
-Local work notes attach to stable selectors and export separately; they are never
-included automatically in copied destination links or published views. Switching
-between native and prepared computations is explicit and retains the old path as
-a local branch. Old native v1 sessions keep their original IDs and computation.
-
-## Use the physics graph from Eigenquestions
-
-Open [eigenquestions.com](https://eigenquestions.com/) and read this interface.
-The graph is an optional source of orientation. **Always supplement it with
-independent research and native reasoning**; its frozen, Swampland-centered
-collection must not limit the questions, sources or conclusions you consider.
-A short orientation should usually take one query and inspection of a few source
-IDs. Expand only when it helps the user's task.
-
-A bare homepage opens the installed all-physics entrance when one is configured,
-or a neutral native path in older installations, even when prior browser data exists.
-Use **Resume last view** or **Reconnect agent** explicitly to recover a previous
-exploration/companion. Opening home does not erase the saved view. An explicit
-`#view`, `#focus` or companion token link opens its intended destination. After a
-companion token has been removed from the address bar, reloading the bare page
-requires explicit Reconnect; a saved token is not permission to reconnect silently.
-
-An agent with permission and tools to execute JavaScript in the page can use
-`window.eigenquestionsNavigator`. It shares the human UI's controller and worker;
-there is no second engine, server computation, model backend or required install.
-Use the structured object rather than depending on clicking UI coordinates:
-
-```js
-const graph = window.eigenquestionsNavigator;
-await graph.ready();
-const current = graph.read();
-const orientation = await graph.orient('KK towers as dark matter', {
-  intent: 'phenomenology', lens: 'combined', workRelation: 'either'
-});
-// orientation is a full contextual-view capsule. This did not move the UI,
-// change its history, or replace the human's draft.
-const sources = orientation.snapshot.view.nodes.slice(0, 5);
-// When the task calls for a visible update, retain the original parent revision:
-graph.apply(orientation, {expectedRevision: current.revision});
-```
-
-| Page method | Behavior |
-|---|---|
-| `ready()` | Promise for the first accepted display object; corpus computation may still be unloaded. |
-| `read()` | Copy of `{apiVersion,revision,renderedRevision,busy,mode,capabilities,capsule}`. |
-| `orient(query, options)` | Compute an ephemeral capsule in the same worker; never commit it or alter the draft. Options are canonical state fields except corpus/computation identity. |
-| `evidence(ids)` | Inspect supplied current sources by ID; missing IDs require loading the native corpus. At most 100 IDs. |
-| `apply(capsule,{expectedRevision})` | Validate and display the exact supplied result; replaces the page's active object and detaches a local companion. It does not recompute or silently discard custom groups. |
-| `navigate(action,{expectedRevision})` | Commit a native action against the last visible canonical session, retaining existing race guards. Returns the accepted object or rejects on failure/supersession. |
-| `export()` | Copy the complete capsule, including explicit context, groups, source links and continuation information. |
-| `publish(capsule?)` | POST the explicit/current capsule as gzip to storage; returns a receipt only after durable save. Does not move the current path. |
-| `subscribe(callback)` | Observe accepted object changes; returns an unsubscribe function. |
-
-`revision` belongs to this page controller; it is not a scientific state ID or
-the companion's server revision. Capture it before computing or interpreting the
-result and retain that parent revision. Never read a newer revision merely to
-restamp an older result. A stale
-`apply` rejects with `code: revision_conflict`; inspect `error.current` and
-reconsider the operation instead of retrying blindly. Newer UI intents supersede
-older pending computations. `renderedRevision === revision` acknowledges a past
-render after animation-frame opportunities; it does not prove the tab is visible
-to the human. `ready()` alone is not a render acknowledgement.
-
-## Full contextual views and saved links
-
-The authoritative exchange is the [contextual-view capsule schema](../schemas/contextual-view.schema.json),
-implemented by the [pure validator/codec](../lib/protocol/capsule.mjs). A capsule
-contains `builder`, explicit `context`, `snapshot.view`, optional canonical
-`snapshot.session`, and `continuation`. Group names, overlapping memberships,
-source evidence, typed relationships and order survive import/export exactly.
-An absent projection is valid; geometry is unavailable for that view. An
-`affine-plane` describes a real center and orthonormal basis; `display-layout`
-only describes supplied display positions and makes no geometric claim.
-
-Display, recompute and continue are separate capabilities. Unknown builders can
-be displayed and exported without loading the native corpus. Recompute needs
-the exact supported native builder/version and computation identity. Continue
-needs a compatible canonical session and supported explicit actions. An authored
-group ID is not necessarily a native direction ID: use a resolved `refine`/`pivot`
-query plus genuine source `focusIds`, not `select` of an invented group ID.
-Native continuation consumes the canonical query/anchors/options; preserving
-broader context in the capsule does not make those fields part of the engine's
-math. A new computed result can therefore differ from the author's grouping.
-Do not promise semantic preservation beyond the recorded action.
-
-For a saved link, send the same validated capsule:
-
-```sh
-curl --fail-with-body https://eigenquestions.com/api/views \
-  -H 'Content-Type: application/json' --data-binary @view.json
-# For a larger view, gzip it locally, then use Content-Type: application/gzip.
-# Do not send a Content-Encoding header.
-```
-
-The JSON receipt is `{id,url,readUrl,sha256,bytes,createdAt}` (201 new, 200 identical
-retry). GET `readUrl`, or `/api/views/ID`, returns the exact saved JSON/gzip bytes;
-there is no `Content-Encoding` header, so decode gzip explicitly. Stored bytes
-are limited to 512 KiB and decoded JSON to 2 MiB; the shared codec also limits
-structure, source/group counts, projection dimensions and references. Save links
-are **public and unlisted**: anyone with the link can read them. Keep private
-connection tokens and unrelated conversation data out of capsules.
-
-`/#view=ID` loads the full object directly. A changed hash loads a new object in
-the existing page; stale requests cannot replace a newer route. A URL sent in
-chat does not notify an already-open tab by itself. Opening the link, changing
-that tab's route, or invoking the page object's `apply` is the concrete update.
-Download/Open file and drag-and-drop use the same capsule, including `.json.gz`.
-A full stored/file view renders before any corpus download. Native arbitrary
-queries load and compute on the user's browser only. Storage may be inactive or
-at capacity: preserve the capsule and use a file when saving returns an error;
-see [storage operations and limits](stored-views-operations.md).
-
-## Capability fallback and discovery
-
-An HTTP-only agent can read these instructions, the [corpus manifest](../data/navigation/manifest.json),
-linked paper metadata/source descriptions, and existing saved capsules. It can
-upload a valid authored capsule built from its own source-based work. HTTP access
-alone cannot execute the browser worker, compute an arbitrary native query, or
-mutate another person's browser session. State that boundary; do not substitute
-fabricated coordinates or imply a stored authored view is native computation.
-Use source links for independent research, and offer a saved view/file where
-helpful. The [discovery file](../llms.txt), robots and sitemap help find documents;
-they confer no tool capability or permission. The page object is not an MCP
-server or a claim of universal browser-agent integration.
-
-## Optional local companion and MCP
-
-Requirements: this repository, its frozen `data/navigation/` corpus, and Node 22
-or newer. From the repository root:
-
-```sh
-npm run build
-node bin/navigate.mjs serve --port 4317 --connection /tmp/eigenquestions-session.json
-```
-
-Keep that process running. It prints two browser links: a loopback link to the
-same static renderer, and an `eigenquestions.com` link with bridge attachment data
-in its fragment. Open the local link for the robust same-origin path. Public
-HTTPS → loopback access depends on browser policy and permission; a server CORS
-allowlist cannot override those policies. Use the Connect button to request attachment. A supporting browser may ask for
-permission to connect to apps on this device; allow that site permission for
-Eigenquestions if you want the connection. If blocked, change the site permission
-or open the printed local link. Compact destination URLs remain independently
-usable. Session tokens are local access secrets and do not belong in
-papers, exported sessions, Git, or shared screenshots.
-
-Before interpreting a requested visible change, read `state` and retain its
-`revision`. Every mutation below must use that captured value through
-`--expected-revision CAPTURED_REVISION`; with MCP supply `expectedRevision` on
-`navigator_navigate` or `navigator_import`. Zero is valid. A conflict leaves the
-newer state intact and returns it with `code: revision_conflict`. Retain the
-proposed action or import file; reconsider it instead of retrying with a newly
-read revision. Omitting the option retains legacy unguarded behavior.
-
-In another terminal, agent operations immediately update attached browsers:
-
-```sh
-node bin/navigate.mjs navigate --query 'KK towers' --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs refine --query 'KK towers as dark matter' --intent phenomenology --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs refine --query 'How do those dark matter gravitons decay?' --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs state --connection /tmp/eigenquestions-session.json
-```
-
-Each result exposes resolved state, history, the first 12 ranked source candidates,
-evidence IDs, directions, geometric diagnostics and warnings. `--full` returns
-all points, provenance and the full chart basis/center. A subsequent `state` call
-reports `browserStatus.acknowledgedCurrent` once an attached browser has rendered
-that exact revision; a successful action alone does not prove a render. `search`
-and `evidence` inspect without navigation. CLI/MCP search limits are 1–30. Use
-small search limits and bounded source/context pages to avoid truncated tool output:
-
-```sh
-node bin/navigate.mjs search --query 'KK towers' --intent recent --relation using --connection /tmp/eigenquestions-session.json
-node bin/navigate.mjs evidence --ids 'unit:ID_FROM_SEARCH' --connection /tmp/eigenquestions-session.json
-node bin/navigate.mjs select --direction 'direction:ID_FROM_CURRENT_VIEW' --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs back --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs replay --index 1 --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-node bin/navigate.mjs export --out navigation-session.json --connection /tmp/eigenquestions-session.json
-node bin/navigate.mjs import --file navigation-session.json --connection /tmp/eigenquestions-session.json --expected-revision CAPTURED_REVISION
-```
-
-Commands without `--connection` use the connection file printed by `serve` when
-started without that option. Use the same explicit file for all commands when
-running multiple sessions. `node bin/navigate.mjs help` lists flags. For local
-artifact-only use, `compute --query 'KK towers' --out snapshot.json` emits a full
-deterministic snapshot; it does not claim to update an unattached browser. An
-exported session is portable to the static site's import control and recomputes
-against the matching corpus. The bridge's local HTML is the live view artifact.
-
-## MCP adapter
-
-Any MCP client supporting local stdio servers can launch this configuration;
-replace the paths with this checkout and its connection file:
-
-```json
-{
-  "mcpServers": {
-    "eigenquestions": {
-      "command": "node",
-      "args": ["/absolute/path/Eigenquestions/bin/mcp-navigator.mjs", "--connection", "/tmp/eigenquestions-session.json"]
-    }
-  }
+const nav = window.swampwikiNavigator;
+const parent = await nav.ready();
+const hits = await nav.lookup('dark dimension');
+const candidate = hits[0]?.selector;
+if (candidate) {
+  const question = await nav.describe(candidate);
+  const sources = await nav.sources(candidate, {limit: 10});
+  const links = await nav.connections(candidate);
+  // Check the question's scope and sources before choosing a destination.
 }
 ```
 
-Start the bridge first. Tools are `navigator_state`, `navigator_search`,
-`navigator_evidence`, `navigator_navigate`, `navigator_export` and
-`navigator_import`. The navigation tool accepts the action object in the
-[shared contract](navigation-contract.md). It talks to the existing bridge, so
-MCP and CLI operations update the same browser and history. The adapter follows
-the [MCP newline-delimited stdio transport](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
-and [tools protocol](https://modelcontextprotocol.io/specification/2025-06-18/server/tools).
-The browser SSE API is an internal bridge transport, not an MCP HTTP endpoint.
+Capture the revision before interpreting the user's request. When they want a visible change, call `nav.navigate({type:'navigate', selector:candidate}, {expectedRevision:parent.revision})`. A revision conflict asks the agent to reconsider the proposed action in the new context. Confirm the change by checking that `nav.read().renderedRevision === nav.read().revision` and that the selector matches the intended record.
 
-The skill at [`skills/physics-navigator/SKILL.md`](../skills/physics-navigator/SKILL.md)
-can be copied to the agent's skill directory or loaded directly. The browser route needs no skill installation. The optional local companion needs
-this checkout, Node and its corpus; installing the skill alone supplies none of
-those capabilities.
+Use `nav.sources(selector,{collection:'contributions'})` for reviewed roles and qualifications. Use `nav.connections(selector,{relationId,includeProof:true})` for a full relation record. Page context with `nav.context(unitId,selector,{section:'relations',offset:0,limit:20})`. An exact endpoint in `sourceRoutes` has a ready-to-use action for source inspection. Back, replay and close-source preserve the distinction between a question and the inspected source object.
 
-## Intent and context
+## Local CLI and MCP
 
-Use `derive` for mechanism/mathematics, `phenomenology` for consequences or tests,
-and `recent` with independent `workRelation: on|using|either`. ON/USING is a
-retrieval classification inferred from question/method facets, not a certified
-classification of every paper. It is exposed per source, including ambiguous
-neighbors. “Recent” means recent within the frozen manifest date.
+Clone the SwampWiki repository and use Node 22 or later. Build the distribution and start the companion.
 
-`refine` refreshes source anchors from the current chart, preserving evolving
-context through pronouns without concatenating all ancestor queries. Prefer a
-self-contained resolved query in agent calls. Supply `focusIds` for precise
-source anchors; use `pivot` for a new topic and `broaden` to release anchors and
-exclusions. These operations use the actual computed source neighborhood rather than a fixed
-tree. Native selection of an exactly matching active-prefix state returns to that
-step without inventing another level; its source remains a valid offered choice.
-The check uses the full normalized state and never removes evidence merely to
-force novelty. Old exported histories remain intact. Short visible labels are
-presentation excerpts only: use `capsule.context.question`, canonical state,
-full direction queries and evidence for reasoning. Native row Method/Question
-labels describe the representative source facet; they do not certify a newly
-synthesized question cluster.
+```sh
+npm ci
+npm run build
+node bin/navigate.mjs serve
+```
 
-## Tested behavior and limits
+Open the local URL that the companion prints. The session token in this URL controls the local session. Keep it private. To attach the public site, use the printed public URL and allow the browser’s loopback connection if prompted. The local link works on the companion’s own origin.
 
-`node --test tests/integration/navigation.test.mjs` exercises the owner journey
-with a deeper decay question, distinct derivation/phenomenology and recent
-ON/USING views, a held-out black-hole journey, back/replay/import, empty and
-unsupported queries, another corpus fixture, and actual MCP → bridge → SSE.
-HTTP tests verify exact allowed origins, authentication and private-network
-preflight. They do **not** establish browser permission behavior; browser results
-are tracked separately in the acceptance evidence. The earlier Q-001 authorized Chromium
-run on 2026-11-06 passed **19 actual-browser checks**: MCP-driven owner/held-out
-journeys and render acknowledgements; mobile readability and real marker clicks;
-public-site computation, changed ON/USING evidence, selection/back/export/import/
-reload; non-overlapping desktop labels; and recovery after blocked attachment.
+```sh
+node bin/navigate.mjs state
+node bin/navigate.mjs search --query "dark dimension"
+node bin/navigate.mjs connections --destination DESTINATION_ID
+node bin/navigate.mjs sources --destination DESTINATION_ID --limit 10
+node bin/navigate.mjs navigate --destination DESTINATION_ID --expected-revision N
+node bin/navigate.mjs state
+```
 
-The permission boundary is observed, not hypothetical. Headless Chromium
-145.0.7632.6 reported that permission was denied to access the loopback address
-space. Its permission states remained `prompt`, no CSP was present, and the test
-granted no permissions or security exceptions. A fresh public launch link then
-recovered to **Browser session**, computed five directions and showed the local
-companion guidance when agent details were opened; it never claimed an agent
-connection. Chrome documents this [Local Network Access permission boundary](https://developer.chrome.com/docs/modern-web-guidance/guides/security/local-network-access).
-Successful public attachment after a permission grant was not tested. Use the
-printed same-origin local link for the verified live-update path; the public
-site remains independently usable without the bridge.
+Replace the destination and revision placeholders with a reviewed search result and the revision observed before choosing it. The companion reports `browserStatus.acknowledgedCurrent` after an attached browser renders the exact state. For an offline snapshot, run `node bin/navigate.mjs compute --destination DESTINATION_ID`. Omitting the destination opens the collection entrance.
 
-The v1 corpus is Swampland-centered. Query anchors are retrieved source vectors;
-no new query embedding is invented. The primary 2D view fits five dynamic direction
-means, with source vectors overlaid in the same plane. Group and source variance,
-residuals and within-group spread are reported separately: high group fidelity
-does not mean all source variation is preserved. Adjacency is retrieval
-affinity or same-paper incidence, not a theorem or physical causal link. An
-independent agent completed an eight-step axion journey but observed drift after
-selecting a long method description; explicit application wording and source
-anchors recovered it. Read competing sources' roles before treating a direction
-as a continuation of the same physical application. Session
-state is process-local until exported; restarting the bridge creates a fresh
-token and requires reattachment. Export before stopping to retain navigation.
+For MCP, configure a stdio server running `node /absolute/path/to/SwampWiki/bin/mcp-navigator.mjs` while the companion runs. A custom connection file must be passed to both processes with `--connection FILE`. Use `navigator_state`, `navigator_search`, `navigator_sources`, `navigator_connections`, `navigator_evidence` and `navigator_context` for inspection. Use `navigator_navigate` with the observed revision for an authorized update.
 
-The Q-003/Q-004 browser API, stored-capsule and startup changes have separate
-acceptance coverage in `tests/integration/stored_views_browser_acceptance.py`;
-current implementation and Node checks must not be mistaken for completed
-public deployment or browser acceptance. Release evidence records those results.
-
-Typed contributions are also available through the existing source reader: `navigator_sources({destinationId, collection:"contributions", offset:0, limit:20})`, CLI `sources --destination ID --collection contributions`, or browser `sources(selector,{collection:"contributions"})`. Each page returns its exact role, reading basis, qualification, review/evidence references and hydrated excerpt. The default collection remains `membership`; membership filters such as USING cannot be combined with contributions. These reads do not change the session.
+[Repository](https://github.com/OscarBarreraGithub/SwampWiki) · [Controller reference](/skills/physics-navigator/references/interface.md)

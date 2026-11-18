@@ -10,13 +10,13 @@ import {gzipSync} from 'node:zlib';
 test('plain atlas pages resolve bucketed source locators and link optional compressed detail',async()=>{
   const root=await mkdtemp(path.join(tmpdir(),'eigenquestions-static-atlas-'));
   try{
-    const unitId='unit:ab'+'0'.repeat(62),directory=path.join(root,'data/atlas/fixture/v1');
+    const unitId='unit:ab'+'0'.repeat(62),directory=path.join(root,'dist/data/atlas/fixture/v1');
     await mkdir(directory,{recursive:true});await mkdir(path.join(root,'scripts'));await mkdir(path.join(root,'web'));await mkdir(path.join(root,'research'));
     await writeFile(path.join(root,'research/private-note.txt'),'Must not be a site asset');await writeFile(path.join(root,'web/index.html'),'<p>Public explorer</p>');
-    await copyFile(new URL('../../scripts/build-site.mjs',import.meta.url),path.join(root,'scripts/build-site.mjs'));
+    await copyFile(new URL('../../scripts/render-atlas-pages.mjs',import.meta.url),path.join(root,'scripts/render-atlas-pages.mjs'));
     await cp(new URL('../../lib',import.meta.url),path.join(root,'lib'),{recursive:true});
     const json=async(filename,value)=>{const body=JSON.stringify(value);await writeFile(path.join(directory,filename),body);return{path:filename,bytes:Buffer.byteLength(body),sha256:createHash('sha256').update(body).digest('hex')};};
-    await writeFile(path.join(root,'data/atlas/index.json'),JSON.stringify({schemaVersion:'1.0.0',atlases:[{atlasId:'fixture',atlasVersion:'v1',entryDestinationId:'question',title:'Synthetic discovery fixture'}]}));
+    await writeFile(path.join(root,'dist/data/atlas/index.json'),JSON.stringify({schemaVersion:'1.0.0',atlases:[{atlasId:'fixture',atlasVersion:'v1',entryDestinationId:'question',title:'Synthetic discovery fixture'}]}));
     const catalog={destinations:[{id:'question',kind:'question',title:'A scoped question',question:'What defines this test?',summary:'Synthetic only.',scope:{assumptions:['Test fixture']},evidenceIds:[unitId],scientificStatus:'test',placementStatus:'test',provenance:{test:true},methods:['A recorded method']}],sources:[{id:unitId,paperId:'paper',title:'Synthetic paper',sourceUrl:'https://example.org/paper',evidence:{text:'A sourced description'}}],memberships:[],relations:[]};
     catalog.destinations[0].scope.assumptions.push('Historical workflow note.');catalog.destinations[0].scopeContentSha256='e'.repeat(64);catalog.destinations[0].displayEditorial={schemaVersion:'1.0.0',kind:'presentation-only',scopeContentSha256:'e'.repeat(64),origin:{artifactPath:'research/component.json',artifactSha256:'d'.repeat(64),recordPointer:'/destinations/0'},relocations:[{path:'/scope/assumptions/1',originalText:'Historical workflow note.',category:'workflow',reason:'This records workflow, not a premise.'}],summary:{text:'Readable synthetic summary.',originalText:'Synthetic only.',reason:'Display-only test.'}};
     const comparisonId='unit:ac'+'0'.repeat(62);catalog.sources.push({...catalog.sources[0],id:comparisonId,evidence:{text:'A comparison description, not an additional primary member.'}});
@@ -39,7 +39,7 @@ test('plain atlas pages resolve bucketed source locators and link optional compr
     const contextFile=await json('context-index.json',{unitIndex:{kind:'unit-hash-prefix',prefixLength:2,shards:{ab:bucket,ac:comparisonBucket}}});
     const unrepresentedFile=await json('unrepresented-papers.json',[{id:'withdrawn-stub',title:'Unavailable source',sourceUrl:'https://example.org/stub',sourceSha256:null,sourceNotice:'No source text available.',scientificStatus:'withdrawn',reason:'Bibliographic record only.'}]);
     await json('manifest.json',{schemaVersion:'1.0.0',kind:'eigenquestions-atlas',atlasId:'fixture',atlasVersion:'v1',corpusId:'fixture-corpus',corpusContentHash:'a'.repeat(64),entryDestinationId:'question',scope:{description:'Synthetic test'},files:{catalog:{path:'catalog.json',sha256:createHash('sha256').update(JSON.stringify(catalog)).digest('hex')},sourceContextIndex:contextFile,unrepresentedPapers:unrepresentedFile}});
-    execFileSync(process.execPath,['scripts/build-site.mjs'],{cwd:root,stdio:'pipe'});
+    execFileSync(process.execPath,['--input-type=module','-e',"import {renderAtlasPages} from './scripts/render-atlas-pages.mjs'; await renderAtlasPages('dist')"],{cwd:root,stdio:'pipe'});
     const html=await readFile(path.join(root,'dist/atlas/fixture/v1/question.html'),'utf8');
     assert.match(html,/A precise topic placement has not been established for this source/);assert.match(html,/Adequate source context, but no complete target scope/);assert.ok(!html.includes('More source context is needed'));
     const relatedHtml=await readFile(path.join(root,'dist/atlas/fixture/v1/related.html'),'utf8');assert.match(relatedHtml,/More source context is needed for precise topic placement/);assert.match(relatedHtml,/Missing extraction context/);
@@ -50,8 +50,8 @@ test('plain atlas pages resolve bucketed source locators and link optional compr
     assert.match(html,/A second exact admitted observation/);assert.match(html,/shared source access/);assert.match(html,/whole scope, independent of source filters/);assert.match(html,/access-proof.json/);assert.match(html,/access-policy.json/);
     const indexHtml=await readFile(path.join(root,'dist/atlas/index.html'),'utf8');assert.match(indexHtml,/Bibliographic records without source text \(1\)/);assert.match(indexHtml,/fixture\/v1\/unrepresented-papers.json/);
     await assert.rejects(readFile(path.join(root,'dist/research/private-note.txt')),/ENOENT/);
-    const accessBytes=await readFile(path.join(directory,'access-proof.json'));await writeFile(path.join(directory,'access-proof.json'),'{}');assert.throws(()=>execFileSync(process.execPath,['scripts/build-site.mjs'],{cwd:root,stdio:'pipe'}),/Command failed/);await writeFile(path.join(directory,'access-proof.json'),accessBytes);
-    await rm(path.join(directory,'unit-index-ab.json'));assert.throws(()=>execFileSync(process.execPath,['scripts/build-site.mjs'],{cwd:root,stdio:'pipe'}),/Command failed/);
-    await rm(path.join(directory,'manifest.json'));assert.throws(()=>execFileSync(process.execPath,['scripts/build-site.mjs'],{cwd:root,stdio:'pipe'}),/Command failed/);
+    const accessBytes=await readFile(path.join(directory,'access-proof.json'));await writeFile(path.join(directory,'access-proof.json'),'{}');assert.throws(()=>execFileSync(process.execPath,['--input-type=module','-e',"import {renderAtlasPages} from './scripts/render-atlas-pages.mjs'; await renderAtlasPages('dist')"],{cwd:root,stdio:'pipe'}),/Command failed/);await writeFile(path.join(directory,'access-proof.json'),accessBytes);
+    await rm(path.join(directory,'unit-index-ab.json'));assert.throws(()=>execFileSync(process.execPath,['--input-type=module','-e',"import {renderAtlasPages} from './scripts/render-atlas-pages.mjs'; await renderAtlasPages('dist')"],{cwd:root,stdio:'pipe'}),/Command failed/);
+    await rm(path.join(directory,'manifest.json'));assert.throws(()=>execFileSync(process.execPath,['--input-type=module','-e',"import {renderAtlasPages} from './scripts/render-atlas-pages.mjs'; await renderAtlasPages('dist')"],{cwd:root,stdio:'pipe'}),/Command failed/);
   }finally{await rm(root,{recursive:true,force:true});}
 });

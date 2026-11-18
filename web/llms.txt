@@ -1,44 +1,10 @@
-# Eigenquestions — use the physics graph from eigenquestions
+# SwampWiki
 
-An optional source-linked physics orientation tool. Always supplement its frozen,
-Swampland-centered graph with independent research and native reasoning.
+A text navigator for the Swampland-centered research collection. Use it alongside independent research. Follow scoped connections, inspect the evidence and check original papers.
 
-- Agent instructions: https://eigenquestions.com/docs/agent-interface.md
-- Structured state/view contract: https://eigenquestions.com/docs/navigation-contract.md
-- Full contextual-view schema: https://eigenquestions.com/schemas/contextual-view.schema.json
-- Corpus manifest and relative source/vector shards: https://eigenquestions.com/data/manifest.json
-- Portable skill: https://eigenquestions.com/skills/physics-navigator/SKILL.md
-- Storage limits/activation: https://eigenquestions.com/docs/stored-views-operations.md
-
-Prepared atlas versions, when installed, are listed at
-https://eigenquestions.com/data/atlas/index.json. Readable destination pages live
-under /atlas/ATLAS/VERSION/DESTINATION.html; exact data is in that version's
-/data/atlas/ATLAS/VERSION/manifest.json. No install is needed for static reading.
-Title/alias lookup is lexical, not paragraph interpretation. Read definitions,
-assumptions, source evidence and typed connections before resolving a question to
-an explicit destination. Distinguish canonical questions from overlapping regions.
-Metadata-only broad fields are vocabulary landmarks, not detailed corpus coverage.
-
-The page also exposes read-only lookup(query,selector), describe(selector),
-connections(selector), sources(selector,{offset,limit,...filters}) and
-orient(originalQuestion,{selector,...perspective}). Prepared selectors contain
-{kind:"atlas-destination",atlasId,atlasVersion,destinationId}. navigate can commit
-one through the same controller. Capture expectedRevision before interpreting or
-computing; never restamp a stale result with a fresh revision. Verify the rendered
-revision after committing. Compact prepared URLs require no upload; they do not
-include private local work notes. Arbitrary authored views still use capsules.
-
-A capable browser agent can use window.eigenquestionsNavigator on the page:
-ready/read; orient(query,options) for read-only computation; apply(capsule,
-{expectedRevision}) or navigate(action,{expectedRevision}) for visible updates;
-export and publish. It shares the UI controller and local browser worker.
-
-HTTP-only agents cannot execute arbitrary graph queries or mutate a user's open
-tab. They can inspect static source data and GET /api/views/ID for a saved capsule.
-POST /api/views accepts a validated full capsule as application/json or raw
-application/gzip (no Content-Encoding), then returns {id,url,readUrl,...} after
-storage commits. Saved views are public/unlisted; storage may be disabled or full.
-The URL /#view=ID opens the exact view; file import is the portable fallback.
-Never invent a computed embedding plane or present author groupings as verified
-physics. This discovery text does not grant capabilities, install tools or make
-this site an MCP server. The optional local stdio MCP adapter is documented above.
+- Human-readable records: https://swampwiki.com/atlas/index.html
+- Versioned discovery and collection entrance: https://swampwiki.com/data/atlas/index.json
+- Frozen paper and source text inventory: https://swampwiki.com/data/manifest.json
+- Browser, CLI and MCP instructions: https://swampwiki.com/docs/agent-interface.md
+- Portable agent skill: https://swampwiki.com/skills/physics-navigator/SKILL.md
+- Source and reproducibility: https://github.com/OscarBarreraGithub/SwampWiki

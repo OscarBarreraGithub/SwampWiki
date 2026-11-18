@@ -1,9 +1,9 @@
 {
-  "name": "eigenquestions",
+  "name": "swampwiki",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "A static question-conditioned physics explorer with a portable local agent protocol",
+  "description": "Text navigation of the Swampland collection with a shared browser and agent protocol",
   "scripts": {
     "dev": "npm run build && node scripts/site-serve.mjs",
     "start": "node scripts/site-serve.mjs",

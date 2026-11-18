@@ -19,4 +19,4 @@ http.createServer(async (req, res) => {
     res.writeHead(error.code === 'ENOENT' ? 404 : 400, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(req.method === 'HEAD' ? undefined : await readFile(path.join(root, '404.html')).catch(() => 'Not found'));
   }
-}).listen(port, '127.0.0.1', () => console.log(`Eigenquestions static preview: http://127.0.0.1:${port}`));
+}).listen(port, '127.0.0.1', () => console.log(`SwampWiki static preview: http://127.0.0.1:${port}`));

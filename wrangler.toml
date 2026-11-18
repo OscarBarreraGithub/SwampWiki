@@ -1,18 +1,25 @@
-name = "eigenquestions"
-main = "backend/views.mjs"
-compatibility_date = "2026-11-05"
-workers_dev = true
-route = { pattern = "eigenquestions.com/*", zone_name = "eigenquestions.com" }
+name = "swampwiki"
+main = "backend/site.mjs"
+compatibility_date = "2026-11-18"
+workers_dev = false
+preview_urls = false
+routes = [
+  { pattern = "swampwiki.com", custom_domain = true },
+  { pattern = "www.swampwiki.com", custom_domain = true }
+]
 
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-run_worker_first = ["/api/views", "/api/views/*"]
+# The www redirect also applies to existing HTML and static files.
+run_worker_first = true
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"
 
-# Default deployment has no storage resources. The API returns an honest 503
-# until the owner activates wrangler.views.toml through ENABLE_STORED_VIEWS.
-[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 0.1
+
+[observability.traces]
 enabled = true
 head_sampling_rate = 0.1

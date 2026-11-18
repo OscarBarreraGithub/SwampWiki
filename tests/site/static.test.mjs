@@ -4,7 +4,7 @@ import { spawn } from 'node:child_process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { checkSite } from '../../scripts/site-check.mjs';
 
-test('built assets preserve corpus hashes and complete imports alongside the bounded storage API', async () => {
+test('built assets preserve corpus hashes and complete imports for the text navigator', async () => {
   const result = await checkSite();
   assert.equal(result.staticAssets, true);
   assert.ok(result.verifiedShards > 1);
@@ -22,20 +22,19 @@ test('static HTTP server serves the new product and retires old pages and APIs',
     assert.ok(ready, error || 'Static preview failed to start');
     const page = await fetch(origin);
     const html = await page.text();
-    assert.match(html, /<title>Eigenquestions/);
+    assert.match(html, /<title>SwampWiki/);
     assert.match(html, /id="current-question">Loading exploration/);
     assert.doesNotMatch(html, /value="Kaluza-Klein towers"/, 'Static startup must not show an unrelated default before restoring a saved view');
-    assert.ok(html.indexOf('id="columns"') < html.indexOf('id="chartpanel"'), 'Text columns must precede optional geometry');
-    assert.match(html, /id="chartpanel"[^>]+hidden/);
+    assert.ok(html.includes('id="columns"'));
+    assert.doesNotMatch(html,/chartpanel|view-geometry|atlas-overview|source exploration/i);
     assert.match(html, /id="reset"[^>]*>New path/);
-    for (const route of ['/api/pair', '/api/vote', '/api/stats', '/api/submit', '/api/leaderboard', '/api/review/approve', '/quiz', '/quiz/index.html', '/taste/index.html', '/explore/tree/index.html', '/leaderboard', '/submit', '/review', '/unknown-page']) {
+    for (const route of ['/api/pair', '/api/vote', '/api/stats', '/api/submit', '/api/leaderboard', '/api/review/approve', '/quiz', '/quiz/index.html', '/taste/index.html', '/explore/tree/index.html', '/leaderboard', '/submit', '/review', '/unknown-page','/overview','/overview.html','/atlas-overview.html','/compute-worker.js','/api/views','/data/vectors-000.f32','/lib/geometry/index.mjs']) {
       const response = await fetch(origin + route);
       assert.equal(response.status, 404, route);
       assert.match(await response.text(), /This page is no longer available/);
     }
     assert.equal((await fetch(origin + '/api/vote', { method: 'POST', body: '{}' })).status, 405);
-    assert.match((await fetch(origin + '/lib/geometry/index.mjs')).headers.get('content-type'), /javascript/);
-    assert.match((await fetch(origin + '/data/vectors-000.f32', { method: 'HEAD' })).headers.get('content-type'), /octet-stream/);
+    assert.match((await fetch(origin + '/lib/geometry/prepared-atlas.mjs')).headers.get('content-type'), /javascript/);
     assert.equal((await fetch(origin + '/.env')).status, 404);
   } finally { server.kill('SIGTERM'); }
 });

@@ -1,0 +1,14 @@
+
+> swampwiki@1.0.0 check:site
+> node scripts/site-check.mjs
+
+{
+  "assets": 18163,
+  "staticAssets": true,
+  "corpusId": "swampland-navigation-20261105-minilm-v1",
+  "verifiedShards": 14,
+  "verifiedAtlasFiles": 7669,
+  "destinations": 10440,
+  "relations": 13128,
+  "entryChoices": 15
+}
