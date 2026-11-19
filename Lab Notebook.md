@@ -2,13 +2,13 @@
 
 ## Now
 
-- **Project/question:** SW-001 — Publish the existing text-based Swampland navigator at swampwiki.com, with its own GitHub and Cloudflare setup.
+- **Project/question:** SW-005 asks whether the live Swampland wiki and broader atlas narrow scientific questions coherently and lead readers to the right evidence. SW-001 established the published text navigator.
 - **Known:** The owner explicitly chose the text navigator we built and only its Swampland parts, not the separate sr-744/swampwiki prototype. The accepted source release is Eigenquestions commit 387e95edb11aca883cbf1d05ceba9513bfd1e364. Keep scientific scopes, source qualifications and adjacent literature in the curated Swampland collection; remove the all-physics navigation and graphical views from this product.
 - **Known checks/save:** Release 8c271ed is verified on GitHub main. All 119 tests and static checks pass locally and in GitHub Node 22 CI. The isolated desktop/mobile browser smoke passed; no jobs remain running. Evidence is linked below.
 - **Known hosting:** https://swampwiki.com/ is live. Production Worker version ec66b63a-8313-45bd-b7eb-25b680d77c58 serves both domains; certificates and redirects are verified. All 23 public-content checks and 42 retired-route checks pass. Live browser navigation opens a topic and returns to the collection with New path.
 - **Latest review:** SW-003 reproduced the same Dark Dimension question from SwampWiki search and Eigenquestions overview links. SW-004 found that a paper-specific question appears as an ordinary next direction under a broad topic. The source link is already typed, but the browse list includes it alongside topic links. See the dated entries for reproducible examples.
-- **Unfinished/attention:** SW-005's independent review is ready to send. The requested Harvard Claude Enterprise sign-in is pending in a separate native profile. Automatic GitHub deployment still awaits a dedicated deployment token. No cluster jobs are running.
-- **Next:** Verify the Enterprise subscription in the native CLI, then dispatch the review and check its evidence. The live navigator remains available for collaborator feedback.
+- **Unfinished/attention:** SW-005's independent review is running in the verified Harvard Claude Enterprise profile. Automatic GitHub deployment still awaits a dedicated deployment token. No cluster jobs are running.
+- **Next:** Check the review's live journeys, structural counts and paper evidence, then save the verified findings and the decisions they support.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
@@ -110,3 +110,7 @@ The example exposes a gap between paper access and scientific depth. A browse st
 Root prepared a private handoff for `claude-enterprise-atlas-review` against SwampWiki release `8c271ed` and Eigenquestions release `387e95e`. The brief asks for a structural census of the graph and browse choices, live journeys across topics, primary-source checks for scientific classifications, tests of convergence and source or agent access, and prioritized regrouping proposals. One reviewer will deliver a report before any implementation. The manager will verify the evidence and label what remains untested. The brief and original tool records belong in ignored `Records/`. [Science with Agents cross-agent workflow](https://github.com/OscarBarreraGithub/sciencewithagents/blob/2a5c57f5c6732d09dfc8cdccb122aa1733703bdd/Workflows/cross-agent.md).
 
 Science with Agents retained prior Harvard Enterprise identity metadata, while Claude Code currently reported Max on both signed-in profiles. Root prepared a separate profile and opened Claude Code's own sign-in flow. No model call has been made. The next launch must verify native Enterprise authentication and preserve the existing account sessions.
+
+## 2026-11-18 — SW-005: Start the independent review under Enterprise
+
+After the owner signed in, root verified Enterprise in the separate native profile and verified that both existing Max profiles remained signed in. The handoff reached `claude-enterprise-atlas-review`. Claude Code reports Opus 5.5, and its isolated browser connected. The session is reviewing the public releases with read access to their catalogs and documentation. The native receipt and handoff are retained privately. The browser connection and start receipt confirm dispatch. Findings are pending.
