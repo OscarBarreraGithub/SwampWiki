@@ -1,0 +1,505 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "swampwiki-publication-check",
+  "checkedAt": "2026-11-19T03:04:32.794Z",
+  "origin": "https://swampwiki.com",
+  "expected": {
+    "releaseFingerprint": "ad76467a20b0e787f7a8fe56e07d060b550ded9e42f76f08c806fb0bb41e0046",
+    "corpusId": "swampland-navigation-20261105-minilm-v1",
+    "atlasId": "swampwiki",
+    "atlasVersion": "2026-11-18-text-v1",
+    "entryDestinationId": "collection:q025-quantum-gravity",
+    "manifestSha256": "c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44",
+    "catalogSha256": "01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8"
+  },
+  "assets": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 7773,
+      "expectedSha256": "25b09971009b133c951843d696e181abc2a50ddbab3fc0bbf158655dfb508c7d",
+      "observedSha256": "25b09971009b133c951843d696e181abc2a50ddbab3fc0bbf158655dfb508c7d",
+      "passed": true
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "bytes": 63387,
+      "expectedSha256": "e4cc126c4165b272d288c8917b009eb31e873c0fc91d497b753ea82950f0af5c",
+      "observedSha256": "e4cc126c4165b272d288c8917b009eb31e873c0fc91d497b753ea82950f0af5c",
+      "passed": true
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "bytes": 27973,
+      "expectedSha256": "13acd24d7a74b854927516ec9e144d3009a12bb6288bff1e10966be373125ade",
+      "observedSha256": "13acd24d7a74b854927516ec9e144d3009a12bb6288bff1e10966be373125ade",
+      "passed": true
+    },
+    {
+      "path": "/atlas-panel.mjs",
+      "status": 200,
+      "bytes": 22224,
+      "expectedSha256": "47c4311d4a6b06a5bb3b984e57291b7e19e565753ed6d7929a670ea85fcc9287",
+      "observedSha256": "47c4311d4a6b06a5bb3b984e57291b7e19e565753ed6d7929a670ea85fcc9287",
+      "passed": true
+    },
+    {
+      "path": "/build-info.json",
+      "status": 200,
+      "bytes": 276,
+      "expectedSha256": "f265dec41cbe9ff88ece41d1e5897c2c857ab09000d04c82933fdaef06fab0fa",
+      "observedSha256": "f265dec41cbe9ff88ece41d1e5897c2c857ab09000d04c82933fdaef06fab0fa",
+      "passed": true
+    },
+    {
+      "path": "/lib/swampwiki.mjs",
+      "status": 200,
+      "bytes": 462,
+      "expectedSha256": "ada01e0ab69dc4f94caca9da69f0f63a56cef85dfaf401e9ca01a9927502133b",
+      "observedSha256": "ada01e0ab69dc4f94caca9da69f0f63a56cef85dfaf401e9ca01a9927502133b",
+      "passed": true
+    },
+    {
+      "path": "/lib/geometry/prepared-atlas.mjs",
+      "status": 200,
+      "bytes": 73322,
+      "expectedSha256": "919c06cca4cb8b376c264d0eb37bb03054a38fa4583b171be84d1311edcf7651",
+      "observedSha256": "919c06cca4cb8b376c264d0eb37bb03054a38fa4583b171be84d1311edcf7651",
+      "passed": true
+    },
+    {
+      "path": "/lib/geometry/prepared-identity.mjs",
+      "status": 200,
+      "bytes": 178,
+      "expectedSha256": "dd3d79b1e1f9fc4512284af1e4a9706f47d09e8221387b45a9922aa56c93c982",
+      "observedSha256": "dd3d79b1e1f9fc4512284af1e4a9706f47d09e8221387b45a9922aa56c93c982",
+      "passed": true
+    },
+    {
+      "path": "/lib/protocol/session.mjs",
+      "status": 200,
+      "bytes": 13099,
+      "expectedSha256": "0c346b0074c33e8428d4af1d933894a44567d85a247187108dabf15906faaec9",
+      "observedSha256": "0c346b0074c33e8428d4af1d933894a44567d85a247187108dabf15906faaec9",
+      "passed": true
+    },
+    {
+      "path": "/lib/protocol/capsule.mjs",
+      "status": 200,
+      "bytes": 13202,
+      "expectedSha256": "151664a27d6ab3cb353f77c97cdf857c1ee97774b72d460d7f7f48751c7df7d3",
+      "observedSha256": "151664a27d6ab3cb353f77c97cdf857c1ee97774b72d460d7f7f48751c7df7d3",
+      "passed": true
+    },
+    {
+      "path": "/lib/protocol/presentation.mjs",
+      "status": 200,
+      "bytes": 1505,
+      "expectedSha256": "5ea37ca61ef23c01a70282928b0070d063f32b1f7e55329d0fd1da57a68932c6",
+      "observedSha256": "5ea37ca61ef23c01a70282928b0070d063f32b1f7e55329d0fd1da57a68932c6",
+      "passed": true
+    },
+    {
+      "path": "/data/manifest.json",
+      "status": 200,
+      "bytes": 3168,
+      "expectedSha256": "1af5531dc5e1c7e8f7518a58675f8f272cb902d1ed3f8587341039d81c67bdae",
+      "observedSha256": "1af5531dc5e1c7e8f7518a58675f8f272cb902d1ed3f8587341039d81c67bdae",
+      "passed": true
+    },
+    {
+      "path": "/data/atlas/index.json",
+      "status": 200,
+      "bytes": 580,
+      "expectedSha256": "2883824aecc808d2220fe7013220ba94df065443cb4c36a3f17e02bfe2c1d7fd",
+      "observedSha256": "2883824aecc808d2220fe7013220ba94df065443cb4c36a3f17e02bfe2c1d7fd",
+      "passed": true
+    },
+    {
+      "path": "/data/atlas/swampwiki/2026-11-18-text-v1/manifest.json",
+      "status": 200,
+      "bytes": 3408,
+      "expectedSha256": "c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44",
+      "observedSha256": "c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44",
+      "passed": true
+    },
+    {
+      "path": "/data/atlas/swampwiki/2026-11-18-text-v1/catalog.json",
+      "status": 200,
+      "bytes": 6669582,
+      "expectedSha256": "01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+      "observedSha256": "01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+      "passed": true
+    },
+    {
+      "path": "/atlas/index.html",
+      "status": 200,
+      "bytes": 1267,
+      "expectedSha256": "175d8baf3623df55d2caa5afca3ad23ffefc3a8b6ed2e815425bb22ba3d0ed0c",
+      "observedSha256": "175d8baf3623df55d2caa5afca3ad23ffefc3a8b6ed2e815425bb22ba3d0ed0c",
+      "passed": true
+    },
+    {
+      "path": "/atlas/swampwiki/2026-11-18-text-v1/collection:q025-quantum-gravity.html",
+      "status": 200,
+      "bytes": 13352,
+      "expectedSha256": "e8b492a233c04bf5582881ce05780c4a93d931d49f3e8cbb4d50ebe1fab25e57",
+      "observedSha256": "e8b492a233c04bf5582881ce05780c4a93d931d49f3e8cbb4d50ebe1fab25e57",
+      "passed": true
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "bytes": 673,
+      "expectedSha256": "067039ec176d81b12578737929f774c52e46b77c37d05af0d181b2693fea8e6e",
+      "observedSha256": "067039ec176d81b12578737929f774c52e46b77c37d05af0d181b2693fea8e6e",
+      "passed": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 66,
+      "expectedSha256": "e0cd5caf9d6f4a1b97921346cea0e9c39cd03835663f5dfa5c44c703abbb6346",
+      "observedSha256": "e0cd5caf9d6f4a1b97921346cea0e9c39cd03835663f5dfa5c44c703abbb6346",
+      "passed": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 349,
+      "expectedSha256": "571d8b4b6d763bf45d171c6dc84002265fd857d6829398e8c2f37bacd01e746e",
+      "observedSha256": "571d8b4b6d763bf45d171c6dc84002265fd857d6829398e8c2f37bacd01e746e",
+      "passed": true
+    },
+    {
+      "path": "/docs/site.md",
+      "status": 200,
+      "bytes": 2117,
+      "expectedSha256": "e3efa1adcbd903bed2ce8b64abfdc90b3785fd306baab3029bf9503211ed8178",
+      "observedSha256": "e3efa1adcbd903bed2ce8b64abfdc90b3785fd306baab3029bf9503211ed8178",
+      "passed": true
+    },
+    {
+      "path": "/docs/agent-interface.md",
+      "status": 200,
+      "bytes": 3792,
+      "expectedSha256": "e8f4a0436378617286f0ddabba04721f658a961e608f788590c3491a374668a3",
+      "observedSha256": "e8f4a0436378617286f0ddabba04721f658a961e608f788590c3491a374668a3",
+      "passed": true
+    },
+    {
+      "path": "/skills/physics-navigator/SKILL.md",
+      "status": 200,
+      "bytes": 1951,
+      "expectedSha256": "7a170e286493056fe62949cce2cddddea3f4b1ed053292debe24567adc7a64f3",
+      "observedSha256": "7a170e286493056fe62949cce2cddddea3f4b1ed053292debe24567adc7a64f3",
+      "passed": true
+    }
+  ],
+  "retiredRoutes": [
+    {
+      "path": "/overview.html",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/overview.html",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/overview.js",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/overview.js",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/overview.css",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/overview.css",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/compute-worker.js",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/compute-worker.js",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/data/overview/manifest.json",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/data/overview/manifest.json",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/quiz/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/quiz/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/taste/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/taste/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/explore/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/explore/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/explore/tree/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/explore/tree/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/review/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/review/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/submit/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/submit/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/leaderboard/",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/leaderboard/",
+      "method": "POST",
+      "status": 405,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/pair",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/pair",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/stats",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/stats",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/vote",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/vote",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/health",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/health",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/submit",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/submit",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/leaderboard",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/leaderboard",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/submissions",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/submissions",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/approve",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/approve",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/reject",
+      "method": "GET",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    },
+    {
+      "path": "/api/review/reject",
+      "method": "POST",
+      "status": 404,
+      "redirected": false,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "assetChecks": 23,
+    "matchedAssets": 23,
+    "retiredRouteChecks": 42,
+    "retiredRoutePasses": 42
+  },
+  "passed": true,
+  "scope": "Checks exact deployed text navigator, prepared catalog, collection landing page, manifests, agent guidance and retired route status. Shard integrity and browser behavior are verified separately."
+}

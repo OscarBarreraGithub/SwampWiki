@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-11-19T03:03:36.526219+00:00",
+  "https": "Handshake failed during initial certificate issuance; verification remains pending.",
+  "http": 200,
+  "universalCertificateStatus": "pending_validation",
+  "workerDomainCertificateStatus": "pending_validation",
+  "alwaysUseHttps": "off"
+}

@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-11-19T03:02:41.830Z",
+  "zone": {
+    "id": "618f4948a88c79c688c70f7f70de8175",
+    "name": "swampwiki.com",
+    "status": "active",
+    "activated_on": "2026-11-19T03:01:39.700040Z",
+    "name_servers": [
+      "ophelia.ns.cloudflare.com",
+      "razvan.ns.cloudflare.com"
+    ]
+  },
+  "domains": [
+    {
+      "id": "b5fc5ae13e52d92bbb60adf0eb89b3f2d880b569",
+      "zone_id": "618f4948a88c79c688c70f7f70de8175",
+      "zone_name": "swampwiki.com",
+      "hostname": "swampwiki.com",
+      "service": "swampwiki",
+      "environment": "production",
+      "cert_id": "4238e3a3-774b-4e77-bf2a-9afaa6892221",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "a70333bedbd361e60e12de16ffd55ec42b1fccd6",
+      "zone_id": "618f4948a88c79c688c70f7f70de8175",
+      "zone_name": "swampwiki.com",
+      "hostname": "www.swampwiki.com",
+      "service": "swampwiki",
+      "environment": "production",
+      "cert_id": "8141fbde-cc73-4ca4-8f68-2c70b8c09fa0",
+      "previews_enabled": false,
+      "enabled": true
+    }
+  ],
+  "deployments": {
+    "deployments": [
+      {
+        "id": "7b405a76-1240-4505-a908-b7f0c30e3122",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ec66b63a-8313-45bd-b7eb-25b680d77c58",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-19T03:02:23.647025Z"
+      },
+      {
+        "id": "273fd8a6-88e7-44ec-bd0c-d874699e60c9",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "annotations": {
+          "workers/message": "SwampWiki text navigator; staged without public...",
+          "workers/triggered_by": "upload"
+        },
+        "versions": [
+          {
+            "version_id": "d4510ee7-ac78-4e7d-8357-c40a25a0db86",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-19T01:28:05.852896Z"
+      }
+    ]
+  },
+  "subdomain": {
+    "enabled": false,
+    "previews_enabled": false
+  },
+  "dns": [
+    {
+      "name": "swampwiki.com",
+      "type": "MX",
+      "content": "eforward5.registrar-servers.com",
+      "priority": 20,
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "MX",
+      "content": "eforward4.registrar-servers.com",
+      "priority": 15,
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "MX",
+      "content": "eforward3.registrar-servers.com",
+      "priority": 10,
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "MX",
+      "content": "eforward2.registrar-servers.com",
+      "priority": 10,
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "MX",
+      "content": "eforward1.registrar-servers.com",
+      "priority": 10,
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "TXT",
+      "content": "\"v=spf1 include:spf.efwd.registrar-servers.com ~all\"",
+      "proxied": false
+    },
+    {
+      "name": "swampwiki.com",
+      "type": "AAAA",
+      "content": "100::",
+      "proxied": true
+    },
+    {
+      "name": "www.swampwiki.com",
+      "type": "AAAA",
+      "content": "100::",
+      "proxied": true
+    }
+  ]
+}

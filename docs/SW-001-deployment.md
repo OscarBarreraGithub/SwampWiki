@@ -2,7 +2,9 @@
 
 ## Status on November 18, 2026
 
-The `OscarBarreraGithub/SwampWiki` repository checks pushes to `main`. Cloudflare access was restored after the owner changed session access. A free `swampwiki.com` zone exists in the intended account. Namecheap now delegates to **ophelia.ns.cloudflare.com** and **razvan.ns.cloudflare.com**, verified in the registrar and at the .com registry. Cloudflare zone activation and live HTTPS verification remain pending.
+The text navigator is live at **https://swampwiki.com/**. The `OscarBarreraGithub/SwampWiki` repository checks pushes to `main`. Namecheap delegates to **ophelia.ns.cloudflare.com** and **razvan.ns.cloudflare.com**, verified in the registrar and at the .com registry. Cloudflare activated the zone at 03:01 UTC on November 19 (November 18 local time), and the production Worker version is `ec66b63a-8313-45bd-b7eb-25b680d77c58`.
+
+Both Custom Domains and their certificates are active. The public site passed all 23 exact-content checks and all 42 retired-route checks. Root inspected the rendered home page, opened the dark-sector direction and verified that New path returns to the 15 collection choices. `www` returns HTTP 308 to the apex, preserving paths and queries; Cloudflare's `always_use_https=on` redirects HTTP to HTTPS. [Publication check](evidence/sw-001/publication-live.json) · [Redirect checks](evidence/sw-001/live-http-checks.json) · [Cloudflare readback](evidence/sw-001/public-deploy-readback.json) · [Certificates/settings](evidence/sw-001/certificate-active-status.json).
 
 The public DNS scan found only Namecheap parking plus five default forwarding MX records and one SPF record. The six mail records were copied into Cloudflare; the parking A/CNAME were not imported. Root inspected the signed-in registrar through the newly configured CLI browser: no email-forwarding aliases or custom host records existed, and DNSSEC was off. No existing mail service needed migration. The saved nameservers persisted after reloading the registrar page. [Registrar verification](evidence/sw-001/namecheap-nameservers-verified.yml) · [DNS receipt](evidence/sw-001/nameserver-cutover.json).
 
@@ -10,7 +12,7 @@ The GitHub `CLOUDFLARE_ACCOUNT_ID` secret is configured. `CLOUDFLARE_DEPLOY_ENAB
 
 The production configuration names one Worker, `swampwiki`, and publishes `dist/` through the `ASSETS` binding. Each static asset request invokes the Worker and counts toward Workers request usage. Requests to `www.swampwiki.com` return a permanent HTTP 308 to `https://swampwiki.com` with the original path and query. File import and export remain available locally. Stored-view reads and uploads return HTTP 503 because this deployment has no storage bindings. The former storage deployment profile is retired. [Worker-first asset routing](https://developers.cloudflare.com/workers/static-assets/routing/worker-script/)
 
-## DNS cutover after Cloudflare access is available
+## DNS cutover record
 
 Before cutover, public DNS showed these records. The Namecheap inventory and absence of forwarding aliases were verified before changing delegation; this table preserves the previous state.
 
@@ -27,17 +29,17 @@ Before cutover, public DNS showed these records. The Namecheap inventory and abs
 2. The assigned nameserver pair is `ophelia.ns.cloudflare.com` and `razvan.ns.cloudflare.com`. In Namecheap's **Domain List → swampwiki.com → Manage → Nameservers → Custom DNS**, enter that pair and save. The available Namecheap connector only checks availability and pricing, so this change uses the signed-in registrar interface. Wait until Cloudflare reports the zone active. [Namecheap nameserver instructions](https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-to-change-dns-for-a-domain/)
 3. The public parking A and CNAME were not imported. Recheck that no conflicting web records have been added before attaching the hostnames. Preserve the other records. Wrangler declares both hostnames as Custom Domains in `wrangler.toml`, allowing Cloudflare to create their DNS records and issue certificates. [Workers Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)
 
-## Staged Worker and public activation
+## Initial staging and future deployments
 
-The checked site has been uploaded as Worker `swampwiki`, version `d4510ee7-ac78-4e7d-8357-c40a25a0db86`, with **no public targets**. A temporary configuration differed from committed `wrangler.toml` only by resolving file paths and replacing its two domain routes with an empty list. Both `workers_dev` and `preview_urls` remain false. Connector readback verified an active version, no custom domains, no zone routes and disabled public subdomains. This is staged hosting, not a live site. [Deployment receipt](evidence/sw-001/predelegation-deploy/readback.json).
+The first upload staged Worker version `d4510ee7-ac78-4e7d-8357-c40a25a0db86` with **no public targets** while registrar access was repaired. A temporary configuration differed from committed `wrangler.toml` only by resolving file paths and replacing its two domain routes with an empty list. [Staging receipt](evidence/sw-001/predelegation-deploy/readback.json). Once the zone activated, root deployed the committed production configuration; the domain attachment succeeded and certificates became active after a short issuance delay. [Public deployment log](evidence/sw-001/public-deploy.log). Both `workers_dev` and `preview_urls` remain false.
 
-After Namecheap uses the assigned nameservers and Cloudflare reports the zone active, deploy using the committed configuration and existing authenticated Wrangler:
+For future publication, build and validate the intended release first, then deploy with the committed configuration and existing authenticated Wrangler:
 
 ```sh
 CLOUDFLARE_ACCOUNT_ID=60ab5e4b784f9a15e59eb851df3e8c0b ./node_modules/.bin/wrangler deploy --config wrangler.toml
 ```
 
-This attaches `swampwiki.com` and `www.swampwiki.com` to the prepared Worker. Verify HTTPS and the www redirect, then run the existing publication check against the real origin. A successful upload or an active Cloudflare zone alone does not prove the site works.
+This publishes to `swampwiki.com` and `www.swampwiki.com`. Verify HTTPS and the www redirect, then run `node tests/integration/publication_check.mjs --origin https://swampwiki.com` against the exact build uploaded. A successful upload or an active Cloudflare zone alone does not prove the site works.
 
 ## Automatic GitHub deployment
 

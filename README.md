@@ -20,6 +20,6 @@ Agents can read the source-linked records or use the [navigation interface](docs
 
 ## Hosting status
 
-The intended address is **swampwiki.com**, with `www.swampwiki.com` redirecting to it. GitHub checks pass. Namecheap delegation to Cloudflare is saved and verified. The complete site is uploaded with no public targets, pending Cloudflare zone activation and live HTTPS verification. Automatic GitHub deployment remains disabled until a dedicated deployment token is configured. The public site is not live yet.
+The text navigator is live at **[swampwiki.com](https://swampwiki.com/)**. HTTPS, the `www` redirect and HTTP-to-HTTPS redirection are verified. All 23 deployed-content checks and 42 retired-route checks pass; the live browser opens the collection, enters a topic and starts a new path. Automatic GitHub deployment remains disabled until a dedicated deployment token is configured; the site was published with authenticated local Wrangler.
 
 [Deployment setup and remaining steps](docs/SW-001-deployment.md) · [Lab notebook](Lab%20Notebook.md)

@@ -1,0 +1,403 @@
+- generic [ref=e33]:
+  - region "Your exploration path" [ref=e34]:
+    - generic [ref=e35]:
+      - button "← Back" [ref=e36] [cursor=pointer]
+      - navigation "Exploration path" [ref=e37]:
+        - 'button "Step 1: Quantum gravity and connected physics" [ref=e194] [cursor=pointer]': Quantum gravity and connected physics
+        - generic [ref=e195]: ›
+        - 'button "Step 2: How do proposed dark-sector constituents, their origins and subsequent evolution determine abundance, persistence, structure and observable signals, and which source-specific consistency tests constrain those proposals?" [ref=e196] [cursor=pointer]': How do proposed dark-sector constituents…
+  - 'region "Dark sectors: candidates, cosmic histories and tests" [ref=e197]':
+    - generic [ref=e40]:
+      - 'heading "Dark sectors: candidates, cosmic histories and tests" [level=1] [ref=e198]'
+      - generic [ref=e43]:
+        - button "Show choices at earlier steps" [disabled] [ref=e44]: ←
+        - button "Show choices at later steps" [disabled] [ref=e45]: →
+    - generic "Choices at each exploration step" [ref=e46]:
+      - generic [ref=e199]:
+        - generic "Quantum gravity and connected physics" [ref=e200]:
+          - text: Step 1 · Choices then
+          - heading "Quantum gravity and connected physics" [level=3] [ref=e201]
+        - generic [ref=e202]:
+          - 'button "Direction 1: How do anomaly and related consistency tests constrain specified field theories, and how do spectra, symmetry, geometry, limits and reductions organize six-dimensional theories and their realizations?" [ref=e204] [cursor=pointer]':
+            - generic [ref=e205]: "01"
+            - generic [ref=e206]:
+              - heading "Anomalies, consistency and six-dimensional theory structure" [level=3] [ref=e207]
+              - generic [ref=e208]: How do anomaly and related consistency tests constrain specified field…
+              - generic [ref=e209]:
+                - generic [ref=e210]: collection access
+                - text: · 48 listed descriptions
+            - generic [ref=e211]: ›
+          - 'button "Direction 2: How do axion sectors and alternative strong-CP mechanisms arise, retain their intended symmetry and vacuum structure, and meet their cosmological and observational requirements?" [ref=e213] [cursor=pointer]':
+            - generic [ref=e214]: "02"
+            - generic [ref=e215]:
+              - 'heading "Axions and strong CP: construction, consistency and tests" [level=3] [ref=e216]'
+              - generic [ref=e217]: How do axion sectors and alternative strong-CP mechanisms arise…
+              - generic [ref=e218]:
+                - generic [ref=e219]: collection access
+                - text: · 47 listed descriptions
+            - generic [ref=e220]: ›
+          - 'button "Direction 3: How do gravitational theories, matter sectors and quantum descriptions determine black-hole geometry, entropy, response and charge evolution, and what conditional consistency tests or observational probes follow?" [ref=e222] [cursor=pointer]':
+            - generic [ref=e223]: "03"
+            - generic [ref=e224]:
+              - heading "Black-hole structure, entropy and dynamical consistency" [level=3] [ref=e225]
+              - generic [ref=e226]: How do gravitational theories, matter sectors and quantum descriptions…
+              - generic [ref=e227]:
+                - generic [ref=e228]: collection access
+                - text: · 92 listed descriptions
+            - generic [ref=e229]: ›
+          - 'button "Direction 4: How can Calabi–Yau geometries, their moduli and quantum corrections be constructed and computed, and what do these data establish about compactification physics?" [ref=e231] [cursor=pointer]':
+            - generic [ref=e232]: "04"
+            - generic [ref=e233]:
+              - heading "Calabi–Yau geometry, computation and compactification physics" [level=3] [ref=e234]
+              - generic [ref=e235]: How can Calabi–Yau geometries, their moduli and quantum corrections be…
+              - generic [ref=e236]:
+                - generic [ref=e237]: collection access
+                - text: · 65 listed descriptions
+            - generic [ref=e238]: ›
+          - 'button "Direction 5: How do compactification ingredients, supersymmetry and its breaking shape vacuum structure and effective interactions, and which source-specific tests establish stability, control and physical consequences?" [ref=e240] [cursor=pointer]':
+            - generic [ref=e241]: "05"
+            - generic [ref=e242]:
+              - heading "Compactification, supersymmetry and vacuum dynamics" [level=3] [ref=e243]
+              - generic [ref=e244]: How do compactification ingredients, supersymmetry and its breaking…
+              - generic [ref=e245]:
+                - generic [ref=e246]: collection access
+                - text: · 144 listed descriptions
+            - generic [ref=e247]: ›
+          - 'button "Direction 6: How do proposed dark-sector constituents, their origins and subsequent evolution determine abundance, persistence, structure and observable signals, and which source-specific consistency tests constrain those proposals?" [ref=e249] [cursor=pointer]':
+            - generic [ref=e250]: "06"
+            - generic [ref=e251]:
+              - 'heading "Dark sectors: candidates, cosmic histories and tests" [level=3] [ref=e252]'
+              - generic [ref=e253]: How do proposed dark-sector constituents, their origins and subsequent…
+              - generic [ref=e254]:
+                - generic [ref=e255]: collection access
+                - text: · 65 listed descriptions
+                - generic [ref=e256]: Followed
+            - generic [ref=e257]: ›
+          - 'button "Direction 7: Which mechanisms can account for dark-energy behavior, how can their dynamics be represented or inferred, and what source-specific observational, microscopic or conjectural tests constrain them?" [ref=e259] [cursor=pointer]':
+            - generic [ref=e260]: "07"
+            - generic [ref=e261]:
+              - heading "Dark-energy mechanisms, inference and conditional consistency" [level=3] [ref=e262]
+              - generic [ref=e263]: Which mechanisms can account for dark-energy behavior…
+              - generic [ref=e264]:
+                - generic [ref=e265]: collection access
+                - text: · 85 listed descriptions
+            - generic [ref=e266]: ›
+          - 'button "Direction 8: Under which source-specific ingredients and approximations can compactifications or related constructions support de Sitter geometry, and what establishes their stability, consistency and effective control?" [ref=e268] [cursor=pointer]':
+            - generic [ref=e269]: "08"
+            - generic [ref=e270]:
+              - 'heading "De Sitter backgrounds: existence, stability and control" [level=3] [ref=e271]'
+              - generic [ref=e272]: Under which source-specific ingredients and approximations can…
+              - generic [ref=e273]:
+                - generic [ref=e274]: collection access
+                - text: · 57 listed descriptions
+            - generic [ref=e275]: ›
+          - 'button "Direction 9: How are field and gravitational descriptions constructed and tested, how do their geometries and matter sectors determine physical behavior and cosmological histories, and what can observations or probabilistic inference establish?" [ref=e277] [cursor=pointer]':
+            - generic [ref=e278]: "09"
+            - generic [ref=e279]:
+              - 'heading "Fields, gravity and cosmology: construction and tests" [level=3] [ref=e280]'
+              - generic [ref=e281]: How are field and gravitational descriptions constructed and tested…
+              - generic [ref=e282]:
+                - generic [ref=e283]: collection access
+                - text: · 581 listed descriptions
+            - generic [ref=e284]: ›
+          - 'button "Direction 10: How can consistency tests, limits of effective descriptions and structural methods assess theories coupled to gravity and their possible low-energy consequences?" [ref=e286] [cursor=pointer]':
+            - generic [ref=e287]: "10"
+            - generic [ref=e288]:
+              - 'heading "Gravitational EFTs: consistency, structure and limits" [level=3] [ref=e289]'
+              - generic [ref=e290]: How can consistency tests, limits of effective descriptions and…
+              - generic [ref=e291]:
+                - generic [ref=e292]: collection access
+                - text: · 94 listed descriptions
+            - generic [ref=e293]: ›
+          - 'button "Direction 11: Which holographic descriptions and calculations illuminate field theory, gravitating systems, cosmology and vacuum scales, and how do their specific assumptions limit observable calculations and consistency claims?" [ref=e295] [cursor=pointer]':
+            - generic [ref=e296]: "11"
+            - generic [ref=e297]:
+              - heading "Holographic descriptions, dynamics and gravitational information" [level=3] [ref=e298]
+              - generic [ref=e299]: Which holographic descriptions and calculations illuminate field…
+              - generic [ref=e300]:
+                - generic [ref=e301]: collection access
+                - text: · 119 listed descriptions
+            - generic [ref=e302]: ›
+          - 'button "Direction 12: How do field content, kinetic and gravitational dynamics, trajectory geometry and initial histories determine inflationary expansion and primordial observables, and what conditions govern their theoretical interpretation and comparison with alternative cosmological mechanisms?" [ref=e304] [cursor=pointer]':
+            - generic [ref=e305]: "12"
+            - generic [ref=e306]:
+              - heading "Inflationary dynamics, primordial observables and theory limits" [level=3] [ref=e307]
+              - generic [ref=e308]: How do field content, kinetic and gravitational dynamics…
+              - generic [ref=e309]:
+                - generic [ref=e310]: collection access
+                - text: · 91 listed descriptions
+            - generic [ref=e311]: ›
+          - 'button "Direction 13: How do source-specific compactifications generate and control moduli dynamics, and what stabilization, vacuum, particle-physics, cosmological and geometric questions arise?" [ref=e313] [cursor=pointer]':
+            - generic [ref=e314]: "13"
+            - generic [ref=e315]:
+              - heading "Moduli dynamics, stabilization and compactification tests" [level=3] [ref=e316]
+              - generic [ref=e317]: How do source-specific compactifications generate and control moduli…
+              - generic [ref=e318]:
+                - generic [ref=e319]: collection access
+                - text: · 74 listed descriptions
+            - generic [ref=e320]: ›
+          - 'button "Direction 14: How do proposed mechanisms for particle scales, supersymmetry breaking and moduli dynamics connect spectra, scalar vacua and cosmological histories, and which observations or conditional consistency tests constrain them?" [ref=e322] [cursor=pointer]':
+            - generic [ref=e323]: "14"
+            - generic [ref=e324]:
+              - heading "Particle scales, supersymmetry and cosmological viability" [level=3] [ref=e325]
+              - generic [ref=e326]: How do proposed mechanisms for particle scales, supersymmetry breaking…
+              - generic [ref=e327]:
+                - generic [ref=e328]: collection access
+                - text: · 64 listed descriptions
+            - generic [ref=e329]: ›
+          - 'button "Direction 15: How do string, brane and gravitational descriptions determine admissible states and backgrounds, their interactions and dynamics, and the limits of consistency tests?" [ref=e331] [cursor=pointer]':
+            - generic [ref=e332]: "15"
+            - generic [ref=e333]:
+              - heading "String, brane and quantum-gravity descriptions and consistency" [level=3] [ref=e334]
+              - generic [ref=e335]: How do string, brane and gravitational descriptions determine…
+              - generic [ref=e336]:
+                - generic [ref=e337]: collection access
+                - text: · 119 listed descriptions
+            - generic [ref=e338]: ›
+      - generic [ref=e339]:
+        - generic "How do proposed dark-sector constituents, their origins and subsequent evolution determine abundance, persistence, structure and observable signals, and which source-specific consistency tests constrain those proposals?" [ref=e340]: Step 2 · Next choices
+        - generic [ref=e341]:
+          - 'button "Direction 1: What can constitute dark matter, how can its abundance arise, and which source-specific consistency and search requirements constrain each proposal?" [ref=e343] [cursor=pointer]':
+            - generic [ref=e344]: "01"
+            - generic [ref=e345]:
+              - heading "Explore dark-matter candidates and their cosmic origins" [level=3] [ref=e346]
+              - generic [ref=e347]: What can constitute dark matter, how can its abundance arise…
+              - generic [ref=e348]:
+                - generic [ref=e349]: narrower
+                - text: · 18 listed descriptions
+                - generic [ref=e350]: · 3 recorded routes
+            - generic [ref=e351]: ›
+          - 'button "Direction 2: How can cosmic observations and complementary search programs distinguish dark-matter scenarios, and what modelling or broader cosmological questions limit that inference?" [ref=e353] [cursor=pointer]':
+            - generic [ref=e354]: "02"
+            - generic [ref=e355]:
+              - heading "Cosmic inference and complementary searches" [level=3] [ref=e356]
+              - generic [ref=e357]: How can cosmic observations and complementary search programs…
+              - generic [ref=e358]:
+                - generic [ref=e359]: narrower
+                - text: · 9 listed descriptions
+            - generic [ref=e360]: ›
+          - 'button "Direction 3: What controls the cosmological persistence or depletion of proposed dark matter and other relic populations, and which observable consequences test the assumed survival mechanism?" [ref=e362] [cursor=pointer]':
+            - generic [ref=e363]: "03"
+            - generic [ref=e364]:
+              - heading "What lets a relic persist, and what depletes it?" [level=3] [ref=e365]
+              - generic [ref=e366]: What controls the cosmological persistence or depletion of proposed…
+              - generic [ref=e367]:
+                - generic [ref=e368]: narrower
+                - text: · 4 listed descriptions
+                - generic [ref=e369]: · 3 recorded routes
+            - generic [ref=e370]: ›
+          - 'button "Direction 4: How do dark-sector interactions, ordinary electric charge, collective effects and dissipation change dark-matter structure and the constraints on its properties?" [ref=e372] [cursor=pointer]':
+            - generic [ref=e373]: "04"
+            - generic [ref=e374]:
+              - heading "Dark forces and structure" [level=3] [ref=e375]
+              - generic [ref=e376]: How do dark-sector interactions, ordinary electric charge…
+              - generic [ref=e377]:
+                - generic [ref=e378]: narrower
+                - text: · 13 listed descriptions
+            - generic [ref=e379]: ›
+          - 'button "Direction 5: Can dark-charge near-extremality let primordial black holes below the ordinary evaporation-survival mass constitute dark matter, and what merger-induced Hawking transients or conditional dark-sector weak-gravity tests follow?" [ref=e381] [cursor=pointer]':
+            - generic [ref=e382]: "05"
+            - generic [ref=e383]:
+              - heading "Test dark-charge survival of primordial black-hole dark matter" [level=3] [ref=e384]
+              - generic [ref=e385]: Can dark-charge near-extremality let primordial black holes below the…
+              - generic [ref=e386]:
+                - generic [ref=e387]: narrower
+                - text: · 0 listed descriptions
+                - generic [ref=e388]: · 2 recorded routes
+            - generic [ref=e389]: ›
+          - 'button "Direction 6: How do reheating, altered expansion and entropy release change relic production, and what can relics and other observables reveal about those histories and inflation?" [ref=e391] [cursor=pointer]':
+            - generic [ref=e392]: "06"
+            - generic [ref=e393]:
+              - heading "Expansion, reheating and relic histories" [level=3] [ref=e394]
+              - generic [ref=e395]: How do reheating, altered expansion and entropy release change relic…
+              - generic [ref=e396]:
+                - generic [ref=e397]: narrower
+                - text: · 1 listed descriptions
+            - generic [ref=e398]: ›
+          - 'button "Direction 7: How do specified extra-dimensional constructions, effective-theory hierarchies or quantum-gravity hypotheses constrain dark-sector models and their observational tests?" [ref=e400] [cursor=pointer]':
+            - generic [ref=e401]: "07"
+            - generic [ref=e402]:
+              - heading "Explore extra dimensions and conditional consistency tests" [level=3] [ref=e403]
+              - generic [ref=e404]: How do specified extra-dimensional constructions…
+              - generic [ref=e405]:
+                - generic [ref=e406]: narrower
+                - text: · 8 listed descriptions
+                - generic [ref=e407]: · 2 recorded routes
+            - generic [ref=e408]: ›
+          - 'button "Direction 8: Which laboratory responses or propagation effects can distinguish dark particles, their interactions or their spin under the specified detector and signal assumptions?" [ref=e410] [cursor=pointer]':
+            - generic [ref=e411]: "08"
+            - generic [ref=e412]:
+              - heading "Laboratory and propagation tests" [level=3] [ref=e413]
+              - generic [ref=e414]: Which laboratory responses or propagation effects can distinguish dark…
+              - generic [ref=e415]:
+                - generic [ref=e416]: narrower
+                - text: · 9 listed descriptions
+            - generic [ref=e417]: ›
+          - 'button "Direction 9: How are PBH abundances, mass distributions and populations generated and evolved, and under which source-specific constraints could they supply dark matter?" [ref=e419] [cursor=pointer]':
+            - generic [ref=e420]: "09"
+            - generic [ref=e421]:
+              - heading "PBH formation and population viability" [level=3] [ref=e422]
+              - generic [ref=e423]: How are PBH abundances, mass distributions and populations generated…
+              - generic [ref=e424]:
+                - generic [ref=e425]: narrower
+                - text: · 5 listed descriptions
+            - generic [ref=e426]: ›
+          - 'button "Direction 10: Which dark-matter candidates, production histories, interactions and observational signatures are compatible with the conditions examined by each source?" [ref=e428] [cursor=pointer]':
+            - generic [ref=e429]: "10"
+            - generic [ref=e430]:
+              - 'heading "Dark matter: candidates, origins, dynamics and tests" [level=3] [ref=e431]'
+              - generic [ref=e432]: Which dark-matter candidates, production histories…
+              - generic [ref=e433]:
+                - generic [ref=e434]: comparison
+                - text: · 0 listed descriptions
+            - generic [ref=e435]: ›
+          - 'button "Direction 11: Under which model-specific conditions can hidden bound states or scalar fields supply dark matter, and what controls their production, interactions and effects on structure?" [ref=e437] [cursor=pointer]':
+            - generic [ref=e438]: "11"
+            - generic [ref=e439]:
+              - heading "Confining sectors and scalar dark matter" [level=3] [ref=e440]
+              - generic [ref=e441]: Under which model-specific conditions can hidden bound states or…
+              - generic [ref=e442]:
+                - generic [ref=e443]: shared source access
+                - text: · 3 listed descriptions
+            - generic [ref=e444]: ›
+          - 'button "Direction 12: Can dark charge make light primordial black holes cosmologically long-lived, and what survival thresholds or merger-radiation signatures follow?" [ref=e446] [cursor=pointer]':
+            - generic [ref=e447]: "12"
+            - generic [ref=e448]:
+              - heading "Dark-charge primordial black holes" [level=3] [ref=e449]
+              - generic [ref=e450]: Can dark charge make light primordial black holes cosmologically…
+              - generic [ref=e451]:
+                - generic [ref=e452]: shared source access
+                - text: · 1 listed descriptions
+            - generic [ref=e453]: ›
+          - 'button "Direction 13: What determines charged-black-hole emission, discharge rates and lifetimes across the specified geometries and matter sectors?" [ref=e455] [cursor=pointer]':
+            - generic [ref=e456]: "13"
+            - generic [ref=e457]:
+              - heading "Emission mechanisms and long-lived charge" [level=3] [ref=e458]
+              - generic [ref=e459]: What determines charged-black-hole emission, discharge rates and…
+              - generic [ref=e460]:
+                - generic [ref=e461]: shared source access
+                - text: · 10 listed descriptions
+            - generic [ref=e462]: ›
+          - 'button "Direction 14: What abundance bounds or discovery tests follow from PBH Hawking radiation and its energy deposition under the specified spectra, populations and observations?" [ref=e464] [cursor=pointer]':
+            - generic [ref=e465]: "14"
+            - generic [ref=e466]:
+              - heading "Hawking-radiation constraints and searches" [level=3] [ref=e467]
+              - generic [ref=e468]: What abundance bounds or discovery tests follow from PBH Hawking…
+              - generic [ref=e469]:
+                - generic [ref=e470]: shared source access
+                - text: · 4 listed descriptions
+            - generic [ref=e471]: ›
+          - 'button "Direction 15: Can modified evaporation or stable endpoints let light PBHs or remnants survive as dark matter, and do charge loss and other consistency tests permit the proposed mechanism?" [ref=e473] [cursor=pointer]':
+            - generic [ref=e474]: "15"
+            - generic [ref=e475]:
+              - heading "Light-PBH survival and remnant consistency" [level=3] [ref=e476]
+              - generic [ref=e477]: Can modified evaporation or stable endpoints let light PBHs or…
+              - generic [ref=e478]:
+                - generic [ref=e479]: shared source access
+                - text: · 2 listed descriptions
+            - generic [ref=e480]: ›
+    - group [ref=e185]:
+      - generic "▸ Question summary and full context" [ref=e186] [cursor=pointer]
+  - generic [ref=e187]:
+    - group [ref=e481]:
+      - generic "Scope, assumptions and sources" [ref=e482] [cursor=pointer]
+    - group [ref=e483]:
+      - generic "All connections (25)" [ref=e484] [cursor=pointer]
+    - group [ref=e485]:
+      - generic "Your work on this question" [ref=e486] [cursor=pointer]
+  - region "Sources 31 papers" [ref=e487]:
+    - heading "Sources 31 papers" [level=2] [ref=e489]
+    - generic [ref=e490]:
+      - paragraph [ref=e492]: 65 primary descriptions match this selection. This view shows 37 descriptions across 31 papers; supporting context is labeled separately.
+      - generic [ref=e493]:
+        - article [ref=e495]:
+          - paragraph [ref=e496]: 2025-10 · Physical question · Matches current source selection
+          - heading [level=3] [ref=e497]:
+            - link "A Mini Review of some Dark Matter/BSM Physics and a Bit More" [ref=e498] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2510.25877
+          - paragraph [ref=e499]: Which connections between dark matter candidates, underlying BSM physics, cosmological consistency and detection strategies provide useful physical insights? This is a subjective review, including excluded or potentially excludable ideas, rather than a systematic assessment of surviving models.
+          - group [ref=e500]:
+            - generic "▸ Source scope & provenance" [ref=e501] [cursor=pointer]
+          - group [ref=e502]:
+            - generic "▸ Methods, assumptions and scientific source connections" [ref=e503] [cursor=pointer]
+          - link "Read paper ↗" [ref=e505] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/2510.25877
+        - article [ref=e507]:
+          - paragraph [ref=e508]: 2026-10 · Physical question · Matches current source selection
+          - heading [level=3] [ref=e509]:
+            - link "Near Threshold Kaluza-Klein Graviton Decays and the Dark Dimension" [ref=e510] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2610.01825
+          - paragraph [ref=e511]: What is the near-threshold partial-wave suppression of intra-tower KK graviton decays, and does the resulting cascade rate permit dark-dimension graviton dark matter or evade bounds from unavoidable freeze-in production?
+          - group [ref=e512]:
+            - generic "▸ Source scope & provenance" [ref=e513] [cursor=pointer]
+          - group [ref=e514]:
+            - generic "▸ Methods, assumptions and scientific source connections" [ref=e515] [cursor=pointer]
+          - link "Read paper ↗" [ref=e517] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/2610.01825
+        - article [ref=e519]:
+          - paragraph [ref=e520]: 2019-06 · Physical question · Matches current source selection
+          - heading [level=3] [ref=e521]:
+            - link "Primordial Extremal Black Holes as Dark Matter" [ref=e522] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/1906.04858
+          - paragraph [ref=e523]: Can primordial black holes below the ordinary evaporation-survival mass constitute dark matter through dark-charge near-extremality, and can their mergers produce observable Hawking-radiation transients or constrain a dark-sector weak gravity conjecture?
+          - group [ref=e524]:
+            - generic "▸ Source scope & provenance" [ref=e525] [cursor=pointer]
+          - group [ref=e526]:
+            - generic "▸ Methods, assumptions and scientific source connections" [ref=e527] [cursor=pointer]
+          - link "Read paper ↗" [ref=e529] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/1906.04858
+        - article [ref=e531]:
+          - paragraph [ref=e532]: 2021-02 · Physical question · Related source; outside this view’s primary selection
+          - heading [level=3] [ref=e533]:
+            - link "Challenging the Stability of Light Millicharged Dark Matter" [ref=e534] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2102.08394
+          - paragraph [ref=e535]: Can electrically neutral, very light charged scalar dark matter remain cosmologically stable when its large occupation numbers enhance particle–antiparticle annihilation into gauge bosons? The paper examines direct electromagnetic coupling and coupling through kinetic mixing with a massless hidden photon.
+          - group [ref=e536]:
+            - generic "▸ Source scope & provenance" [ref=e537] [cursor=pointer]
+          - group [ref=e538]:
+            - generic "▸ Methods, assumptions and scientific source connections" [ref=e539] [cursor=pointer]
+          - link "Read paper ↗" [ref=e541] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/2102.08394
+        - article [ref=e543]:
+          - paragraph [ref=e544]: 2016-12 · Physical question · Matches current source selection
+          - heading [level=3] [ref=e545]:
+            - link "Dark Matter Relics and the Expansion Rate in Scalar-Tensor Theories" [ref=e546] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/1612.05553
+          - paragraph [ref=e547]: Can thermal dark matter reproduce the assumed observed abundance with annihilation cross sections larger or smaller than standard-cosmology values, through scalar-tensor modifications of pre-BBN expansion?
+          - group [ref=e548]:
+            - generic "▸ Source scope & provenance" [ref=e549] [cursor=pointer]
+          - group [ref=e550]:
+            - generic "▸ Methods, assumptions and scientific source connections" [ref=e551] [cursor=pointer]
+          - link "Read paper ↗" [ref=e553] [cursor=pointer]:
+            - /url: https://arxiv.org/abs/1612.05553
+        - generic [ref=e554]:
+          - article [ref=e555]:
+            - paragraph [ref=e556]: 2008-10 · Physical question · Matches current source selection
+            - heading [level=3] [ref=e557]:
+              - link "Dark Matter and Dark Radiation" [ref=e558] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/0810.5126
+            - paragraph [ref=e559]: Can dark matter carry an unbroken long-range U(1)D interaction while satisfying thermal-relic, radiation-density and galactic-dynamics constraints, and could the resulting neutral dark plasma have observable collective effects?
+            - group [ref=e560]:
+              - generic "▸ Source scope & provenance" [ref=e561] [cursor=pointer]
+            - group [ref=e562]:
+              - generic "▸ Methods, assumptions and scientific source connections" [ref=e563] [cursor=pointer]
+            - link "Read paper ↗" [ref=e565] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/0810.5126
+          - group [ref=e566]:
+            - generic "1 more extracted descriptions from this paper" [ref=e567] [cursor=pointer]
+        - generic [ref=e568]:
+          - article [ref=e569]:
+            - paragraph [ref=e570]: 2009-04 · Physical question · Matches current source selection
+            - heading [level=3] [ref=e571]:
+              - link "Searching for the light dark gauge boson in GeV-scale experiments" [ref=e572] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/0904.1743
+            - paragraph [ref=e573]: Which low-energy experiments can constrain or discover a weakly coupled, roughly hundred-MeV to GeV dark vector, and what fixed-target designs could extend sensitivity beyond existing collider and meson-decay samples?
+            - group [ref=e574]:
+              - generic "▸ Source scope & provenance" [ref=e575] [cursor=pointer]
+            - group [ref=e576]:
+              - generic "▸ Methods, assumptions and scientific source connections" [ref=e577] [cursor=pointer]
+            - link "Read paper ↗" [ref=e579] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/0904.1743
+          - group [ref=e580]:
+            - generic "1 more extracted descriptions from this paper" [ref=e581] [cursor=pointer]
+        - button "Show all 31 papers in this view" [ref=e582] [cursor=pointer]

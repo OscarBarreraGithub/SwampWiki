@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-19T03:05:15.214Z",
+  "checks": [
+    {
+      "url": "https://swampwiki.com/",
+      "expectedStatus": 200,
+      "status": 200,
+      "location": null,
+      "passed": true
+    },
+    {
+      "url": "https://www.swampwiki.com/?q=test",
+      "expectedStatus": 308,
+      "expectedLocation": "https://swampwiki.com/?q=test",
+      "status": 308,
+      "location": "https://swampwiki.com/?q=test",
+      "passed": true
+    },
+    {
+      "url": "https://www.swampwiki.com/docs/site.md?q=test",
+      "expectedStatus": 308,
+      "expectedLocation": "https://swampwiki.com/docs/site.md?q=test",
+      "status": 308,
+      "location": "https://swampwiki.com/docs/site.md?q=test",
+      "passed": true
+    },
+    {
+      "url": "http://swampwiki.com/?q=test",
+      "expectedStatus": 301,
+      "expectedLocation": "https://swampwiki.com/?q=test",
+      "status": 301,
+      "location": "https://swampwiki.com/?q=test",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

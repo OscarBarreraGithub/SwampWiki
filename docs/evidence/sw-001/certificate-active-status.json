@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-19T03:05:27.738Z",
+  "certificates": [
+    {
+      "id": "8141fbde-cc73-4ca4-8f68-2c70b8c09fa0",
+      "type": "advanced",
+      "hosts": [
+        "swampwiki.com",
+        "www.swampwiki.com",
+        "*.www.swampwiki.com"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "4238e3a3-774b-4e77-bf2a-9afaa6892221",
+      "type": "advanced",
+      "hosts": [
+        "swampwiki.com",
+        "*.swampwiki.com"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "e06eca61-ca59-4982-b02b-81c38d788b69",
+      "type": "universal",
+      "hosts": [
+        "swampwiki.com",
+        "*.swampwiki.com"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "d0b6a136-162f-407b-bad0-47604faed2c3",
+      "type": "universal",
+      "hosts": [
+        "swampwiki.com",
+        "*.swampwiki.com"
+      ],
+      "status": "backup_issued"
+    }
+  ],
+  "https": {
+    "id": "always_use_https",
+    "value": "on",
+    "modified_on": "2026-11-19T03:04:30.794028Z",
+    "editable": true
+  }
+}

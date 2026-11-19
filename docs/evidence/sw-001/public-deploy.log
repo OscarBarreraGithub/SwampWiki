@@ -1,0 +1,18 @@
+
+ ⛅️ wrangler 4.95.0
+───────────────────
+🌀 Building list of assets...
+✨ Read 18177 files from the assets directory /Users/emmy/Documents/SwampWiki/dist
+🌀 Starting asset upload...
+No updated asset files to upload. Proceeding with deployment...
+Total Upload: 26.23 KiB / gzip: 7.88 KiB
+Worker Startup Time: 3 ms
+Your Worker has access to the following bindings:
+Binding            Resource      
+env.ASSETS         Assets        
+
+Uploaded swampwiki (8.50 sec)
+Deployed swampwiki triggers (1.66 sec)
+  swampwiki.com (custom domain)
+  www.swampwiki.com (custom domain)
+Current Version ID: ec66b63a-8313-45bd-b7eb-25b680d77c58
