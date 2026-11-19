@@ -2,13 +2,13 @@
 
 ## Now
 
-- **Project/question:** SW-005 asks whether the live Swampland wiki and broader atlas narrow scientific questions coherently and lead readers to the right evidence. SW-001 established the published text navigator.
+- **Project/question:** SW-005 and SW-006 ask how the Swampland wiki can narrow scientific questions coherently, lead readers to evidence, and stay readable at desktop and phone widths. SW-001 established the published navigator.
 - **Known:** The owner explicitly chose the text navigator we built and only its Swampland parts, not the separate sr-744/swampwiki prototype. The accepted source release is Eigenquestions commit 387e95edb11aca883cbf1d05ceba9513bfd1e364. Keep scientific scopes, source qualifications and adjacent literature in the curated Swampland collection; remove the all-physics navigation and graphical views from this product.
 - **Known checks/save:** Release 8c271ed is verified on GitHub main. All 119 tests and static checks pass locally and in GitHub Node 22 CI. The isolated desktop/mobile browser smoke passed; no jobs remain running. Evidence is linked below.
 - **Known hosting:** https://swampwiki.com/ is live. Production Worker version ec66b63a-8313-45bd-b7eb-25b680d77c58 serves both domains; certificates and redirects are verified. All 23 public-content checks and 42 retired-route checks pass. Live browser navigation opens a topic and returns to the collection with New path.
 - **Latest review:** SW-003 reproduced the same Dark Dimension question from SwampWiki search and Eigenquestions overview links. SW-004 found that a paper-specific question appears as an ordinary next direction under a broad topic. The source link is already typed, but the browse list includes it alongside topic links. See the dated entries for reproducible examples.
-- **Unfinished/attention:** SW-005's independent review is running in the verified Harvard Claude Enterprise profile. Automatic GitHub deployment still awaits a dedicated deployment token. No cluster jobs are running.
-- **Next:** Check the review's live journeys, structural counts and paper evidence, then save the verified findings and the decisions they support.
+- **Unfinished/attention:** Enterprise Claude is auditing the release, testing the LZ route, and working on a responsive UI candidate in an isolated worktree. The recurring job is registered, and its first tick is awaiting macOS Documents access. Automatic GitHub deployment still awaits a dedicated deployment token. No cluster jobs are running.
+- **Next:** Review the source-backed findings and rendered UI changes, then verify a real recurring supervision tick. Keep trials in the separate checkout until validated.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
@@ -22,6 +22,8 @@
 **SW-004 (summary):** Assess why a detailed paper question about brane symmetry breaking and the reported LZ event appears one step below a broad topic.
 
 **SW-005 (summary):** Commission an independent Claude Enterprise audit of the live wiki and atlas, with evidence for what works, scientific and organizational corrections, and better principles for navigation across subfields.
+
+**SW-006 (summary):** Run useful SwampWiki research and UI improvement rounds through the Enterprise account's five-hour windows. Supervise progress and resume at the provider's reset. Use Opus 5.5 at xhigh, with Fable 5.2 for a difficult question if available within the allowance. Iterate on responsive layout and browsing.
 
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
@@ -114,3 +116,9 @@ Science with Agents retained prior Harvard Enterprise identity metadata, while C
 ## 2026-11-18 — SW-005: Start the independent review under Enterprise
 
 After the owner signed in, root verified Enterprise in the separate native profile and verified that both existing Max profiles remained signed in. The handoff reached `claude-enterprise-atlas-review`. Claude Code reports Opus 5.5, and its isolated browser connected. The session is reviewing the public releases with read access to their catalogs and documentation. The native receipt and handoff are retained privately. The browser connection and start receipt confirm dispatch. Findings are pending.
+
+## 2026-11-18 — SW-006: Start focused science and UI rounds and register recurring supervision
+
+Root launched two distinct Opus 5.5 xhigh pilots. One starts from live navigation and tests how the distant-brane LZ source question should be reached. The second measures phone and desktop layouts and makes one focused responsive pass in the local `experiment/claude-swampwiki-ui` worktree. The preview built successfully. Both isolated browsers connected and recorded live interactions. The broader SW-005 audit is also active. Raw native and browser evidence stays in ignored `Records/`.
+
+Native Enterprise events report a five-hour reset at 00:20 Eastern on November 19 and organization-disabled overage. The recurring job is registered as `com.sciencewithagents.swampwiki-enterprise`. It checks every five minutes while the Mac is awake and logged in, wakes Codex to inspect active work and select a useful next round, and uses native allowance evidence to govern dispatch. Seven local checks exercised the reset gate, rejection, stop and single UI writer. The first actual tick has reached macOS's Python Documents access prompt. Reset behavior on real provider time and recurring dispatch are unverified. The owner can pause recurring work with the private `Records/sw-006/STOP` marker. The live sites still serve their verified releases.
