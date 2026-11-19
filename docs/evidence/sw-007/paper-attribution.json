@@ -1,0 +1,40 @@
+{
+  "request": "SW-007",
+  "task": "paper attribution",
+  "worker": "Enterprise Claude Opus 5.5",
+  "scope": "local UI candidate",
+  "topic": "q025-candidate-question:b6a72d6d11c8f9c783284067",
+  "before": {
+    "width": 390,
+    "heading": "Paper questions \u00b7 14 from 9 papers",
+    "rowCount": 14,
+    "distinctPapers": 9
+  },
+  "after": {
+    "width": 390,
+    "heading": "Paper questions \u00b7 14 from 12 papers",
+    "rowCount": 14,
+    "distinctPapers": 12,
+    "docOverflowX": false,
+    "targetsUnder44px": 0,
+    "qualification2007Open": true
+  },
+  "desktop": {
+    "width": 1280,
+    "rowCount": 14,
+    "distinctPapers": 12
+  },
+  "history": {
+    "rows": 14,
+    "attributedRows": 14,
+    "papers": 12,
+    "retained2007SpecializesWithQualification": true
+  },
+  "testsPassed": 123,
+  "validatedFileSha256": {
+    "web/app.js": "784f13d861701ac938ef66096c933e6627108f2edd518e86c6e665edc02c688b",
+    "web/atlas-panel.mjs": "c65554b154e4d620a40f557ebb094c1c19e8ea866ce7bcd9ed70b26274d92cea",
+    "tests/site/paper-attribution.test.mjs": "c003a08698085fd63a4a4d5667d199e3a79db1c9d4d864ba37ee96e00a5b1387"
+  },
+  "knownNextCase": "Three regions exceed the attribution batch cap of 48. The largest exposes 67 links."
+}
