@@ -20,6 +20,6 @@ Agents can read the source-linked records or use the [navigation interface](docs
 
 ## Hosting status
 
-The intended address is **swampwiki.com**, with `www.swampwiki.com` redirecting to it. GitHub checks are configured; Cloudflare deployment is disabled pending account access, domain setup and deployment credentials. The Namecheap domain is still parked. No live SwampWiki deployment is claimed.
+The intended address is **swampwiki.com**, with `www.swampwiki.com` redirecting to it. GitHub checks pass. The complete site is uploaded to Cloudflare with no public targets, pending Namecheap nameserver delegation and domain activation. Automatic GitHub deployment remains disabled until a dedicated deployment token is configured. The Namecheap domain is still parked; the public site is not live yet.
 
 [Deployment setup and remaining steps](docs/SW-001-deployment.md) · [Lab notebook](Lab%20Notebook.md)

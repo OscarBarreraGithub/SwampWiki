@@ -1,0 +1,146 @@
+
+ ⛅️ wrangler 4.95.0 (update available 4.165.0)
+──────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 18177 files from the assets directory /Users/emmy/Documents/SwampWiki/dist
+🌀 Starting asset upload...
+🌀 Found 18161 new or modified static assets to upload. Proceeding with upload...
++ /robots.txt
++ /favicon.svg
++ /404.html
++ /data/atlas/index.json
++ /paper-title.mjs
++ /atlas/swampwiki/2026-11-18-text-v1/q025-candidate-question:a4f67137d6a4a477cc097c6a.html
++ /data/atlas/swampwiki/2026-11-18-text-v1/fine-home-access-admission.json
++ /atlas/index.html
++ /source-coverage.mjs
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ccec1d6db42fce1c9c3ae5150d3d02094553988b5e8c1e8c0f551359d9100883.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:346956558be4a8e5a663067f1ad1df75305aaf9623a4861b4f3b15c0e5ea82ea.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ef300e71c2946be15c47b67a1cab1561fc82af70cc8966a6c53c804f36d18fc7.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:9348c648eb6d5adf0f43f0678d2f2e8cac2d220dbd7cc4ef3a91fde2a4bb8650.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:b1dff6825d7bfdc0ee431f8ceca88c8621c389506485ca8a65988776ab3b6111.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:efc73e67470600e7a71635aab12cb3294755cda638f3c05ad684ea0fc0404bdf.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:fcf0431e685c9797217a81b23fad41075543d42a3eb50d7901e4e8bf1113ce3e.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:08a7c0eef95e600eb72bc79e0b8a8456b9b600e6633b60cd1b23ec15c162f002.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:804847dd18b410ee76133159cfc6dee32363e96b8839c428c3c12b5bbc1dfe11.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:bebd983f78917f389492a18226755c9aac6f0de266973bb09b65aabbde2d7ca4.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:d3dcef3cda69753171c255cdd3dcaef2f2fea6e886528e2024d1d549827ca2f2.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:643c199d7c75378295b8c9b0677a393db30e5c2d15eb18deb20f31b0a4332b49.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:f75d6bc35c8b9b49a90e765c8105b237f0de7e4af0870c4e5151795391726a90.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:3e854198fa1a47b3a773781c5602527768a2d7fcb722fabacd16fb52658344ab.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:29d09dc428bf8d12f83f67ca9a501b4ea19092427458bae8c420f47717c77005.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:91f4eebf91351693eac4abf80283d1a36fa815df67c3447ecdb4112582ddd89a.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:6954917944305438f6219480665af41e506e78fb87635b6c6a695cdf6e49638a.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:fdf027a4a95fe2d1e66c7926b390ba37c9c56c98067c68a4af65a0c47f222a87.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:21a744432ea5c2a44b59461b33f566e28da299f1a95a899f29d4a6968855505b.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:846b5eaed40fb85686e83739948802175d551df3d0b9a507973ceda91b9482b8.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:6e7c538a1adca22ea5d182f99d43682cd1142ac64c0e7346fa261287e988b705.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:2f7ada10910118137fade4d1c5f95677bfaacb8913d50547bf4dcd7f5af59a96.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:78b5f5aecb18574a42edb8f1f34524cdd5061b0a64600fbc2f010c0c8325b33f.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:8a82595558096a2dda96f9098044821fbaccc90e738c2a06f452b287161bc30e.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:1af60b48dc6e0c6ee3e2484511b281b231ce01c351ec9f487e9f0038c1eef3d5.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:e8184a7b5ea027c1b12ed0673b119994fb7ea1d17ad5d2ce8bdfe062a7a0763f.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:4f4207a9a5f4ef5cd6f9e82572e46fbf01b09ebb07fd3955db0033098e583ab4.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:7e29dc4ab74f40cb4e54f98b2eccaa2997a4a03aad753f0e6bf8ff653d08840a.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:3d89142bf943b8516bcd13219eab26f23a3d354b0e61086d34c8acfbe3e6017b.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:01ac825877e401161541c2e2c380f2488def760583e5f0c42c1f2b44fe4ccf94.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:76a56272add2f036da7d669ef473218db7df602266a37cfd12c7d8c612f7ad85.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:37a4ce553c743c3ef234fa2410eceeef7337a9deb591eab9007be597666579d3.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:4d9046a9f1b5b5f8377a5e9f028cedfd0d13f15bbf90a16c2b05d512e980f070.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:57e063530e56d4fe9e0d6a00adb9a4a8340eaaa2e68849de844007ac5be9841e.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:dbb9485a225b2430e8be3ebba03b1ec654b60104333862d9f62631c272b35af4.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:b5be332b824e0a71ea775dd55084860d22b2dd0d8d606acfe601320048bde0f2.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:f1b63592f6ef3ca0014dc724586548abaaa3e4b686ef015dba6cc5d0a85b3169.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a407a7c0792376cc28807bcf47a6c10d3c433c2660baf819d9fbb544a54120af.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:169c7d56191ea947c75fc22f7dfe2357bc73e0e4b270cc6d3d0ed82c083dd6c7.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:8442c6b1d700aeee9e2d712b39774bf60f01d328f481ed7477ba4a521fa3e58a.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:2ebe4d7b5c5169a46775c408d9039e0a1c76081281f7fc0ef56cacebac2a0845.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:7b1f7d1f5613228014560f68273d76b4cb82c6dc61596b30c09390def49c8ca5.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:78fb82b22c44bc7c94ccb77c0ffb2671e623925398f530ecef273387b32c5b16.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:555811959158eb32f4cf08ba52e676d75f4065c4496a72fa7e613ce532864281.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:7368e62ea569bbb3d1adadb3013c77813cfff988ed3ebd8b4f9e70f7955381e5.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:bb32ff66c6868e949cea597074bf017d9ef8b42174cfa9eb4323386e1fb0767f.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:d8413d25e3c4b1bb2699f405d7a0f9de45b24b6b5003944fa1bc83b0f59e9538.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ed79f6a525629d405933dbfaa1052927f7d512bb2a27f676e4a93117294c8a03.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:b736a52a82738c80c72da003b77eddc1ad6567b8751539182f1049f303d02c74.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:0486f470080e57cff9499a6687e71807d24a273dc6fd41613b5b8b77981e81e8.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:9733462f7061a5be3bbfca2e76dc57219ca2a2e96f1c1b03d29e961a92fccac7.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:48530260e6ed4f134919f20ec9e29798af50b9579ccf589dc930b1ae9051ad8d.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:6da8113bd5ed8623d92d3fbf739387ca2ec1ecd0b2a0ff7dafed4d3c7ddd353a.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a4fd8de130a2ce4a11542bdca1a9f3990f51b93e4b66d6e755db176fb2be2fac.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:753973943d9eabfe653fab74b4a5e2da57b7dfb6d77b59d71776dc5941ca5d71.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:9498c902d1fcafd6c6c840e010275277fdbf1a63b88584633518660a01fa1db1.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:95e467e7b5d10bd9a437e9ff7aca6bbb04583952c58e9e3f29372cb5540c75a9.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:d6135abb9d5651b3e387e7a3b7b2ac980185db091dedce1c08c4c3090e963e35.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:9488d2e8b48625d53658d0a08807311cecd09ee354ce7571504825852245dfc6.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:0b53e5e6646ffb16fadf3ea1c0783332fb56433f06fc8ab4cd05b3aedfc53b22.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:cb18318f7185a2e346392da2d7e83525f9c17e2717f58440d05ebc0cc48dd073.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:bb1523935ee703d4ce1a119b275b3b5fd87fa274c2f75314497febf36099a2e8.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:5647fb3cc5f4e2ff3446fa7cb77f943393191578f030a98071203ac63806dd67.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:57dd0fff751821c7460894e2fcc9cee0b458903c9607e400bc27eebc9fdf7ecb.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a6e8d73163d58f272be516056320066039c985181e7bb3a1ca8f242a3d6196f9.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:e6b5e6d18b4ee7fac057cb246e9f61e55eb21860c15abcb150ca3a2215610a42.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a2c6c54e5bc957b44ec1b335d4eb576c725548615452875849d50bd106b15d9f.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ecad3e44c60308fad0e1bfd7d1dec710cb35eb2ec1c22afa523c874403c9a9e6.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:fe830140c93fc7b3acd5748ed38525455057450beff77e71e6abdef966578edd.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:4d2c56db71a4f75b04a6b057aa9fd676452500539ebd6cedcad2b6ddc12acd79.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:153104ac211226e4df408880ac552bec2ac75b6d4a90db905a5aba24e4ad2d30.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:b9ea375b452329c96a9124623e82b3a5ba91a7702ef89f7e15468601f7facb7e.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:328727ae562b449a9c1c36bf482eb6c2e8e0019f40018ad0b98fbba669217b28.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a87e191d74b12c28d9bfe3bcd3a7eb1bb52b73395885b6ef7733c9be71fc0ec1.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:881c22670a1048c3f605b4f1e499227bb7b03d77964a190381b22ff91a805517.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:737f0e72ef282504b82ec10d5ea8b7ddf4d0d56830347d17107cd9219132e564.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:b0a10a242143873e59ba2d7f08fd905bc49dfacec461eeee485fdb7cf2d748e3.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:444bdc91544c4eb000702bec715a1ab8fcc6b42eeec76ec26640a58a806c7454.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:1ba0c4834dc54837ff447f538552c7b360c02b4371d3fafc4f633ba4d6e5bccf.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:0849e6ba6fb9ed4ce84c6d617363a95d2f3d4f2e113b30e9fce62ca0eb7c338c.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:34b3b54554926696705824af97e66c800d28b0c5980709edcb8799ea434b041d.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:bd01eaef1f4ba314bcb0d7ada2c3efd5ccf46af9c1b4113267c032bfdf6df46e.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:e8e985c2e02110d579e9042dc5cbbbfcc1638bb46c78a5a281abc9411eed3b68.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:1628aea90a0486350f68498c2ea20cba5b0c19a4da9afe74df1a0ef92c2fe237.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:00b2692be597be9a2c2bfa22ff21729dd9095b177d325670b23bf283708bd573.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:42694d521c0eb9d57820f1447f07e596140eb6b990a55d3ede0e77aa9f9f7c72.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ba080b13c9b979443a88b8a7d9124068c438d002b1ab0ab7af00ad98ce85d0ab.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:1f60dca66eed8c1c21492f7246b43ee45b28fcc5822a568510ab051ce19d3a80.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:a5ecf81198febe8a9c0642d006e13cb7e7d5c1b4971e83a91a4bfc157f5da448.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:ab533618bef602e78eea624c4111d3deffdf2d1010da68d430260b069ae5d0e3.html
++ /atlas/swampwiki/2026-11-18-text-v1/source-question:1655c2bcdd847ca3ad3572d4f0c5ca77a3c42f6ee7185d69fff5910e0a276409.html
+   (truncating changed assets log, set `WRANGLER_LOG=debug` environment variable to see full diff)
+Uploaded 1000 of 18161 assets
+Uploaded 2000 of 18161 assets
+Uploaded 3000 of 18161 assets
+Uploaded 4000 of 18161 assets
+Uploaded 5000 of 18161 assets
+Uploaded 6000 of 18161 assets
+Uploaded 7000 of 18161 assets
+Uploaded 8000 of 18161 assets
+Uploaded 9000 of 18161 assets
+Uploaded 10000 of 18161 assets
+Uploaded 11000 of 18161 assets
+Uploaded 12000 of 18161 assets
+Uploaded 13000 of 18161 assets
+Uploaded 14000 of 18161 assets
+Uploaded 15000 of 18161 assets
+Uploaded 15946 of 18161 assets
+Uploaded 16432 of 18161 assets
+Uploaded 17085 of 18161 assets
+Uploaded 17418 of 18161 assets
+Uploaded 17622 of 18161 assets
+Uploaded 17787 of 18161 assets
+Uploaded 17937 of 18161 assets
+Uploaded 18049 of 18161 assets
+Uploaded 18100 of 18161 assets
+Uploaded 18138 of 18161 assets
+Uploaded 18142 of 18161 assets
+Uploaded 18161 of 18161 assets
+✨ Success! Uploaded 18161 files (1 already uploaded) (107.46 sec)
+
+Total Upload: 26.43 KiB / gzip: 7.92 KiB
+Worker Startup Time: 4 ms
+Your Worker has access to the following bindings:
+Binding            Resource
+env.ASSETS         Assets
+
+Uploaded swampwiki (117.73 sec)
+No deploy targets for swampwiki (0.78 sec)
+Current Version ID: d4510ee7-ac78-4e7d-8357-c40a25a0db86

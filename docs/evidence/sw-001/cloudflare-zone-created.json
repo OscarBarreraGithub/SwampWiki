@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-19T01:23:16.641Z",
+  "zone": {
+    "id": "618f4948a88c79c688c70f7f70de8175",
+    "name": "swampwiki.com",
+    "status": "pending",
+    "type": "full",
+    "account": {
+      "id": "60ab5e4b784f9a15e59eb851df3e8c0b",
+      "name": "Oscarbarrera@fas.harvard.edu's Account"
+    },
+    "name_servers": [
+      "ophelia.ns.cloudflare.com",
+      "razvan.ns.cloudflare.com"
+    ],
+    "plan": {
+      "id": "0feeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "name": "Free Website",
+      "price": 0,
+      "currency": "USD",
+      "frequency": "",
+      "is_subscribed": false,
+      "can_subscribe": false,
+      "legacy_id": "free",
+      "legacy_discount": false,
+      "externally_managed": false
+    },
+    "original_name_servers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+    ]
+  },
+  "access": {
+    "cloudflareAccountAndZone": "working after owner updated session access",
+    "wrangler": "Existing OAuth authenticates the same account",
+    "browser": "Computer Use was not approved to use Google Chrome",
+    "accountTokenManagement": "Connector returned HTTP 403; missing account-api-tokens.write"
+  },
+  "registrar": "No changes performed; confirmation of custom records/email is pending",
+  "deployment": "Not yet uploaded; GitHub deployment gate remains false"
+}

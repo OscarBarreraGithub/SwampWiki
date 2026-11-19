@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-19T01:27:07.124408+00:00",
+  "commit": "bc2c4f26310dfc333f830d0129af98ff0d55dbab",
+  "wranglerVersion": "4.95.0",
+  "command": "./node_modules/.bin/wrangler deploy --dry-run --config <temporary wrangler.toml> --outdir <temporary bundle directory>",
+  "exitCode": 0,
+  "productionConfigSha256": "1865b63ee83ca50a6bd58712d6d62803c711c0c0b84e603abfdbf06ad07c167b",
+  "stagingConfigSha256": "7f78a08081aa112adf2906730142ec6bb3c5d56ab64715c8e6ebb548da21f97b",
+  "configComparison": {
+    "changedFields": {
+      "main": "Resolved backend/site.mjs to its absolute path.",
+      "assets.directory": "Resolved dist to its absolute path.",
+      "routes": []
+    },
+    "allOtherParsedFieldsEqual": true,
+    "workers_dev": false,
+    "preview_urls": false,
+    "worker": "swampwiki",
+    "compatibility_date": "2026-11-18",
+    "bindings": [
+      "ASSETS"
+    ]
+  },
+  "bundleSha256": "24225640c6b9fccb8ea41e6332a965732d90d4590362fe72fb6c04c6786b5ff3",
+  "workerKiB": 26.43,
+  "gzipKiB": 7.92,
+  "matchesProductionCodeAfterOmittingBundlerSourcePathComments": true,
+  "staticAssets": {
+    "wranglerPathsRead": 18177,
+    "files": 18163,
+    "directories": 14,
+    "totalFileBytes": 637508662,
+    "largestAsset": {
+      "path": "data/atlas/swampwiki/2026-11-18-text-v1/catalog.json",
+      "bytes": 6669582
+    }
+  },
+  "remoteDeploymentPerformedByThisCheck": false
+}

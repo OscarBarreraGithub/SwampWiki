@@ -1,0 +1,9 @@
+⛅️ wrangler 4.95.0 (update available 4.165.0)
+──────────────────────────────────────────────
+✨ Read 18177 files from the assets directory <project>/dist
+Total Upload: 26.43 KiB / gzip: 7.92 KiB
+Your Worker has access to the following bindings:
+Binding            Resource
+env.ASSETS         Assets
+
+--dry-run: exiting now.
