@@ -2,6 +2,8 @@
 
 Enterprise Claude Opus 5.5 reviewed the published SwampWiki text release (`8c271ed`, atlas `2026-11-18-text-v1`) and sampled the Eigenquestions overview (`387e95e`). An independent Opus 5.5 xhigh pilot separately followed the LZ example on the live wiki. The project manager checked the catalog bytes against publication and independently repeated the central graph counts. Findings below separate observations from candidate changes. These are checks of one release and a limited scientific sample.
 
+To reproduce the counts, run `npm run build` then `node docs/evidence/sw-005/direction-census.mjs` in the project. [Census code](evidence/sw-005/direction-census.mjs).
+
 ## What the review reproduced
 
 - **Browsing reaches almost all topics through some route, while topical narrowing reaches about a seventh.** Starting from the 15 collection entrances and following only outgoing `narrower` edges reaches 279 of 1,966 non-entrance catalog destinations. Allowing uncapped catalog links in both browse directions reaches 1,961. These counts exclude the 8,473 lazily indexed paper questions. A small reachable fraction under one relation type alone does not establish that individual placements are wrong.

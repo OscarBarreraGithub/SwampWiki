@@ -1,0 +1,62 @@
+{
+  "request": "SW-006",
+  "releaseCompared": "8c271edbca01864fda09dc3b75b7f8d34dbccd57",
+  "product": "local candidate",
+  "reviewer": "/root",
+  "worker": "claude-swampwiki-ui-pilot",
+  "assetsSha256": {
+    "web/app.js": "5bcec76c9428e58e484bfa2bf439753129e0203ed47b2a65b13e4fb43572a596",
+    "web/styles.css": "81587bfbc46bb593db423f7c50799bcac2aa2f2f6e202ebccec618c1e7b39ed8"
+  },
+  "mobileHome390": {
+    "baseline": {
+      "pageWidth": 390,
+      "panelHeight": 606,
+      "panelContent": 2399,
+      "verticalOverflow": "auto"
+    },
+    "candidate": {
+      "pageWidth": 390,
+      "panelHeight": 2399,
+      "panelContent": 2399,
+      "verticalOverflow": "visible",
+      "keyboardEndReachedFooter": true,
+      "panelScrollTopAfterEnd": 0
+    }
+  },
+  "links": {
+    "earlierStepArrowPreservedCurrentDestination": true,
+    "afterChoosingLastHomeDirectionAt390": {
+      "titleTop": 60,
+      "pathTop": 0
+    }
+  },
+  "longLzQuestion": {
+    "viewportAndDocumentWidths": [
+      [
+        360,
+        360
+      ],
+      [
+        390,
+        390
+      ],
+      [
+        768,
+        768
+      ],
+      [
+        1280,
+        1280
+      ]
+    ],
+    "paperLinksEachWidth": 2
+  },
+  "validation": {
+    "testsPassed": 119,
+    "testsFailed": 0,
+    "verifiedShardFiles": 14,
+    "verifiedAtlasFiles": 7669,
+    "note": "First full test run found a missing miniflare dependency in the new checkout. Installed locked dependencies with npm ci, then all tests and the static site check passed."
+  }
+}
