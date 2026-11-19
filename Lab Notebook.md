@@ -7,8 +7,8 @@
 - **Known checks/save:** Release 8c271ed is verified on GitHub main. All 119 tests and static checks pass locally and in GitHub Node 22 CI. The isolated desktop/mobile browser smoke passed; no jobs remain running. Evidence is linked below.
 - **Known hosting:** https://swampwiki.com/ is live. Production Worker version ec66b63a-8313-45bd-b7eb-25b680d77c58 serves both domains; certificates and redirects are verified. All 23 public-content checks and 42 retired-route checks pass. Live browser navigation opens a topic and returns to the collection with New path.
 - **Latest review:** SW-003 reproduced the same Dark Dimension question from SwampWiki search and Eigenquestions overview links. SW-004 found that a paper-specific question appears as an ordinary next direction under a broad topic. The source link is already typed, but the browse list includes it alongside topic links. See the dated entries for reproducible examples.
-- **Unfinished/attention:** Automatic GitHub deployment still awaits a dedicated deployment token; its gate remains false. Manual publication through the authenticated local Wrangler works. No user action is needed to view the site. Namecheap delegation and the CLI browser repair are complete.
-- **Next:** Use the live text navigator for collaborator feedback. When token administration becomes available, configure the dedicated GitHub deployment credential and enable its existing workflow. No cluster jobs are running.
+- **Unfinished/attention:** SW-005's independent review is ready to send. The requested Harvard Claude Enterprise sign-in is pending in a separate native profile. Automatic GitHub deployment still awaits a dedicated deployment token. No cluster jobs are running.
+- **Next:** Verify the Enterprise subscription in the native CLI, then dispatch the review and check its evidence. The live navigator remains available for collaborator feedback.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
@@ -20,6 +20,8 @@
 **SW-003 (summary):** Review the current wiki and atlas and navigate both live sites.
 
 **SW-004 (summary):** Assess why a detailed paper question about brane symmetry breaking and the reported LZ event appears one step below a broad topic.
+
+**SW-005 (summary):** Commission an independent Claude Enterprise audit of the live wiki and atlas, with evidence for what works, scientific and organizational corrections, and better principles for navigation across subfields.
 
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
@@ -102,3 +104,9 @@ In the overview, several connections had the same visible label and relation. On
 Root reproduced the quoted example live. “Extra dimensions and conditional quantum-gravity tests” lists the LZ question as Direction 12 of 15. Clicking it opens a single-paper destination with one recorded connection. The release catalogs the link as source access from the broader question and keeps that link distinct from narrower-topic relations. The default direction selector ranks source access lower but includes it when there are available slots. The broad page has seven such links in its data. [Broad topic](https://swampwiki.com/#atlas=swampwiki&version=2026-11-18-text-v1&destination=q025-candidate-question%3A190bdf4415c78268d594ff95&lens=combined&intent=explore&relation=either) · [Original paper](https://arxiv.org/abs/2609.07138) · [Direction selection](lib/geometry/prepared-atlas.mjs).
 
 The example exposes a gap between paper access and scientific depth. A browse step should give comparable ways to narrow the question. Paper examples can remain directly accessible under sources and via search and shared links. A missing intermediate topic needs evidence of a meaningful grouping. For this case, check whether the literature supports an intermediate route through extra-dimensional dark matter, inelastic mechanisms or direct detection. The present catalog has no curated “inelastic dark matter” destination, and a title scan alone cannot establish the right grouping. No change to the live view was made in this diagnostic.
+
+## 2026-11-18 — SW-005: Prepare an independent Enterprise Claude review
+
+Root prepared a private handoff for `claude-enterprise-atlas-review` against SwampWiki release `8c271ed` and Eigenquestions release `387e95e`. The brief asks for a structural census of the graph and browse choices, live journeys across topics, primary-source checks for scientific classifications, tests of convergence and source or agent access, and prioritized regrouping proposals. One reviewer will deliver a report before any implementation. The manager will verify the evidence and label what remains untested. The brief and original tool records belong in ignored `Records/`. [Science with Agents cross-agent workflow](https://github.com/OscarBarreraGithub/sciencewithagents/blob/2a5c57f5c6732d09dfc8cdccb122aa1733703bdd/Workflows/cross-agent.md).
+
+Science with Agents retained prior Harvard Enterprise identity metadata, while Claude Code currently reported Max on both signed-in profiles. Root prepared a separate profile and opened Claude Code's own sign-in flow. No model call has been made. The next launch must verify native Enterprise authentication and preserve the existing account sessions.
