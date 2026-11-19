@@ -2,14 +2,14 @@
 
 ## Now
 
-- **Project/question:** SW-005 and SW-006 ask how the Swampland wiki can narrow scientific questions coherently, lead readers to evidence, and stay readable at desktop and phone widths. SW-001 established the published navigator.
+- **Project/question:** SW-005 and SW-006 ask how the Swampland wiki can narrow scientific questions coherently, lead readers to evidence, and stay readable at desktop and phone widths. SW-007 restores active supervision from the owner's project conversation and continuous Enterprise work.
 - **Known:** The owner explicitly chose the text navigator we built and only its Swampland parts, not the separate sr-744/swampwiki prototype. The accepted source release is Eigenquestions commit 387e95edb11aca883cbf1d05ceba9513bfd1e364. Keep scientific scopes, source qualifications and adjacent literature in the curated Swampland collection; remove the all-physics navigation and graphical views from this product.
 - **Known checks/save:** Release 8c271ed is verified on GitHub main. All 119 tests and static checks pass locally and in GitHub Node 22 CI. The isolated desktop/mobile browser smoke passed; no jobs remain running. Evidence is linked below.
 - **Known hosting:** https://swampwiki.com/ is live. Production Worker version ec66b63a-8313-45bd-b7eb-25b680d77c58 serves both domains; certificates and redirects are verified. All 23 public-content checks and 42 retired-route checks pass. Live browser navigation opens a topic and returns to the collection with New path.
 - **Latest review:** SW-003 reproduced the same Dark Dimension question from SwampWiki search and Eigenquestions overview links. SW-004 found that a paper-specific question appears as an ordinary next direction under a broad topic. The source link is already typed, but the browse list includes it alongside topic links. See the dated entries for reproducible examples.
 - **Known review:** The independent audit and LZ pilot are complete. Root repeated the key counts and verified the LZ laboratory contribution. [Findings and decisions](docs/SW-005-independent-atlas-review.md).
-- **Unfinished/attention:** Enterprise rounds are testing browse policies, auditing weak-gravity organization and correcting expanded reading record overflow. The first mobile scrolling candidate is verified locally. The recurring job has dispatched the follow-up UI round. The real provider reset is still ahead. No cluster jobs are running.
-- **Next:** Verify wrapping of expanded records, compare alternative browse layouts, and check the actual post-reset dispatch. Keep the published release separate from the experimental UI branch.
+- **Unfinished/attention:** The overnight review queue stalled after it lost implementation scope. The scheduler now resumes a native fork of this project conversation and can dispatch UI repairs with test access. The latest Enterprise window is live. Claude is fixing paper attribution and preparing independent scientific route candidates. The overnight UI changes remain in the local candidate.
+- **Next:** Verify that the attribution repair restores all 12 papers, then continue the browse experiment and check the live allowance near the next provider reset. Keep publication separate from the experimental branch.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
@@ -25,6 +25,8 @@
 **SW-005 (summary):** Commission an independent Claude Enterprise audit of the live wiki and atlas, with evidence for what works, scientific and organizational corrections, and better principles for navigation across subfields.
 
 **SW-006 (summary):** Run useful SwampWiki research and UI improvement rounds through the Enterprise account's five-hour windows. Supervise progress and resume at the provider's reset. Use Opus 5.5 at xhigh, with Fable 5.2 for a difficult question if available within the allowance. Iterate on responsive layout and browsing.
+
+**SW-007 (summary):** Recover the stalled work, continue the actual project conversation as supervisor, complete actionable Claude rounds, and keep the Enterprise allowance in active use across resets.
 
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
@@ -137,3 +139,11 @@ The Opus 5.5 xhigh UI pilot found that mobile choices sat in a 606 px scroll box
 Root saved the verified candidate as local commit `64457ce56123e4e535f2dc78d02675a29e9187b1` on `experiment/claude-swampwiki-ui`. The UI worker also found a separate overflow when opening full reading coverage. Root reproduced a document width of 1,885 px in a 390 px viewport on the Dark Dimension matching question. The next UI assignment targets expanded records and proof hashes. The branch is local and has no deployment. The main repository includes the review's [reproducible census](docs/evidence/sw-005/direction-census.mjs).
 
 The next scheduled check dispatched the expanded-record fix to Claude. The owner clarified the division of work for SW-006. Enterprise Claude should perform the browser journeys, research, edits and routine checks. Codex should review the evidence, assign targeted follow-ups and make occasional acceptance spot checks. Root updated the recurring supervisor and briefs accordingly. Native records showed 276 successful Claude browser actions across the rounds at this checkpoint.
+
+## 2026-11-19 — SW-007: Recover the overnight stall and resume the project conversation
+
+The original job did wake and continued after the 00:20 reset. Native records show 35 completed Claude rounds, including useful responsive changes and a verified source-attribution defect. The last five-hour readings in the two previous windows were 84% and 66% used. After the last 03:52 dispatch, the recurring supervisor kept checking the same blocker without starting more Claude work. Its blank-context checks were separate from this project conversation. Its generated follow-ups all used research mode and could not edit or save the missing regression. These were supervision and dispatch failures. The owner asked to restore continuous useful work.
+
+Root saved the overnight candidate patch privately and dispatched the concrete attribution fix under Enterprise Opus 5.5 at xhigh with scoped edit, test and browser access. The native receipt confirmed a fresh five-hour window. The clock reported its reset at 19:20 Eastern. The recurring job then successfully forked this exact Codex conversation, sent a separate Dark Dimension assignment, resumed the same fork and sent a distance/tower assignment. Future decisions preserve their requested research or implementation mode. An unchanged idle state no longer starts the same supervisor call every five minutes. Five local checks exercised UI routing, the single-writer rule, idle suppression, reset dispatch and the paid-overage stop.
+
+The work in progress is in the local experimental checkout. The existing candidate's paper list understates 14 questions from 12 papers as 14 from 9; the missing three sources and one reviewed role were established before the repair. A browser-verified fix is pending. The corrected instructions and raw native receipts are in private `Records/sw-006/`.
