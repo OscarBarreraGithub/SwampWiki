@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "serverInfo": {
+    "name": "Playwright",
+    "version": "1.66.0-alpha-2026-11-18"
+  },
+  "protocolVersion": "2025-06-18",
+  "toolCount": 25,
+  "requiredNavigationToolsPresent": true,
+  "browserExecutableInstalled": true,
+  "browserLaunched": false,
+  "accountAccessTested": false,
+  "scope": "MCP initialize and tools/list only; no UI interaction or original Chrome access.",
+  "package": "@playwright/mcp",
+  "packageVersion": "0.0.86",
+  "profile": "cli-browser",
+  "codexVersion": "0.169.0",
+  "profileLoadedByCodexMcpGet": true,
+  "desktopNodeReplDisabledInProfile": true,
+  "approvalPolicy": "on-request",
+  "defaultConfigurationChanged": false,
+  "profileSha256": "f1dc2ad588ede61ed4aadd32ee72d15d0230578d6f64197e8766fc9dae7ca045",
+  "browserConfigSha256": "99e593f9e5b83d236f7343846ef657b148db67edb57f0ab4374d59b995034be2"
+}

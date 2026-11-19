@@ -6,13 +6,15 @@
 - **Known:** The owner explicitly chose the text navigator we built and only its Swampland parts, not the separate sr-744/swampwiki prototype. The accepted source release is Eigenquestions commit 387e95edb11aca883cbf1d05ceba9513bfd1e364. Keep scientific scopes, source qualifications and adjacent literature in the curated Swampland collection; remove the all-physics navigation and graphical views from this product.
 - **Known checks/save:** Release 8c271ed is verified on GitHub main. All 119 tests and static checks pass locally and in GitHub Node 22 CI. The isolated desktop/mobile browser smoke passed; no jobs remain running. Evidence is linked below.
 - **Known hosting:** Cloudflare access is restored. The free zone exists and the complete site is uploaded as Worker version d4510ee7-ac78-4e7d-8357-c40a25a0db86 with no public targets. API readback confirms the staged version, no routes/domains and disabled public subdomains.
-- **Unfinished/attention:** Namecheap delegation is pending; Chrome access is still denied. The owner must make the nameserver change or restore browser access, and confirm whether email/custom DNS needs preservation. GitHub account ID is configured, but automatic deployment remains gated off pending a dedicated API token. Connector token administration lacks the required scope.
-- **Next:** Finish Namecheap delegation with any mail needs preserved, then deploy committed wrangler.toml to attach the custom domains after zone activation and verify HTTPS. Assigned nameservers: ophelia.ns.cloudflare.com and razvan.ns.cloudflare.com. No jobs are running.
+- **Unfinished/attention:** Namecheap delegation is pending. The owner clarified this is Codex CLI: its custom desktop browser bridge has no access host. A separate opt-in CLI browser profile is now configured and its MCP handshake passes; it needs a resumed CLI session, browser approval and a Namecheap sign-in before UI/DNS verification. Existing Chrome access remains denied. GitHub automatic deployment still awaits a dedicated token.
+- **Next:** Resume with the cli-browser profile and approval prompts, inspect Namecheap mail/custom DNS, and change nameservers to ophelia.ns.cloudflare.com / razvan.ns.cloudflare.com. Then attach the domains using committed wrangler.toml after zone activation and verify HTTPS. No jobs are running.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
 
 **SW-001 (summary):** Pause expansion of Eigenquestions; configure the newly purchased Namecheap domain swampwiki.com and its GitHub/Cloudflare deployment for only the existing text-based Swampland navigation.
+
+**SW-002 (summary):** Repair the browser integration for Codex CLI so the agent can complete the Namecheap setup.
 
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
@@ -55,3 +57,13 @@
 **Observed.** The upload completed successfully, creating Worker version `d4510ee7-ac78-4e7d-8357-c40a25a0db86` with only ASSETS bound. Cloudflare readback confirms that version is deployed but no custom domains, zone routes, workers.dev URL or version-preview URL expose it. The zone remains pending delegation. [Dry run and configuration comparison](docs/evidence/sw-001/predelegation-deploy/dry-run.json) · [Upload log](docs/evidence/sw-001/predelegation-deploy/upload.log) · [Cloudflare readback](docs/evidence/sw-001/predelegation-deploy/readback.json).
 
 **Meaning/next.** Server-side preparation is complete; the domain is still parked, so no live-site claim is made. After the owner changes Namecheap to the assigned nameservers (with any mail/custom DNS needs resolved), use the committed configuration to attach both hostnames and perform real HTTPS/content checks. The GitHub account-ID secret is now configured; API-token creation remains unavailable, and automated deployment stays disabled. This checkpoint changes only setup documentation and evidence; the tested navigator code and frozen data are unchanged.
+
+## 2026-11-18 — SW-002: Diagnose the CLI/browser mismatch and prepare a supported connection
+
+**Correction.** Earlier desktop Settings instructions did not apply to the owner's Codex CLI session. Codex 0.169.0's diagnostic command reports that the custom node_repl server lacks three browser-access variables. The local configuration points to the desktop app's bridge; the browser tool reports an unavailable host. Official documentation says the built-in Browser is unavailable in CLI. Full Access alone does not supply this host. [Browser availability](https://learn.chatgpt.com/docs/browser).
+
+**Change.** Root installed pinned Microsoft Playwright MCP 0.0.86 and its browser locally, and created an opt-in `cli-browser` configuration profile. The profile uses a fresh in-memory browser, keeps its sandbox enabled, enables approval prompts, and disables the broken desktop bridge only for this profile. Default configuration and existing Chrome access were not changed. No desktop session identity was copied or fabricated. [Microsoft's Codex setup](https://github.com/microsoft/playwright-mcp#codex).
+
+**Observed/limits.** Codex successfully resolves the new MCP configuration. The server's initialization and tool discovery pass (25 tools), and the browser executable is installed. No browser was launched and no account was accessed: the current session must be resumed with this profile before the agent can request browser actions. The owner will need to sign in to Namecheap in that new session. `codex doctor --profile` and `--strict-config` on `codex mcp` are not supported in 0.169.0, so the setup was checked with the supported profile-aware `codex mcp get` and a direct protocol handshake. [Verification receipt](docs/evidence/sw-001/cli-browser-setup.json).
+
+**Resume.** Exit the current CLI and run `codex resume SESSION_ID --profile cli-browser --ask-for-approval on-request`. This preserves the conversation. Approve the new browser connection through the normal prompt, verify its rendered behavior, and continue SW-001 from the pending Namecheap step. Cloudflare's staged version is unchanged.
