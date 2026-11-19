@@ -1,0 +1,164 @@
+- generic [ref=f32e437]:
+  - generic [ref=f32e438]:
+    - generic [ref=f32e440]:
+      - generic [ref=f32e441]:
+        - generic [ref=f32e442]: Dns Templates
+        - generic [ref=f32e443] [cursor=pointer]: alert
+      - generic [ref=f32e446]:
+        - generic [ref=f32e447]:
+          - link "Choose DNS Template" [ref=f32e448] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - button "Choose DNS Template" [ref=f32e451]
+        - combobox [ref=f32e452]:
+          - option "Choose DNS Template" [selected]
+          - option "Shopify"
+          - option "Weebly"
+          - option "Wix"
+    - separator [ref=f32e454]
+  - generic [ref=f32e455]:
+    - generic [ref=f32e458]:
+      - generic [ref=f32e459]: Host Records
+      - generic [ref=f32e460] [cursor=pointer]: alert
+    - generic [ref=f32e461]:
+      - generic [ref=f32e463]:
+        - link "Actions" [ref=f32e465] [cursor=pointer]:
+          - /url: "#"
+        - link "Filters" [ref=f32e468] [cursor=pointer]:
+          - /url: ""
+        - generic [ref=f32e470]:
+          - textbox "Search" [ref=f32e471]
+          - link "Search" [ref=f32e472] [cursor=pointer]:
+            - /url: ""
+      - table [ref=f32e475]:
+        - rowgroup [ref=f32e476]:
+          - row [ref=f32e477]:
+            - columnheader "Type" [ref=f32e478]:
+              - checkbox [ref=f32e480]
+              - paragraph [ref=f32e481]:
+                - generic "Type" [ref=f32e482]:
+                  - link "Type" [ref=f32e483] [cursor=pointer]:
+                    - /url: ""
+            - columnheader "Host" [ref=f32e484]:
+              - paragraph [ref=f32e485]:
+                - generic "Host" [ref=f32e486]:
+                  - link "Host" [ref=f32e487] [cursor=pointer]:
+                    - /url: ""
+            - columnheader "Value" [ref=f32e488]:
+              - paragraph [ref=f32e489]:
+                - generic "Value" [ref=f32e490]:
+                  - link "Value" [ref=f32e491] [cursor=pointer]:
+                    - /url: ""
+            - columnheader "TTL" [ref=f32e492]:
+              - paragraph [ref=f32e493]:
+                - generic "TTL" [ref=f32e494]:
+                  - link "TTL" [ref=f32e495] [cursor=pointer]:
+                    - /url: ""
+            - columnheader [ref=f32e496]
+        - rowgroup [ref=f32e497]:
+          - row [ref=f32e498]:
+            - cell [ref=f32e499]:
+              - checkbox [ref=f32e501]
+              - paragraph [ref=f32e502] [cursor=pointer]: CNAME Record
+            - cell [ref=f32e503]:
+              - paragraph [ref=f32e504] [cursor=pointer]: www
+            - cell [ref=f32e505]:
+              - paragraph [ref=f32e506] [cursor=pointer]: parkingpage.namecheap.com.
+            - cell [ref=f32e507]:
+              - paragraph [ref=f32e508] [cursor=pointer]: 30 min
+            - cell [ref=f32e509]:
+              - link "Remove" [ref=f32e510] [cursor=pointer]:
+                - /url: ""
+          - row [ref=f32e511]:
+            - cell [ref=f32e512]:
+              - checkbox [ref=f32e514]
+              - paragraph [ref=f32e515] [cursor=pointer]: URL Redirect Record
+            - cell [ref=f32e516]:
+              - paragraph [ref=f32e517] [cursor=pointer]: "@"
+            - cell [ref=f32e518]:
+              - paragraph [ref=f32e520] [cursor=pointer]: http://www.swampwiki.com/
+              - paragraph [ref=f32e522] [cursor=pointer]: Unmasked
+            - cell [ref=f32e523]
+            - cell [ref=f32e524]:
+              - link "Remove" [ref=f32e525] [cursor=pointer]:
+                - /url: ""
+        - rowgroup [ref=f32e526]:
+          - row [ref=f32e527]:
+            - cell [ref=f32e528]:
+              - link "Add New Record" [ref=f32e530] [cursor=pointer]:
+                - /url: ""
+    - separator [ref=f32e532]
+  - generic [ref=f32e534]:
+    - generic [ref=f32e536]:
+      - generic [ref=f32e539]:
+        - generic [ref=f32e540]: DNSSEC
+        - generic [ref=f32e541] [cursor=pointer]: alert
+      - generic:
+        - generic [ref=f32e542]: Status
+        - generic [ref=f32e545]:
+          - checkbox [ref=f32e546]
+          - generic [ref=f32e547] [cursor=pointer]
+    - separator [ref=f32e549]
+  - generic [ref=f32e550]:
+    - generic [ref=f32e552]:
+      - generic [ref=f32e553]:
+        - generic [ref=f32e554]: Mail Settings
+        - generic [ref=f32e555] [cursor=pointer]: alert
+      - generic [ref=f32e556]:
+        - generic [ref=f32e557]:
+          - link "Email Forwarding" [ref=f32e558] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - button "Email Forwarding" [ref=f32e561]
+        - combobox [ref=f32e562]:
+          - option "No Email Service"
+          - option "Email Forwarding" [selected]
+          - option "MXE Record"
+          - option "Custom MX"
+          - option "Private Email"
+          - option "Gmail"
+    - table [ref=f32e566]:
+      - rowgroup [ref=f32e567]:
+        - row [ref=f32e568]:
+          - columnheader "Type" [ref=f32e569]:
+            - paragraph [ref=f32e570]:
+              - generic "Type" [ref=f32e571]:
+                - link "Type" [ref=f32e572] [cursor=pointer]:
+                  - /url: ""
+          - columnheader "Host" [ref=f32e573]:
+            - paragraph [ref=f32e574]:
+              - generic "Host" [ref=f32e575]:
+                - link "Host" [ref=f32e576] [cursor=pointer]:
+                  - /url: ""
+          - columnheader "Value" [ref=f32e577]:
+            - paragraph [ref=f32e578]:
+              - generic "Value" [ref=f32e579]:
+                - link "Value" [ref=f32e580] [cursor=pointer]:
+                  - /url: ""
+          - columnheader "TTL" [ref=f32e581]:
+            - paragraph [ref=f32e582]:
+              - generic "TTL" [ref=f32e583]:
+                - link "TTL" [ref=f32e584] [cursor=pointer]:
+                  - /url: ""
+          - columnheader [ref=f32e585]
+      - rowgroup [ref=f32e586]:
+        - row [ref=f32e587]:
+          - cell [ref=f32e588]:
+            - paragraph [ref=f32e589]: TXT Record
+          - cell [ref=f32e590]:
+            - paragraph [ref=f32e591] [cursor=pointer]: "@"
+          - cell [ref=f32e592]:
+            - paragraph [ref=f32e593] [cursor=pointer]: v=spf1 include:spf.efwd.registrar-servers.com ~all
+          - cell [ref=f32e594]:
+            - paragraph [ref=f32e595] [cursor=pointer]: Automatic
+          - cell [ref=f32e596]:
+            - generic [ref=f32e597]: Locked byDomain Redirect
+    - separator [ref=f32e599]
+  - generic [ref=f32e600]:
+    - generic [ref=f32e602]:
+      - generic [ref=f32e603]:
+        - generic [ref=f32e604]: Dynamic DNS
+        - generic [ref=f32e605] [cursor=pointer]: alert
+      - generic [ref=f32e606]: Status
+      - generic [ref=f32e609]:
+        - checkbox [ref=f32e610]
+        - generic [ref=f32e611] [cursor=pointer]
+    - separator [ref=f32e613]

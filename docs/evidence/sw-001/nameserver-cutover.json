@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-19T03:01:15.319000+00:00",
+  "domain": "swampwiki.com",
+  "nameservers": [
+    "ophelia.ns.cloudflare.com",
+    "razvan.ns.cloudflare.com"
+  ],
+  "registrarSaved": true,
+  "registrarVerifiedAfterReload": true,
+  "emailAliasesBeforeCutover": 0,
+  "dnssecBeforeCutover": false,
+  "activationCheckRequestedAt": "2026-11-19T03:00:16Z",
+  "queries": [
+    {
+      "resolver": "a.gtld-servers.net",
+      "output": "; <<>> DiG 9.10.6 <<>> @a.gtld-servers.net swampwiki.com NS +norecurse +noall +answer +authority\n; (2 servers found)\n;; global options: +cmd\nswampwiki.com.\t\t172800\tIN\tNS\tophelia.ns.cloudflare.com.\nswampwiki.com.\t\t172800\tIN\tNS\trazvan.ns.cloudflare.com."
+    },
+    {
+      "resolver": "b.gtld-servers.net",
+      "output": "; <<>> DiG 9.10.6 <<>> @b.gtld-servers.net swampwiki.com NS +norecurse +noall +answer +authority\n; (2 servers found)\n;; global options: +cmd\nswampwiki.com.\t\t172800\tIN\tNS\tophelia.ns.cloudflare.com.\nswampwiki.com.\t\t172800\tIN\tNS\trazvan.ns.cloudflare.com."
+    },
+    {
+      "resolver": "1.1.1.1",
+      "output": "; <<>> DiG 9.10.6 <<>> @1.1.1.1 swampwiki.com NS +noall +answer\n; (1 server found)\n;; global options: +cmd\nswampwiki.com.\t\t86400\tIN\tNS\tophelia.ns.cloudflare.com.\nswampwiki.com.\t\t86400\tIN\tNS\trazvan.ns.cloudflare.com."
+    },
+    {
+      "resolver": "8.8.8.8",
+      "output": "; <<>> DiG 9.10.6 <<>> @8.8.8.8 swampwiki.com NS +noall +answer\n; (1 server found)\n;; global options: +cmd\nswampwiki.com.\t\t21600\tIN\tNS\tophelia.ns.cloudflare.com.\nswampwiki.com.\t\t21600\tIN\tNS\trazvan.ns.cloudflare.com."
+    }
+  ]
+}

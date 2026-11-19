@@ -1,0 +1,24 @@
+- generic [ref=f43e492]:
+  - generic [ref=f43e493]:
+    - generic [ref=f43e494]:
+      - generic [ref=f43e497]:
+        - generic [ref=f43e498]: Nameservers
+        - generic [ref=f43e499] [cursor=pointer]: ALERT
+      - generic [ref=f43e500]:
+        - generic [ref=f43e501]:
+          - link "Custom DNS" [ref=f43e502] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - button "Custom DNS" [ref=f43e505]
+        - combobox [ref=f43e506]:
+          - option "Namecheap BasicDNS"
+          - option "Namecheap Web Hosting DNS"
+          - option "Custom DNS" [selected]
+    - generic [ref=f43e509]:
+      - paragraph [ref=f43e511]:
+        - textbox "Nameserver 1" [ref=f43e512]: ophelia.ns.cloudflare.com
+      - paragraph [ref=f43e514]:
+        - textbox "Nameserver 2" [ref=f43e515]: razvan.ns.cloudflare.com
+      - paragraph [ref=f43e516]:
+        - link "ADD NAMESERVER" [ref=f43e517] [cursor=pointer]:
+          - /url: "#"
+  - separator [ref=f43e519]

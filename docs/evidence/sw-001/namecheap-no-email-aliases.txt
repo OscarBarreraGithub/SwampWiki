@@ -1,0 +1,2 @@
+Observed in Namecheap domain settings before saving the nameserver change.
+- paragraph [ref=f37e560]: You haven’t defined any Email Redirect yet.

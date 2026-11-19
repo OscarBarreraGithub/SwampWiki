@@ -2,9 +2,9 @@
 
 ## Status on November 18, 2026
 
-The `OscarBarreraGithub/SwampWiki` repository checks pushes to `main`. Cloudflare access was restored after the owner changed session access. A free `swampwiki.com` zone now exists in the intended account, with assigned nameservers **ophelia.ns.cloudflare.com** and **razvan.ns.cloudflare.com**. Registrar delegation and live HTTPS verification remain pending.
+The `OscarBarreraGithub/SwampWiki` repository checks pushes to `main`. Cloudflare access was restored after the owner changed session access. A free `swampwiki.com` zone exists in the intended account. Namecheap now delegates to **ophelia.ns.cloudflare.com** and **razvan.ns.cloudflare.com**, verified in the registrar and at the .com registry. Cloudflare zone activation and live HTTPS verification remain pending.
 
-The public DNS scan found only Namecheap parking plus five default forwarding MX records and one SPF record. The six mail records were copied into Cloudflare; the parking A/CNAME were not imported. These DNS records do not establish forwarding-service continuity, since Namecheap forwarding depends on Namecheap DNS. Confirm whether the owner has configured aliases or custom records before delegation. Chrome computer use is still denied, so the registrar change requires the owner or restored browser access.
+The public DNS scan found only Namecheap parking plus five default forwarding MX records and one SPF record. The six mail records were copied into Cloudflare; the parking A/CNAME were not imported. Root inspected the signed-in registrar through the newly configured CLI browser: no email-forwarding aliases or custom host records existed, and DNSSEC was off. No existing mail service needed migration. The saved nameservers persisted after reloading the registrar page. [Registrar verification](evidence/sw-001/namecheap-nameservers-verified.yml) · [DNS receipt](evidence/sw-001/nameserver-cutover.json).
 
 The GitHub `CLOUDFLARE_ACCOUNT_ID` secret is configured. `CLOUDFLARE_DEPLOY_ENABLED` remains `false`, and the dedicated deployment API token is pending. Existing local Wrangler OAuth authenticates the correct account and can publish the site. The connector lacks `account-api-tokens.write`, so creation of a dedicated CI token remains unavailable; do not export personal OAuth credentials into CI.
 
@@ -12,7 +12,7 @@ The production configuration names one Worker, `swampwiki`, and publishes `dist/
 
 ## DNS cutover after Cloudflare access is available
 
-Public DNS showed these records. Obtain the full Namecheap DNS record inventory and mail-forwarding aliases before changing delegation.
+Before cutover, public DNS showed these records. The Namecheap inventory and absence of forwarding aliases were verified before changing delegation; this table preserves the previous state.
 
 | Record | Observed value |
 | --- | --- |
