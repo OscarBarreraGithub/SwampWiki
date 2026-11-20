@@ -47,6 +47,8 @@ h1, h2, h3, p { margin-top: 0; }
   justify-content: space-between;
   gap: 18px;
   border-bottom: 1px solid var(--line);
+  /* With enlarged text the tools move below the wordmark instead of widening the page. */
+  flex-wrap: wrap;
 }
 .wordmark {
   font-family: var(--serif);
@@ -56,7 +58,7 @@ h1, h2, h3, p { margin-top: 0; }
   color: var(--ink);
   text-decoration: none;
 }
-.header-actions { display: flex; align-items: center; gap: 12px; }
+.header-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-left: auto; }
 .header-actions button {
   min-width: 44px;
   border: 0;
@@ -179,6 +181,9 @@ main { max-width: 1496px; padding: 0 28px; margin: auto; }
 .column-heading h3 { font-size: 16px; font-weight: 600; line-height: 1.4; margin: 5px 0 0; overflow-wrap: anywhere; }
 .current-column-heading { min-height: 44px; background: #fff; }
 .current-column-heading .column-step { color: var(--ink); }
+/* Focus returns here after a step change; inset like the choices so the column's overflow cannot clip it. */
+.current-column-heading:focus-visible { outline: 2px solid var(--link); outline-offset: -3px; }
+.current-column-heading:focus:not(:focus-visible) { outline: none; }
 .direction-row { display: flex; border-bottom: 1px solid #ddd; position: relative; }
 .direction {
   flex: 1;
@@ -212,8 +217,67 @@ main { max-width: 1496px; padding: 0 28px; margin: auto; }
 .direction-evidence[aria-pressed=true] { background: #eee; color: var(--ink); font-weight: 600; }
 .direction:focus-visible { outline-offset: -3px; }
 .direction-evidence:focus-visible { outline-offset: -3px; }
+/* A premise check's recorded scope (SW-006): the toggle sits beside the row's navigation button, never inside it, in the column
+   Sources uses; the qualification opens in a panel directly under the row, indented to the label and carrying the sideways
+   rule. Narrow screens place the toggle where they place Sources. */
+.direction-scope-toggle { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 76px; min-height: 44px; padding: 8px 12px; border: 0; border-left: 1px solid #eee; border-radius: 0; background: #fff; color: var(--link); font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.direction-scope-toggle::after { content: ''; flex: none; width: 5px; height: 5px; margin-top: -3px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
+.direction-scope-toggle[aria-expanded="true"] { background: #f6f6f6; color: var(--ink); }
+.direction-scope-toggle[aria-expanded="true"]::after { margin-top: 3px; transform: rotate(-135deg); }
+.direction-scope-toggle:hover { background: #eee; border-color: #eee; }
+.direction-scope-toggle:focus-visible { outline-offset: -3px; }
+.direction-row:has(+ .direction-scope:not([hidden])) { border-bottom-color: #e6e6e6; }
+.direction-scope { padding: 9px 14px 11px 39px; border-bottom: 1px solid #ddd; border-left: 2px dashed #b4b4b4; background: #f6f6f6; color: var(--ink); font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.direction-scope p { max-width: 80ch; margin: 0 0 6px; line-height: 1.5; }
+.direction-scope p:last-child { margin-bottom: 0; }
+.direction-scope-label { font-size: 13px; font-weight: 600; }
+.direction-scope-note { font-size: 13px; color: var(--muted); }
+/* Next-choice families (SW-006 experiment): each run of narrower, sideways, broader or listing choices is a labelled group.
+   Sideways rows (typed relations, organizational access) carry a dashed left rule so they never read as narrower topics;
+   hover and the followed state still replace it with the solid rule. */
+.choice-group-heading { margin: 0; padding: 10px 14px 8px 13px; border-bottom: 1px solid #ddd; background: #f6f6f6; font-size: 13px; font-weight: 600; line-height: 1.4; color: var(--ink); overflow-wrap: anywhere; }
+/* A heading with a reading note sits in .choice-group-header with the note's toggle, which only narrow screens show. */
+.choice-group-header > .choice-group-heading { border-bottom: 0; padding-bottom: 2px; }
+.choice-group-note-toggle { display: none; }
+.choice-group-note { margin: 0; padding: 0 14px 9px 13px; border-bottom: 1px solid #ddd; background: #f6f6f6; font-size: 13px; line-height: 1.45; color: var(--muted); overflow-wrap: anywhere; }
+.choice-group[data-choice-family="typed"] .direction:not([aria-current]):not(:hover),
+.choice-group[data-choice-family="organizational"] .direction:not([aria-current]):not(:hover) { border-left: 2px dashed #b4b4b4; }
+.choice-group[data-choice-family="typed"] .direction-kind,
+.choice-group[data-choice-family="organizational"] .direction-kind { color: var(--ink); }
+.miller-column[data-current="false"] .choice-group-heading { padding: 6px 14px 5px 13px; font-size: 12px; color: var(--muted); }
 .column-followup { padding: 15px; font-size: 14px; line-height: 1.5; color: var(--muted); }
 .column-followup strong { color: var(--ink); display: block; margin-bottom: 4px; }
+/* Paper questions: source access listed after the topic choices, set in smaller text so the topics scan first.
+   Each question wraps in full; the paper's primary source sits on the line below it. */
+.paper-access { padding: 12px 14px 4px 13px; border-bottom: 1px solid #ddd; background: #fafafa; }
+.paper-access-heading { margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.paper-access-note { margin: 3px 0 6px; max-width: 80ch; font-size: 13px; line-height: 1.45; color: var(--muted); }
+/* Shown only while the paper count is partial: exact identified/total numbers, set in ink so it reads with the heading. */
+.paper-access-progress { margin: 3px 0 0; max-width: 80ch; font-size: 13px; line-height: 1.45; color: var(--ink); overflow-wrap: anywhere; }
+.paper-access-progress[hidden] { display: none; }
+.miller-column[data-current="false"] .paper-access { padding-top: 4px; padding-bottom: 0; }
+.paper-access-folded > summary { display: list-item; min-height: 44px; padding: 12px 0; font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.paper-access-folded > summary:focus-visible { outline-offset: -3px; }
+.paper-list { margin: 0; padding: 0; list-style: none; }
+.paper-row { padding: 4px 0 2px; border-top: 1px solid #e3e3e3; }
+.paper-row:first-child { border-top: 0; }
+.paper-question { display: block; width: 100%; max-width: 90ch; min-height: 44px; padding: 6px 8px; border: 0; border-left: 2px solid transparent; border-radius: 0; background: transparent; color: var(--link); text-align: left; font-size: 15px; line-height: 1.45; overflow-wrap: anywhere; }
+.paper-question:hover { background: #f0f0f0; border-left-color: #888; text-decoration: underline; text-underline-offset: 3px; }
+.paper-question[aria-current] { background: var(--selected); border-left-color: #555; color: var(--ink); font-weight: 600; }
+.paper-question:focus-visible { outline-offset: -3px; }
+.paper-source { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; padding-left: 10px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.paper-meta { overflow-wrap: anywhere; }
+/* A paper identifier (hep-th/0601001) moves to the next line whole rather than splitting at its hyphen or slash;
+   it breaks internally only when it is wider than the row. Display only: the copied text is unchanged. */
+.source-id { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+.paper-read { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; margin-left: -4px; font-size: 14px; }
+.paper-read:focus-visible { outline-offset: -2px; }
+/* The qualification recorded with a reviewed role: closed beside the role line, full row width when opened. */
+.paper-qualification > summary { display: list-item; min-height: 44px; padding: 13px 4px; margin-left: -4px; font-size: 13px; line-height: 1.4; color: var(--ink); cursor: pointer; }
+.paper-qualification > summary:focus-visible { outline-offset: -3px; }
+.paper-qualification[open] { flex-basis: 100%; }
+.paper-qualification > p { margin: 0 0 8px; max-width: 80ch; color: var(--ink); overflow-wrap: anywhere; }
+.paper-more { margin: 6px 0 10px 8px; font-size: 14px; }
 .column-restore { padding: 18px; }
 .column-restore p { font-size: 16px; color: var(--muted); }
 .column-restore button { color: var(--link); }
@@ -279,6 +343,10 @@ summary { cursor: pointer; }
 .session-tools > p { font-size: 14px; color: var(--muted); margin: 8px 0 14px; }
 .tool-buttons { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 14px; }
 .tool-buttons button { font-size: 15px; }
+/* Copy feedback and the exact link, beside the share controls. The link field scrolls within itself, never the page. */
+.share-result { padding: 0 0 14px; max-width: 72ch; }
+.share-result p { font-size: 14px; line-height: 1.5; color: var(--ink); margin: 0 0 8px; overflow-wrap: anywhere; }
+.share-result input { width: 100%; min-width: 0; box-sizing: border-box; min-height: 44px; padding: 8px 10px; border: 1px solid #999; border-radius: 2px; background: var(--soft); color: var(--ink); font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .stored-view-link { max-width: 900px; margin: 5px 0 12px; }
 .stored-view-link label { display: block; margin-bottom: 6px; font-size: 14px; color: var(--muted); }
 .stored-view-link > div { display: flex; gap: 8px; }
@@ -335,8 +403,11 @@ body.busy #explore-button { cursor: progress; }
   .question-input button { min-width: 78px; padding: 9px 13px; }
   #options-summary { margin-left: 4px; font-size: 12px; }
   .options-open .question-controls { grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 3px 0 16px; }
-  .status-line { font-size: 12px; gap: 12px; }
-  .status-line > span { max-width: 110px; white-space: normal; text-align: right; }
+  /* The session label shares the status line while both fit; with enlarged text or a longer label
+     ("… companion disconnected") it moves to its own line instead of running past the screen edge. */
+  .status-line { font-size: 12px; gap: 0 12px; flex-wrap: wrap; }
+  .status-line p { flex: 1 1 14em; min-width: 0; }
+  .status-line > span { flex: 0 1 auto; max-width: 100%; margin-left: auto; white-space: normal; text-align: right; overflow-wrap: anywhere; }
   .path-navigation { gap: 5px; }
   .path-navigation > button { font-size: 14px; padding: 8px 2px; }
   #path { gap: 1px; }
@@ -360,9 +431,27 @@ body.busy #explore-button { cursor: progress; }
   .direction h3 { font-size: 17px; }
   .direction-number { flex-basis: 17px; }
   .direction-meta { min-height: 32px; display: flex; align-items: center; padding-right: 66px; margin-top: 8px; font-size: 13px; }
+  /* That space is kept for the row's Sources button; rows without one (every prepared-atlas row) use the full width. */
+  .direction-row:not(:has(.direction-evidence)) .direction-meta { padding-right: 0; }
+  .choice-group-heading { padding: 10px 12px 8px 10px; }
+  .choice-group-note { padding: 0 12px 9px 10px; }
+  /* Narrow screens fold a group's reading note behind a toggle on its heading line. The label, count and each row's recorded
+     relation stay in view; the note's full text stays in the page and opens in place (app.js remembers it per note). */
+  .choice-group-header { display: flex; align-items: center; gap: 4px; border-bottom: 1px solid #ddd; background: #f6f6f6; }
+  .choice-group-header > .choice-group-heading { flex: 1; min-width: 0; padding: 4px 0 4px 10px; }
+  .choice-group-note-toggle { display: inline-flex; flex: none; align-items: center; gap: 7px; min-height: 44px; padding: 0 12px 0 8px; border: 0; border-radius: 0; background: transparent; color: var(--link); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+  .choice-group-note-toggle::after { content: ''; width: 5px; height: 5px; margin-top: -3px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
+  .choice-group-note-toggle[aria-expanded="true"]::after { margin-top: 3px; transform: rotate(-135deg); }
+  .choice-group-note-toggle:hover { background: #eee; }
+  .choice-group-note-toggle:focus-visible { outline-offset: -3px; }
+  .choice-group:not(.note-open) > .choice-group-note { display: none; }
+  .choice-group.note-open > .choice-group-header { border-bottom: 0; }
   .direction-arrow { display: none; }
   .direction-evidence { position: absolute; right: 10px; bottom: 2px; width: auto; min-width: 62px; height: 44px; padding: 8px 2px; border: 0; background: transparent; }
   .direction-evidence:hover { background: #eee; }
+  .direction-scope-toggle { position: absolute; right: 10px; bottom: 2px; min-width: 62px; height: 44px; padding: 0 4px 0 8px; border: 0; background: transparent; font-size: 13px; }
+  .direction-row:has(.direction-scope-toggle) .direction-meta { padding-right: 70px; }
+  .direction-scope { padding: 9px 12px 11px 35px; }
   .navigator-note { grid-column: 1 / -1; grid-row: 2; font-size: 13px; }
   .reading-pane { padding-top: 22px; }
   .view-tabs { gap: 18px; }
@@ -420,8 +509,25 @@ body.busy #explore-button { cursor: progress; }
 .atlas-connection-list>div{padding:.45rem 0}.atlas-connection-list>div>span,.atlas-provenance,.atlas-member-list small{font-size:.85rem;color:var(--muted,#64615c)}
 .atlas-connection-list p{margin:.1rem 0 .4rem;max-width:85ch;line-height:1.5}.atlas-member-list article{padding:.9rem 0;border-bottom:1px solid var(--line,#d9d6d1)}
 .atlas-member-list p{line-height:1.6;margin:.4rem 0}.atlas-member-list small{overflow-wrap:anywhere}.atlas-entrances,.atlas-lookup{padding:.9rem 0}.atlas-entrances h2{font-size:1.15rem;margin:.3rem 0}.atlas-entrances p,.atlas-lookup p{line-height:1.5}.saved-branches button{display:block}
+/* Expanded records (reading-coverage JSON, relation SHA-256 labels) wrap inside the reading
+   column instead of widening the page. Wrapping is visual only: copied text is unchanged. */
+.atlas-panel pre{white-space:pre-wrap;overflow-wrap:anywhere}.atlas-connection-list small{overflow-wrap:anywhere}
+/* A relation's record ID and SHA-256 follow its evidence link; give them their own line so the link text and
+   "Record …" do not run together on screen or in a copied selection. */
+.atlas-connection-list details>div>small{display:block;margin-top:.35rem}
+/* "Open Source contributions" in Sources scrolls here; keep the focused summary's outline clear of the viewport edge. */
+.source-contributions>summary{scroll-margin-top:18px}
 .source-scientific-context pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.8rem;line-height:1.5;max-height:24rem;overflow:auto;background:var(--soft,#f5f5f5);padding:.75rem}.source-scientific-context h4{font-size:.95rem;margin:.8rem 0 .4rem}.source-scientific-context section{border-left:2px solid var(--line,#d2d2d2);padding-left:1rem}
 .columns.prepared-columns{height:auto;min-height:0;max-height:72vh}.prepared-columns .miller-column{height:auto;max-height:72vh}.context-heading #atlas-current-summary{font-size:16px;line-height:1.55;color:var(--ink);max-width:85ch;margin-top:.6rem}.atlas-panel{padding-top:.3rem;margin-top:.7rem}
+/* One step is visible at a time below 761px, so the page owns vertical scrolling:
+   the current step's choices flow at full height instead of inside a 72vh box.
+   Earlier steps, reached with the arrows, stay compact scroll boxes; size
+   containment stops them from stretching a short current step into an empty frame. */
+@media (max-width: 760px) {
+  .columns.prepared-columns { max-height: none; }
+  .prepared-columns > .miller-column[data-current="true"] { max-height: none; overflow-x: clip; overflow-y: visible; }
+  .prepared-columns > .miller-column[data-current="false"] { contain: size; min-height: min(45vh, 22rem); }
+}
 .source-paper{border-bottom:1px solid var(--line)}.source-paper>.evidence-card{border-bottom:0}.source-facets{margin:0 18px 18px}.source-facets>summary{cursor:pointer;color:var(--muted);padding:8px 0}.source-scientific-context section{margin-top:1rem}.source-scientific-context button{margin:.5rem 0}.source-scientific-context pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}
 
 .lookup-note{font-size:12px;line-height:1.5;color:var(--muted);margin:.15rem 0 .4rem}
@@ -435,5 +541,33 @@ body.busy #explore-button { cursor: progress; }
 .source-contributions>div>details{margin:.8rem 0;padding:.5rem 0;border-bottom:1px solid var(--line)}.source-contributions article{padding:.5rem 0;border-top:1px solid var(--line)}.source-contributions pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.8rem}.source-contributions h3{font-size:1rem}
 
 .source-contributions small{overflow-wrap:anywhere}
+/* "Open paper question" sits under the contribution's question text, above its ID line, role basis and qualification, which
+   stay as they were. The padding gives the link a 44px touch target; its note wraps under it on narrow screens. */
+.source-contributions .contribution-question-line{margin:0 0 .2rem;line-height:1.5}
+.source-contributions a.contribution-question{display:inline-block;padding:10px 0;font-weight:600}
+.source-contributions .contribution-question-note{color:var(--muted);font-size:.85rem}
 
 .source-inspection{border-left:3px solid #a52929;padding:.6rem 1rem;margin:.5rem 0 1.2rem;scroll-margin-top:1rem}.source-inspection h2{font-size:1.2rem;margin:.3rem 0}.source-inspection p{line-height:1.6;overflow-wrap:anywhere}.source-inspection pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* SW-006 source clarifications: a note at the top of a source-context panel, bound to one extracted record. Its quantities
+   stay separate labelled terms (term beside value on wide screens, above it on narrow ones); the bound row carries the same
+   edge colour and returns to the note. Link padding gives a 44px touch target. */
+.source-scientific-context section.source-clarification{max-width:62rem;border-left:3px solid var(--link);background:var(--soft);padding:.7rem 1rem .5rem;margin:.6rem 0 1rem;color:var(--ink)}
+.source-clarification h4{margin-top:0;scroll-margin-top:12px}.source-clarification h4:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.clarification-quantities{display:grid;gap:.5rem;margin:.6rem 0}.clarification-quantities>div{display:grid;grid-template-columns:minmax(9rem,13rem) minmax(0,1fr);gap:.15rem 1rem}
+.clarification-quantities dt{font-weight:700}.clarification-quantities dd{margin:0;line-height:1.55;overflow-wrap:anywhere}
+.clarification-links{margin:.4rem 0;padding-left:0;list-style:none}.clarification-links li{overflow-wrap:anywhere}.clarification-links a{display:inline-block;padding:10px 0;line-height:1.5}
+.source-scientific-context .clarification-bound button{display:block;margin:.4rem 0 0}.clarification-review{color:var(--muted);font-size:.9em}
+.source-scientific-context details.clarified-record{border-left:3px solid var(--link);padding-left:.6rem}.clarified-record>summary{scroll-margin-top:12px}.clarification-tag{font-weight:700;color:var(--ink);margin-left:.3em}
+@media (max-width:760px){.clarification-quantities>div{grid-template-columns:minmax(0,1fr)}}
+/* SW-006 supplemental relation review, inline after the record lines of a route's "Sources and review record". Same edge and
+   label/term layout as a source clarification (label beside text on wide screens, above it on narrow ones); every line wraps,
+   including the 64-character hashes, so the note never scrolls sideways. The paper link has a 44px touch target. */
+.atlas-connection-list section.relation-review{max-width:62rem;border-left:3px solid var(--link);background:var(--soft);padding:.7rem 1rem .5rem;margin:.8rem 0 .4rem;color:var(--ink);box-sizing:border-box}
+.relation-review h4{font-size:1rem;margin:0 0 .4rem}.relation-review p,.relation-review dd,.relation-review small{overflow-wrap:anywhere}
+.relation-review-paper a{display:inline-block;padding:10px 0;line-height:1.5}
+.relation-review-findings{display:grid;gap:.6rem;margin:.7rem 0}.relation-review-findings>div{display:grid;grid-template-columns:minmax(9rem,13rem) minmax(0,1fr);gap:.15rem 1rem}
+.relation-review-findings dt{font-weight:700}.relation-review-findings dd{margin:0;line-height:1.55;max-width:85ch}
+.atlas-connection-list .relation-review-binding,.atlas-connection-list .relation-review-attribution,.relation-review>small{color:var(--muted);font-size:.9em}.relation-review>small{display:block;margin:.2rem 0 .4rem}
+.relation-review pre{font-size:.8rem;line-height:1.5;max-height:24rem;overflow:auto}
+@media (max-width:760px){.relation-review-findings>div{grid-template-columns:minmax(0,1fr)}.atlas-connection-list section.relation-review{padding:.6rem .75rem .4rem}}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.1.0",
+  "kind": "eigenquestions-session",
+  "corpusId": "swampland-navigation-20261105-minilm-v1",
+  "computationId": "prepared:1.0.0:b23d4767901321588374a3d4573c7305cfa5dff85611f44e892edf71dcc8d7b0:c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44:01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+  "session": {
+    "schemaVersion": "1.1.0",
+    "corpusId": "swampland-navigation-20261105-minilm-v1",
+    "computationId": "prepared:1.0.0:b23d4767901321588374a3d4573c7305cfa5dff85611f44e892edf71dcc8d7b0:c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44:01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+    "states": [
+      {
+        "schemaVersion": "1.1.0",
+        "id": "state-4c8f3bbfd55cbebf",
+        "corpusId": "swampland-navigation-20261105-minilm-v1",
+        "computationId": "prepared:1.0.0:b23d4767901321588374a3d4573c7305cfa5dff85611f44e892edf71dcc8d7b0:c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44:01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+        "query": "Quantum gravity and connected physics",
+        "focusIds": [],
+        "intent": "recent",
+        "workRelation": "on",
+        "lens": "physical_question",
+        "constraints": {
+          "excludeIds": []
+        },
+        "selector": {
+          "kind": "atlas-destination",
+          "atlasId": "swampwiki",
+          "atlasVersion": "2026-11-18-text-v1",
+          "destinationId": "collection:q025-quantum-gravity"
+        }
+      },
+      {
+        "schemaVersion": "1.1.0",
+        "id": "state-326547654e8b0a1d",
+        "corpusId": "swampland-navigation-20261105-minilm-v1",
+        "computationId": "prepared:1.0.0:b23d4767901321588374a3d4573c7305cfa5dff85611f44e892edf71dcc8d7b0:c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44:01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+        "query": "How do proposed dark-sector constituents, their origins and subsequent evolution determine abundance, persistence, structure and observable signals, and which source-specific consistency tests constrain those proposals?",
+        "focusIds": [],
+        "intent": "recent",
+        "workRelation": "on",
+        "lens": "physical_question",
+        "constraints": {
+          "excludeIds": []
+        },
+        "selector": {
+          "kind": "atlas-destination",
+          "atlasId": "swampwiki",
+          "atlasVersion": "2026-11-18-text-v1",
+          "destinationId": "q025-candidate-region:7961ee3cebdb154299e78b58"
+        }
+      },
+      {
+        "schemaVersion": "1.1.0",
+        "id": "state-de7b7ba179d8566d",
+        "corpusId": "swampland-navigation-20261105-minilm-v1",
+        "computationId": "prepared:1.0.0:b23d4767901321588374a3d4573c7305cfa5dff85611f44e892edf71dcc8d7b0:c2a754cdb7a2d5fa5dba17f499e80b2b4265d0822a6e1b775703838b7d169e44:01aba8d33f9c0e0c9130b7c917bff0b12131a41be4cb773fe1b45fb142621fc8",
+        "query": "How do specified extra-dimensional constructions, effective-theory hierarchies or quantum-gravity hypotheses constrain dark-sector models and their observational tests?",
+        "focusIds": [],
+        "intent": "recent",
+        "workRelation": "on",
+        "lens": "physical_question",
+        "constraints": {
+          "excludeIds": []
+        },
+        "selector": {
+          "kind": "atlas-destination",
+          "atlasId": "swampwiki",
+          "atlasVersion": "2026-11-18-text-v1",
+          "destinationId": "q025-candidate-question:190bdf4415c78268d594ff95"
+        }
+      }
+    ],
+    "cursor": 2
+  }
+}
