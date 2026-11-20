@@ -28,6 +28,8 @@
 
 **SW-007 (summary):** Recover the stalled work, continue the actual project conversation as supervisor, complete actionable Claude rounds, and keep the Enterprise allowance in active use across resets.
 
+**SW-008 (summary):** Explain what Claude actually found and did on SwampWiki, and turn the lessons into a launch workflow for the next collection of roughly 5,000 geophysics papers.
+
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
 **Observed.** The owner resolved the codebase ambiguity: use our text navigator, not the private sr-744 prototype. Root created a separate local checkout from the accepted public release. No private prototype content is copied. Namecheap currently serves its parking A/CNAME and default forwarding MX records; no DS record was returned. Cloudflare lookup was rejected before account information was returned. GitHub access works through the installed CLI; the connector lacks repository-creation capability.
@@ -173,3 +175,11 @@ Claude resolved the 67-question expansion delay. In its phone-width slow-link si
 Root saved a buildable source snapshot on `candidate/swampwiki-verified-navigation`, with targeted regressions and the unchanged scientific inputs. The snapshot includes the grouped choices, source attribution, cache and exact URL replay UI. Its build, all 158 tests and the static check passed. The published site still serves the earlier release. The separate experimental worktree preserves the test-only science proposals and their original browser receipts. Evidence: private `Records/sw-006/candidate-snapshot.json`, the three `candidate-*.log` files, and reports from `ui-release-candidate`, `followup-76`, `followup-90`, `weak-gravity-pilot-overlay` and `dark-dimension-implementation-handoff`.
 
 Two Enterprise Claude assignments were active at this checkpoint. One tests immediate availability of the primary record while its supplemental review loads. The other works out how to add the reviewed Dark Dimension notes within 19,999 static assets while preserving old links and frozen shards. The current build emits 18,163 assets. A full second copy of the atlas exceeds the limit, and the earlier worker could edit only the browser and fixture code. Packaging and the next live reset remain open.
+
+## 2026-11-20 — SW-008: Turn the SwampWiki audit into a reusable launch brief
+
+Claude audited the existing graph and browser routes, audited selected primary-source claims, and tested narrow repairs. The reviewers found that browse reachability alone hid poor topical depth. On authored question pages, paper examples filled 42.2% of presented choices. The LZ pilot showed that a reviewed source contribution can supply a second reading route without changing hierarchy. Deep checks distinguished the toroidal-radius limit from the experimental separation and Yukawa exclusion in the Dark Dimension example. In the flux-localization example Claude reproduced a normalization issue in a displayed intermediate equation and checked the premise under which the leading result survives. The wider corpus extraction, embedding and graph construction predate this Claude audit. [Audit and census](docs/SW-005-independent-atlas-review.md).
+
+Two additional rounds closed since the earlier checkpoint. Claude fixed the delay that held the primary evidence link until an optional supplement arrived, and proposed a versioned release that would add two static files by reusing existing checked shards. The former passed local tests and a delayed-response browser check. The latter is a checked design awaiting implementation and final review of the scientific note fields. See private reports `Records/sw-006/runs/followup-91-1795200607/review.md` and `Records/sw-006/runs/versioned-reading-notes-release-plan-1795200696/review.md`.
+
+Root saved the [new-corpus launch workflow](docs/atlas-corpus-workflow.md). It combines a small extraction pilot, an evidence-backed graph and embedding comparison, and held-out browse and agent journeys. The geophysics sample sizes are starting choices. Intake and pilot results remain pending.
