@@ -8,8 +8,8 @@
 - **Known hosting:** https://swampwiki.com/ is live. Production Worker version ec66b63a-8313-45bd-b7eb-25b680d77c58 serves both domains; certificates and redirects are verified. All 23 public-content checks and 42 retired-route checks pass. Live browser navigation opens a topic and returns to the collection with New path.
 - **Latest review:** SW-003 reproduced the same Dark Dimension question from SwampWiki search and Eigenquestions overview links. SW-004 found that a paper-specific question appears as an ordinary next direction under a broad topic. The source link is already typed, but the browse list includes it alongside topic links. See the dated entries for reproducible examples.
 - **Known review:** The independent audit and LZ pilot are complete. Root repeated the key counts and verified the LZ laboratory contribution. [Findings and decisions](docs/SW-005-independent-atlas-review.md).
-- **Unfinished/attention:** The overnight reset handoff worked in the live scheduler. Claude is checking that the primary evidence remains available while optional review notes load, and planning how to ship the reviewed source notes under the static file limit. The latest provider reset is 18:20 Eastern on November 20.
-- **Next:** Review the two Claude handoffs, then verify the smallest compatible way to ship the Dark Dimension notes. Keep the Weak Gravity and other proposed links in rehearsal while testing which existing choices they displace.
+- **Unfinished/attention:** SW-009 targets a release-quality Swampland graph over roughly ten Enterprise windows. Claude started the depth census and placement review. The first scoped builder task will take the tested shared-asset atlas into the actual build. The latest reported reset is 18:20 Eastern on November 20.
+- **Next:** Verify the real versioned build, then land and measure the Dark Dimension and Weak Gravity navigation repairs. Use the baseline and placement findings to drive the remaining branch fixes.
 - **Save:** Project folder /Users/emmy/Documents/SwampWiki. Eigenquestions is preserved at its existing domain/repository. Earlier research history remains in the upstream Git history and its notebook; this is the single active notebook for SwampWiki.
 
 ## Requests
@@ -29,6 +29,8 @@
 **SW-007 (summary):** Recover the stalled work, continue the actual project conversation as supervisor, complete actionable Claude rounds, and keep the Enterprise allowance in active use across resets.
 
 **SW-008 (summary):** Explain what Claude actually found and did on SwampWiki, and turn the lessons into a launch workflow for the next collection of roughly 5,000 geophysics papers.
+
+**SW-009 (summary):** Keep Enterprise Claude improving SwampWiki systematically for about ten five-hour windows, aiming for meaningful depth, good navigation and easy placement in the graph.
 
 ## 2026-11-18 — SW-001: Establish the intended project and access boundaries
 
@@ -183,3 +185,11 @@ Claude audited the existing graph and browser routes, audited selected primary-s
 Two additional rounds closed since the earlier checkpoint. Claude fixed the delay that held the primary evidence link until an optional supplement arrived, and proposed a versioned release that would add two static files by reusing existing checked shards. The former passed local tests and a delayed-response browser check. The latter is a checked design awaiting implementation and final review of the scientific note fields. See private reports `Records/sw-006/runs/followup-91-1795200607/review.md` and `Records/sw-006/runs/versioned-reading-notes-release-plan-1795200696/review.md`.
 
 Root saved the [new-corpus launch workflow](docs/atlas-corpus-workflow.md). It combines a small extraction pilot, an evidence-backed graph and embedding comparison, and held-out browse and agent journeys. The geophysics sample sizes are starting choices. Intake and pilot results remain pending.
+
+## 2026-11-20 — SW-009: Run toward a finished Swampland graph
+
+**Release target.** A reader can start at a broad landmark and take several meaningful steps toward a precise scientific question and its evidence. Alternate qualified paths stay available, and equivalent formulations reach the same destination. A materially different scientific premise has a distinct destination or a visible gap. Existing papers remain discoverable. Include a test where a researcher describes current work in prose, locates a sensible question or region, and sends a link another reader can open. Use both held-out questions and corrected routes to verify the built release.
+
+**Work sequence.** Use the first windows to establish the before state and land the versioned graph builder with replay intact. Use the middle windows to fix a measured set of high-value shallow, missing and misplaced routes across Dark Dimension, Weak Gravity, Distance and vacua, retaining lateral links and primary evidence. Compare every change with the actual menu it replaces, including which papers move behind expanded choices. Use the final windows for independent cross-field and prose-to-location journeys, corrections and release checks. The ten-window horizon is a planning estimate. Evidence and remaining gaps determine readiness.
+
+**Dispatch and constraints.** Root launched Enterprise Opus 5.5 at xhigh on `sw009-depth-baseline` and `sw009-placement-triage`. The saved queue begins with the real versioned build, then source-backed graph repairs, placement refinements and a fresh acceptance review. Previously, Claude proved the two-version plan in a fixture server, while the builder was outside its edit scope. The scheduler now gives a graph writer the derived builder, graph records, agent interface and relevant tests in the isolated checkout. UI and graph edits share one slot, and independent researchers can work in parallel. The native Codex continuation steers based on the work and receipts. Raw launch and provider evidence is in private `Records/sw-006/`. Checkpoints still need a verified candidate before release.
